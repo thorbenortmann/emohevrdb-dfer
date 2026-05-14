@@ -1,0 +1,11 @@
+# Pre-installed packages in the nvcr.io/nvidia/tensorflow:25.02-tf2-py3 container
+# jupyterlab==4.3.5
+# pandas==2.2.3
+# scikit-learn==1.5.2
+# tensorflow==2.17.0+nv25.2
+
+keras==3.12.0
+
+# Addional packages
+seaborn==0.13.2
+matplotlib==3.9.4

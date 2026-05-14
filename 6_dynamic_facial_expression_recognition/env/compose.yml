@@ -1,0 +1,39 @@
+services:
+  tf:
+    image: tf-ngc:keras312
+    build: .
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: ["gpu"]
+    mem_limit: "96g"
+    memswap_limit: "96g"
+    pids_limit: 8192
+    cpuset: "1-23"
+    shm_size: "16g"
+    ulimits:
+      memlock: -1
+      stack: 67108864
+    volumes:
+      - /home/thorben/workspace/repos/emoji_hero_vr_dfer:/workspace/emoji_hero_vr_dfer
+      - /home/thorben/workspace/datasets:/workspace/datasets
+    ports:
+      - "8888:8888"
+    working_dir: /workspace
+    environment:
+      TF_CPP_MIN_LOG_LEVEL: "2"
+      TF_FORCE_GPU_ALLOW_GROWTH: "true"
+      TF_GPU_ALLOCATOR: "cuda_malloc_async"
+    entrypoint: ["/bin/bash"]
+    command:
+      - -lc
+      - jupyter lab --ip=0.0.0.0 --no-browser
+        --ServerApp.iopub_msg_rate_limit=20000.0
+        --ServerApp.iopub_data_rate_limit=10000000.0
+        --ServerApp.rate_limit_window=20.0
+        2>&1 | /workspace/emoji_hero_vr_dfer/filter_logs.sh
+    stdin_open: true
+    tty: true
