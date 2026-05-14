@@ -23,7 +23,6 @@ This repository mirrors the relevant structure of the journal paper.
   - [6.2 FEA-Sequence-Based FER](6_dynamic_facial_expression_recognition/6_2_fea_sequence_based_fer)
   - [6.3 Multimodal FER](6_dynamic_facial_expression_recognition/6_3_multimodal_fer)
     - [6.3.1 Complementarity Analysis](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_1_complementarity_analysis)
-    - [6.3.2 Multimodal Dataset](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_2_multimodal_dataset)
     - [6.3.3 Late Fusion](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_3_late_fusion)
     - [6.3.4 Intermediate Fusion](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_4_intermediate_fusion)
 
