@@ -1,0 +1,15 @@
+metric,value
+Static FEA accuracy,0.716931216931217
+Dynamic FEA accuracy,0.783068783068783
+Dynamic - Static FEA difference (pp),6.613756613756613
+Paired-bootstrap CI low (pp),2.91005291005291
+Paired-bootstrap CI high (pp),10.582010582010582
+Exact McNemar p-value,0.001263559472435463
+Static-only correct reenactments,16.0
+Dynamic-only correct reenactments,41.0
+Sensitivity t statistic,3.355980773180113
+Sensitivity t-test p-value,0.0008712365457085796
+Participants favoring Dynamic FEA,6.0
+Participants favoring Static FEA,2.0
+Participants tied,0.0
+Median participant difference Dynamic - Static FEA (pp),7.428940568475456

@@ -1,0 +1,2 @@
+comparison,n_reenactments,mean_difference_pp,t_statistic,df,p_value
+Static FEA vs. Dynamic FEA,378,6.613756613756613,3.355980773180113,377,0.0008712365457085796

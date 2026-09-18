@@ -1,0 +1,2 @@
+comparison,n_reenactments,ordered_fea_accuracy,mean_fea_accuracy,difference_ordered_minus_mean_pp,ci_low_pp,ci_high_pp,both_correct,ordered_only_correct,mean_only_correct,both_wrong,mcnemar_statistic,p_value,p_value_holm,reject_holm,holm_family,holm_family_size,alpha
+Ordered FEA vs. Mean FEA,378,0.783068783068783,0.6904761904761905,9.25925925925926,5.82010582010582,12.962962962962962,254,42,7,75,7.0,3.6245783263666453e-07,7.249156652733291e-07,True,fea_sequence_order,2,0.05

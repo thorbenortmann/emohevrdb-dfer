@@ -1,0 +1,2 @@
+comparison,n_reenactments,mean_difference_pp,t_statistic,df,p_value
+Ordered FEA vs. Shuffled FEA,378,8.201058201058201,4.447389805529518,377,1.1452403860005432e-05

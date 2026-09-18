@@ -1,0 +1,2 @@
+comparison,n_reenactments,image_accuracy,multimodal_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap
+Pooled multimodal - pooled image,378,0.6984126984126984,0.8042328042328042,10.582010582010582,7.5396825396825395,13.756613756613756,9.99999000001e-07,1000000

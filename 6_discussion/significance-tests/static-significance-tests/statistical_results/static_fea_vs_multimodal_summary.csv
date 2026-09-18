@@ -1,0 +1,15 @@
+metric,value
+FEA accuracy,0.716931216931217
+Pooled multimodal accuracy,0.8042328042328042
+Central multimodal accuracy,0.8359788359788359
+Side multimodal accuracy,0.7724867724867724
+Multimodal - FEA difference (pp),8.73015873015873
+Primary bootstrap CI low (pp),4.62962962962963
+Primary bootstrap CI high (pp),12.83068783068783
+Primary bootstrap p-value,4.3999956000044e-05
+Sensitivity t statistic,4.1647169075643165
+Sensitivity t-test p-value,3.8675468678170124e-05
+Participants favoring Multimodal,6.0
+Participants favoring FEA,2.0
+Participants tied,0.0
+Median participant difference Multimodal - FEA (pp),8.595008051529788

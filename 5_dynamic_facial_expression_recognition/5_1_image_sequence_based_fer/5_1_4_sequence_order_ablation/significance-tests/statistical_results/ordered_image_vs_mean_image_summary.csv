@@ -1,0 +1,17 @@
+metric,value
+Pooled Ordered Image accuracy,0.7275132275132276
+Pooled Mean Image accuracy,0.6084656084656085
+Ordered - Mean Image difference (pp),11.904761904761903
+Primary bootstrap CI low (pp),7.936507936507936
+Primary bootstrap CI high (pp),15.873015873015872
+Primary bootstrap p-value,9.99999000001e-07
+Sensitivity t statistic,5.945060975297056
+Sensitivity t-test p-value,6.3013329303040015e-09
+Participants favoring Ordered Image,8.0
+Participants favoring Mean Image,0.0
+Participants tied,0.0
+Median participant difference Ordered - Mean Image (pp),12.361239592969469
+Primary Holm-adjusted p-value (within modality),1.999998000002e-06
+Reject primary null after Holm correction,1.0
+Holm family size,2.0
+Family-wise alpha,0.05

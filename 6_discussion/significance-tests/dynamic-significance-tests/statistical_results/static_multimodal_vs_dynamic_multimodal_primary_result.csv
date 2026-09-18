@@ -1,0 +1,2 @@
+comparison,n_reenactments,static_multimodal_accuracy,dynamic_multimodal_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap
+Pooled Dynamic Multimodal - pooled Static Multimodal,378,0.8042328042328042,0.8161375661375662,1.1904761904761905,-1.984126984126984,4.365079365079365,0.4942775057224943,1000000

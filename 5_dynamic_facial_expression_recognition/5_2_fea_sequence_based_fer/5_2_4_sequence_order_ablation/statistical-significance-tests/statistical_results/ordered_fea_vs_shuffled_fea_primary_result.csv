@@ -1,0 +1,2 @@
+comparison,n_reenactments,ordered_fea_accuracy,shuffled_fea_accuracy,difference_ordered_minus_shuffled_pp,ci_low_pp,ci_high_pp,both_correct,ordered_only_correct,shuffled_only_correct,both_wrong,mcnemar_statistic,p_value,p_value_holm,reject_holm,holm_family,holm_family_size,alpha
+Ordered FEA vs. Shuffled FEA,378,0.783068783068783,0.701058201058201,8.201058201058201,4.761904761904762,11.904761904761903,255,41,10,72,10.0,1.4737715885004832e-05,1.4737715885004832e-05,True,fea_sequence_order,2,0.05

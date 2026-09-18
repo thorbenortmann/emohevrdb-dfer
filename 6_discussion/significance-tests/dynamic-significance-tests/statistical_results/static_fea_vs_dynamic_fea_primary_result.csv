@@ -1,0 +1,2 @@
+comparison,n_reenactments,static_fea_accuracy,dynamic_fea_accuracy,difference_dynamic_minus_static_pp,ci_low_pp,ci_high_pp,both_correct,static_only_correct,dynamic_only_correct,both_wrong,mcnemar_statistic,p_value
+Static FEA vs. Dynamic FEA,378,0.716931216931217,0.783068783068783,6.613756613756613,2.91005291005291,10.582010582010582,255,16,41,66,16.0,0.001263559472435463

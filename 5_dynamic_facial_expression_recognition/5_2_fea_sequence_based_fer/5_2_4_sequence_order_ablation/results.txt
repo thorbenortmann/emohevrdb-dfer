@@ -1,0 +1,39 @@
+1. image
+    0. optimization budget: 19 configurations
+    1. ordered lstm model
+        - val acc 80.39
+        - test acc 72.75
+    2. shuffled lstm model
+        1. unoptimized
+            - val acc 70.52
+            - test acc 59.66
+        2. optimized
+            - val acc 72.08
+            - test acc 61.90
+    3. global average pooling model
+         1. unoptimized
+            - val acc 67.66
+            - test acc 58.07
+        2. optimized
+            - val acc 72.60
+            - test acc 60.85
+2. fea
+    0. optimization budget: 24 configurations
+    1. ordered lstm model
+        - val acc 85.19
+        - test acc 78.31
+    2. shuffled lstm model
+        1. unoptimized
+            - val acc 72.73
+            - test acc 67.20
+        2. optimized
+            - val acc 76.34
+            - test acc 70.11
+    3. global average pooling model
+         1. unoptimized
+            - val acc 77.40
+            - test acc 69.05
+        2. optimized
+            - val acc 77.40
+            - test acc 69.05
+    

@@ -1,0 +1,47 @@
+services:
+  tf215:
+    image: emohevrdb-sfer:tf215
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ["0"]
+              capabilities: ["gpu"]
+
+    shm_size: "16gb"
+
+    volumes:
+      - type: bind
+        source: ${SFER_REPO_PATH}
+        target: /workspace/emohevrdb-sfer
+      - type: bind
+        source: ${DATASETS_PATH}
+        target: /workspace/datasets
+
+    ports:
+      - "8888:8888"
+
+    working_dir: /workspace/emohevrdb-sfer
+
+    environment:
+      TF_CPP_MIN_LOG_LEVEL: "2"
+      TF_FORCE_GPU_ALLOW_GROWTH: "true"
+
+    command:
+      - /bin/bash
+      - -lc
+      - >-
+        jupyter lab
+        --ip=0.0.0.0
+        --port=8888
+        --no-browser
+        --allow-root
+        --ServerApp.root_dir=/workspace
+
+    stdin_open: true
+    tty: true

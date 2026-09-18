@@ -1,0 +1,19 @@
+metric,value
+Ordered FEA accuracy,0.783068783068783
+Shuffled FEA accuracy,0.701058201058201
+Ordered - Shuffled FEA difference (pp),8.201058201058201
+Paired-bootstrap CI low (pp),4.761904761904762
+Paired-bootstrap CI high (pp),11.904761904761903
+Exact McNemar p-value,1.4737715885004832e-05
+Ordered-only correct reenactments,41.0
+Shuffled-only correct reenactments,10.0
+Sensitivity t statistic,4.447389805529518
+Sensitivity t-test p-value,1.1452403860005432e-05
+Participants favoring Ordered FEA,7.0
+Participants favoring Shuffled FEA,1.0
+Participants tied,0.0
+Median participant difference Ordered - Shuffled FEA (pp),5.607966457023068
+Primary Holm-adjusted p-value (within modality),1.4737715885004832e-05
+Reject primary null after Holm correction,1.0
+Holm family size,2.0
+Family-wise alpha,0.05
