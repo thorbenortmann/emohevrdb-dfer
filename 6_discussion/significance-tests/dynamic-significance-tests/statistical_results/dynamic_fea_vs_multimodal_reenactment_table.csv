@@ -14,12 +14,12 @@ reenactment_id,central_multimodal_correct,side_multimodal_correct,fea_correct,pa
 1700479119890-2-1-2-6-2,True,True,True,1,1.0
 1700479129747-2-1-2-10-2,True,True,True,1,1.0
 1700479131977-2-1-2-11-4,True,True,True,1,1.0
-1700479238544-2-1-3-0-4,True,True,False,1,1.0
+1700479238544-2-1-3-0-4,True,True,True,1,1.0
 1700479240547-2-1-3-1-1,True,False,False,1,0.5
 1700479243878-2-1-3-3-6,True,True,True,1,1.0
 1700479245714-2-1-3-4-3,True,True,True,1,1.0
 1700479248151-2-1-3-5-2,True,True,True,1,1.0
-1700479250572-2-1-3-6-5,True,True,True,1,1.0
+1700479250572-2-1-3-6-5,True,True,False,1,1.0
 1700479253441-2-1-3-8-0,True,False,True,1,0.5
 1700479258342-2-1-3-10-0,False,False,False,1,0.0
 1700479260806-2-1-3-11-3,True,True,True,1,1.0
@@ -276,7 +276,7 @@ reenactment_id,central_multimodal_correct,side_multimodal_correct,fea_correct,pa
 1700756725541-2-18-4-12-1,True,True,True,18,1.0
 1700756727000-2-18-4-13-3,True,True,True,18,1.0
 1700756728630-2-18-4-14-0,True,True,True,18,1.0
-1700756730921-2-18-4-15-1,False,False,True,18,0.0
+1700756730921-2-18-4-15-1,False,False,False,18,0.0
 1700756736108-2-18-4-18-4,True,True,True,18,1.0
 1700756739446-2-18-4-20-5,True,True,True,18,1.0
 1700756740978-2-18-4-21-6,True,True,True,18,1.0
@@ -344,7 +344,7 @@ reenactment_id,central_multimodal_correct,side_multimodal_correct,fea_correct,pa
 1701094455829-2-27-1-7-5,True,True,True,27,1.0
 1701094458007-2-27-1-8-3,True,True,True,27,1.0
 1701094536373-2-27-2-2-6,True,True,True,27,1.0
-1701094539306-2-27-2-3-2,True,True,False,27,1.0
+1701094539306-2-27-2-3-2,True,True,True,27,1.0
 1701094549501-2-27-2-7-4,True,True,True,27,1.0
 1701094559720-2-27-2-11-4,True,True,False,27,1.0
 1701094652485-2-27-3-0-4,True,True,True,27,1.0
