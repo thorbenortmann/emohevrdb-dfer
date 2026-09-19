@@ -1,0 +1,4 @@
+group,sequence_id,reenactment_id,perspective,true_class,final_predicted_class,final_correct
+Always correct,1700478998549-2-1-1-1-5-0,1700478998549-2-1-1-1-5,Central,Sadness,Sadness,True
+Recovered by final prefix,1700479005401-2-1-1-4-0-0,1700479005401-2-1-1-4-0,Central,Anger,Anger,True
+Final error,1700478995850-2-1-1-0-0-1,1700478995850-2-1-1-0-0,Side,Anger,Disgust,False

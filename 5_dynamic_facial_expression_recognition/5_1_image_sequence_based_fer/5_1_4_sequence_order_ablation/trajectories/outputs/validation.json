@@ -1,0 +1,9 @@
+{
+  "rows": 22680,
+  "view_sequences": 756,
+  "reenactments": 378,
+  "participants": 8,
+  "prefixes_per_sequence": 30,
+  "maximum_probability_sum_error": 2.0088999996836776e-07,
+  "input_sha256": "356ae90a50b82990e1d17901289a854b6a666309b572b25222e853b87e27844a"
+}

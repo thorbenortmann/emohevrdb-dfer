@@ -1,0 +1,62 @@
+{
+  "input_sha256": {
+    "fea_prediction_trajectories.csv": "a820c7f91c973c228c4e4cd5fd2196cc7a51f2fbf9ad7d97a52e43af9032a034"
+  },
+  "python": "3.12.3",
+  "numpy": "1.26.4",
+  "pandas": "2.2.3",
+  "matplotlib": "3.9.4",
+  "inference_rerun": false,
+  "show_individuals_in_all_class_probability_views": true,
+  "error_selection": "Fixed subset incorrect at prefix 30",
+  "figures": [
+    "14_class_recall_and_overall_accuracy",
+    "fea_prefix_recall_accuracy",
+    "11_mean_true_class_probability",
+    "fea_prefix_true_class_probability",
+    "01_class_trajectories",
+    "08_all_sequence_trajectories",
+    "09_trajectories_by_final_outcome",
+    "10_class_trajectories_by_final_outcome",
+    "02_accuracy_and_confidence",
+    "03_class_recall_and_composition",
+    "04_corrections_and_stability",
+    "05_error_patterns",
+    "06_selected_examples",
+    "07_participant_check",
+    "12_all_class_probabilities_anger",
+    "12_all_class_probabilities_disgust",
+    "12_all_class_probabilities_fear",
+    "12_all_class_probabilities_happiness",
+    "12_all_class_probabilities_neutral",
+    "12_all_class_probabilities_sadness",
+    "12_all_class_probabilities_surprise",
+    "12_all_class_probabilities_overview",
+    "13_final_error_probabilities_anger",
+    "13_final_error_probabilities_disgust",
+    "13_final_error_probabilities_fear",
+    "13_final_error_probabilities_happiness",
+    "13_final_error_probabilities_neutral",
+    "13_final_error_probabilities_sadness",
+    "13_final_error_probabilities_surprise",
+    "13_final_error_probabilities_overview"
+  ],
+  "class_counts": {
+    "Anger": 54,
+    "Disgust": 54,
+    "Fear": 54,
+    "Happiness": 54,
+    "Neutral": 54,
+    "Sadness": 54,
+    "Surprise": 54
+  },
+  "error_counts": {
+    "Anger": 26,
+    "Disgust": 24,
+    "Fear": 21,
+    "Happiness": 0,
+    "Neutral": 3,
+    "Sadness": 6,
+    "Surprise": 2
+  }
+}

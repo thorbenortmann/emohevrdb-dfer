@@ -1,0 +1,5 @@
+group,group_n,sequence_id,true_class,final_class,distance_to_group_mean
+Always correct,95,1700577839039-2-10-3-0-4,Neutral,Neutral,0.010994493828991933
+Initial error → final correction,195,1701085788374-2-23-4-3-6,Surprise,Surprise,0.023078851300651897
+Transient success → final error,24,1700747235785-2-15-2-3-2,Fear,Surprise,0.024435241007336263
+Never correct,58,1700747253760-2-15-2-10-2,Fear,Disgust,0.023771072871599925

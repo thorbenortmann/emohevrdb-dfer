@@ -1,0 +1,8 @@
+true_class,n_sequences,final_correct,never_correct,earlier_correct_final_wrong,median_stabilization_timestep,median_prediction_switches
+Anger,108,50,27,31,19.0,2.0
+Disgust,108,74,20,14,15.0,2.0
+Fear,108,71,18,19,18.5,2.0
+Happiness,108,99,6,3,8.0,1.0
+Neutral,108,81,20,7,2.0,1.0
+Sadness,108,88,10,10,10.0,1.0
+Surprise,108,87,13,8,17.0,2.0
