@@ -1,0 +1,18 @@
+source,target,group_id,group_label,fea_name
+Anger,Disgust,AU4,AU4 · Brow Lowerer,BrowLowererR
+Anger,Disgust,AU7,AU7 · Lid Tightener,LidTightenerR
+Anger,Disgust,AU9,AU9 · Nose Wrinkler,NoseWrinklerR
+Anger,Disgust,AU10,AU10 · Upper Lip Raiser,UpperLipRaiserR
+Anger,Disgust,AU17,AU17 · Chin Raiser,ChinRaiserB
+Anger,Disgust,AU23,AU23 · Lip Tightener,LipTightenerR
+Disgust,Happiness,AU9,AU9 · Nose Wrinkler,NoseWrinklerR
+Disgust,Happiness,AU10,AU10 · Upper Lip Raiser,UpperLipRaiserR
+Disgust,Happiness,AU6,AU6 · Cheek Raiser,CheekRaiserR
+Disgust,Happiness,AU12,AU12 · Lip Corner Puller,LipCornerPullerR
+Disgust,Happiness,AU17,AU17 · Chin Raiser,ChinRaiserB
+Fear,Surprise,AU1,AU1 · Inner Brow Raiser,InnerBrowRaiserR
+Fear,Surprise,AU2,AU2 · Outer Brow Raiser,OuterBrowRaiserR
+Fear,Surprise,AU4,AU4 · Brow Lowerer,BrowLowererR
+Fear,Surprise,AU5,AU5 · Upper Lid Raiser,UpperLidRaiserR
+Fear,Surprise,AU20,AU20 · Lip Stretcher,LipStretcherR
+Fear,Surprise,AU26,AU26 · Jaw Drop,JawDrop

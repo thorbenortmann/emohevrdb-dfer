@@ -1,0 +1,37 @@
+pair,subset,n,participants
+Anger__Disgust,Anger: all,54,8
+Anger__Disgust,Anger: correct,28,6
+Anger__Disgust,Anger → Disgust,23,5
+Anger__Disgust,Disgust: all,54,8
+Anger__Disgust,Disgust: correct,30,7
+Anger__Disgust,Disgust → Anger,2,2
+Fear__Surprise,Fear: all,54,8
+Fear__Surprise,Fear: correct,33,6
+Fear__Surprise,Fear → Surprise,8,3
+Fear__Surprise,Surprise: all,54,8
+Fear__Surprise,Surprise: correct,52,8
+Fear__Surprise,Surprise → Fear,1,1
+Disgust__Happiness,Disgust: all,54,8
+Disgust__Happiness,Disgust: correct,30,7
+Disgust__Happiness,Disgust → Happiness,10,3
+Disgust__Happiness,Happiness: all,54,8
+Disgust__Happiness,Happiness: correct,54,8
+Disgust__Happiness,Happiness → Disgust,0,0
+Disgust__Fear,Disgust: all,54,8
+Disgust__Fear,Disgust: correct,30,7
+Disgust__Fear,Disgust → Fear,7,2
+Disgust__Fear,Fear: all,54,8
+Disgust__Fear,Fear: correct,33,6
+Disgust__Fear,Fear → Disgust,3,2
+Disgust__Sadness,Disgust: all,54,8
+Disgust__Sadness,Disgust: correct,30,7
+Disgust__Sadness,Disgust → Sadness,2,2
+Disgust__Sadness,Sadness: all,54,8
+Disgust__Sadness,Sadness: correct,48,8
+Disgust__Sadness,Sadness → Disgust,4,1
+Fear__Neutral,Fear: all,54,8
+Fear__Neutral,Fear: correct,33,6
+Fear__Neutral,Fear → Neutral,6,3
+Fear__Neutral,Neutral: all,54,8
+Fear__Neutral,Neutral: correct,51,8
+Fear__Neutral,Neutral → Fear,0,0

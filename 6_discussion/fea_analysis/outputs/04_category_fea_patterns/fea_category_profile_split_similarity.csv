@@ -1,0 +1,4 @@
+split_a,split_b,profile_correlation
+train,validation,0.8668091920443532
+train,test,0.8259343417300417
+validation,test,0.8040799879563941

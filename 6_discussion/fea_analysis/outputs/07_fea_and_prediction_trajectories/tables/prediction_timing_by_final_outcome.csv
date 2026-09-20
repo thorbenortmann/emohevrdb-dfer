@@ -1,0 +1,14 @@
+true_label,correct_final_prediction,n_reenactments,median_max_final_class_probability_increase,median_step_of_max_final_class_probability_increase,median_final_label_stable_from,median_label_switches,fraction_reaching_0_80,median_first_0_80_step,median_persistent_0_80_step,final_outcome
+Anger,False,26,0.25854976,15.5,18.0,1.0,0.8076923076923077,19.0,18.0,Incorrect
+Anger,True,28,0.296876395,12.0,12.0,1.0,0.8928571428571429,12.0,13.0,Correct
+Disgust,False,24,0.20129091500000001,15.5,14.0,1.0,0.7083333333333334,10.0,14.0,Incorrect
+Disgust,True,30,0.20518650500000005,15.0,17.5,2.0,0.7666666666666667,15.0,15.0,Correct
+Fear,False,21,0.1684618,15.0,17.0,1.0,0.5238095238095238,9.0,16.0,Incorrect
+Fear,True,33,0.14914265,11.0,9.0,1.0,0.5151515151515151,17.0,21.0,Correct
+Happiness,True,54,0.35467787500000003,6.0,5.5,1.0,1.0,7.0,7.5,Correct
+Neutral,False,3,0.16374135999999997,28.0,29.0,1.0,0.3333333333333333,30.0,30.0,Incorrect
+Neutral,True,51,0.16807688000000004,2.0,1.0,0.0,0.803921568627451,6.0,5.0,Correct
+Sadness,False,6,0.30363153000000004,9.5,4.5,1.0,0.6666666666666666,5.5,8.0,Incorrect
+Sadness,True,48,0.27159281999999996,6.5,8.0,1.0,1.0,11.0,11.0,Correct
+Surprise,False,2,0.10840248000000001,22.5,24.5,1.0,0.5,25.0,25.0,Incorrect
+Surprise,True,52,0.219639005,13.5,16.0,2.0,0.7307692307692307,14.0,15.0,Correct

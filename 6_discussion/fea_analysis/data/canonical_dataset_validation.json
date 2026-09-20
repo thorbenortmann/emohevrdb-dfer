@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0.0",
+  "sequence_length": 30,
+  "fea_feature_count": 63,
+  "dfea_source": "/workspace/datasets/emoji-hero-vr-db-dfea-as-csv",
+  "sfea_source": "/workspace/datasets/emoji-hero-vr-db-sfea-as-csv",
+  "splits": {
+    "train": {
+      "reenactments": 964,
+      "dfea_rows": 28920,
+      "sfea_rows": 964,
+      "participants": 20,
+      "reference_timestep_counts": {
+        "16": 21,
+        "17": 13,
+        "18": 17,
+        "19": 13,
+        "20": 12,
+        "21": 21,
+        "22": 9,
+        "23": 14,
+        "24": 12,
+        "25": 16,
+        "26": 15,
+        "27": 18,
+        "28": 28,
+        "29": 25,
+        "30": 730
+      }
+    },
+    "validation": {
+      "reenactments": 385,
+      "dfea_rows": 11550,
+      "sfea_rows": 385,
+      "participants": 8,
+      "reference_timestep_counts": {
+        "16": 4,
+        "17": 7,
+        "18": 2,
+        "19": 5,
+        "20": 6,
+        "21": 4,
+        "22": 2,
+        "23": 6,
+        "24": 9,
+        "25": 7,
+        "26": 7,
+        "27": 7,
+        "28": 6,
+        "29": 11,
+        "30": 302
+      }
+    },
+    "test": {
+      "reenactments": 378,
+      "dfea_rows": 11340,
+      "sfea_rows": 378,
+      "participants": 8,
+      "reference_timestep_counts": {
+        "16": 8,
+        "17": 7,
+        "18": 7,
+        "19": 7,
+        "20": 7,
+        "21": 7,
+        "22": 7,
+        "23": 7,
+        "24": 9,
+        "25": 9,
+        "26": 7,
+        "27": 9,
+        "28": 4,
+        "29": 10,
+        "30": 273
+      }
+    }
+  },
+  "compatibility_files": {
+    "dynamic_test_predictions": "/workspace/repos/emohevrdb-dfer/6_discussion/significance-tests/dynamic-significance-tests/dynamic_test_predictions.csv",
+    "fea_prediction_trajectories": "/workspace/repos/emohevrdb-dfer/5_dynamic_facial_expression_recognition/5_2_fea_sequence_based_fer/5_2_4_sequence_order_ablation/trajectories/fea_prediction_trajectories.csv",
+    "static_test_predictions": "/workspace/repos/emohevrdb-dfer/6_discussion/significance-tests/static-significance-tests/static_test_predictions.csv"
+  }
+}

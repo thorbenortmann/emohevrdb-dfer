@@ -1,0 +1,7 @@
+class_a,class_b,errors_both_directions
+Anger,Disgust,25
+Fear,Surprise,9
+Disgust,Happiness,10
+Disgust,Fear,10
+Disgust,Sadness,6
+Fear,Neutral,6

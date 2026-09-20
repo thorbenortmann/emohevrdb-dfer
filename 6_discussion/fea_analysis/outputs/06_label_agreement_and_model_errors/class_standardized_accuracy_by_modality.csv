@@ -1,0 +1,4 @@
+modality,shared_classes,classes,accuracy_2_of_3,accuracy_3_of_3,difference_3_minus_2_pp
+Image,6,Anger | Disgust | Fear | Neutral | Sadness | Surprise,0.583058608058608,0.7307190849464086,14.76604768878006
+FEA,6,Anger | Disgust | Fear | Neutral | Sadness | Surprise,0.7318681318681319,0.7508605289820295,1.8992397113897552
+Multimodal,6,Anger | Disgust | Fear | Neutral | Sadness | Surprise,0.7100732600732601,0.8088799125473257,9.880665247406561

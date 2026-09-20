@@ -1,0 +1,2022 @@
+{
+  "mapping_version": "1.2.1",
+  "date": "2026-09-20",
+  "title": "Project-canonical semantic crosswalk between EmoHeVRDB facial expression activations and FACS",
+  "scope": {
+    "recorded_api": "Meta XR Core SDK Face Tracking API, version 59.0, as used for EmoHeVRDB",
+    "feature_schema": "63 face-expression channels used by EmoHeVRDB",
+    "openxr_equivalent_enum": "XrFaceExpressionFB / XR_FB_face_tracking, indices 0–62",
+    "newer_meta_sdk_note": "Newer Meta SDK references include additional tongue-related expressions. They are outside the scope of this 63-channel EmoHeVRDB mapping."
+  },
+  "interpretation": {
+    "mapping_type": "semantic crosswalk",
+    "official_meta_to_facs_mapping": false,
+    "validated_au_measurement": false,
+    "validated_facs_intensity_measurement": false,
+    "aggregation_rule": null,
+    "statement": "The FEA values remain vendor-defined blendshape coefficients. The crosswalk provides semantic labels/groupings only; it does not convert FEA values into FACS AU occurrence or A–E intensity scores."
+  },
+  "primary_key": [
+    "fea_name"
+  ],
+  "status_legend": {
+    "direct_semantic_correspondence": "The API channel name/movement directly corresponds semantically to a FACS AU or Action Descriptor, without implying measurement validation.",
+    "component_correspondence": "The API exposes a spatial component of a movement that is represented as one FACS AU.",
+    "approximate_eye_position_correspondence": "The eye-look channel is related to the same-direction FACS eye-position code, but is not treated as a calibrated gaze measurement.",
+    "no_unique_correspondence": "No unique single FACS AU/AD/eye-position code is assigned.",
+    "no_dedicated_fea": "The AU appears in the paper table but has no dedicated channel in the 63-feature schema."
+  },
+  "sources": {
+    "paper_table_facs_2002": {
+      "title": "Ekman, Friesen, and Hager, Facial Action Coding System, Investigator's Guide (2002), Table 10-1",
+      "url": null,
+      "role": "Source of the AU/category membership reproduced in the current paper's Table 1."
+    },
+    "meta_face_tracking_guide": {
+      "title": "Meta Horizon OS Developers — Face Tracking for Movement SDK for Unity",
+      "url": "https://developers.meta.com/horizon/documentation/unity/move-face-tracking/",
+      "role": "Meta documentation for the face-tracking/blendshape interface and FACS-based naming."
+    },
+    "meta_ovrfaceexpressions_current": {
+      "title": "Meta Horizon OS Developers — OVRFaceExpressions reference (Unity SDK v205)",
+      "url": "https://developers.meta.com/horizon/reference/unity/v205/class_o_v_r_face_expressions/",
+      "role": "Current Meta Unity reference used to document the relationship between PascalCase OVRFaceExpressions.FaceExpression members and underscore-separated OVRPlugin.FaceExpression2 values. This is a naming/API cross-check; EmoHeVRDB itself was recorded with Meta XR Core SDK v59."
+    },
+    "openxr_xrfaceexpressionfb": {
+      "title": "Khronos OpenXR — XrFaceExpressionFB",
+      "url": "https://registry.khronos.org/OpenXR/specs/1.1/man/html/XrFaceExpressionFB.html",
+      "role": "Authoritative 63-entry XR_FB_face_tracking enum and zero-based indices 0–62."
+    },
+    "cohn_ambadar_ekman_2007": {
+      "title": "Cohn, Ambadar, and Ekman (2007), Observer-Based Measurement of Facial Expression with the Facial Action Coding System",
+      "url": "https://www.jeffcohn.net/wp-content/uploads/2020/01/Cohn-chapter-2007.pdf",
+      "role": "FACS 2002 structure, AU/descriptor distinctions, intensity coding, eye/head position codes, and changes from FACS 1978."
+    },
+    "callifacs_human_ad_reference": {
+      "title": "Correia-Caeiro et al. (2022), CalliFACS: The common marmoset Facial Action Coding System",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9113598/",
+      "role": "Peer-reviewed secondary cross-check listing human FACS Action Descriptors including AD29, AD30, AD34, and AD35."
+    },
+    "cmu_facs_historical": {
+      "title": "CMU Facial Action Coding System reference",
+      "url": "https://www.cs.cmu.edu/~face/facs.htm",
+      "role": "Historical FACS code/name cross-check, especially eye-position codes; not used as the primary source for FACS 2002 changes."
+    }
+  },
+  "coverage_summary": {
+    "feature_count": 63,
+    "mapped_to_au_features": 46,
+    "mapped_to_action_descriptor_features": 7,
+    "mapped_to_eye_position_features": 8,
+    "features_without_unique_single_facs_code": 2,
+    "distinct_au_codes": 22,
+    "distinct_action_descriptor_codes": 4,
+    "distinct_eye_position_codes": 4,
+    "paper_table_unique_aus": 20,
+    "paper_table_aus_with_dedicated_fea_mapping": 17,
+    "paper_table_aus_without_dedicated_fea_mapping": [
+      "AU11",
+      "AU25",
+      "AU27"
+    ]
+  },
+  "repository_cross_check": {
+    "scope": "Cross-checked against saved outputs in the supplied 2026-09-20 emohevrdb-dfer repository snapshot.",
+    "static_test_notebook": "6_discussion/significance-tests/static-significance-tests/collect_static_test_predictions.ipynb",
+    "dynamic_test_notebook": "6_discussion/significance-tests/dynamic-significance-tests/collect_dynamic_test_predictions.ipynb",
+    "result": "Both saved outputs show exactly 63 FEA feature columns in the same order as this mapping.",
+    "limitation": "This cross-check does not re-validate all source dataset archives or the physiological accuracy of any Meta coefficient."
+  },
+  "fea_to_facs": [
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 0,
+      "fea_name": "BrowLowererL",
+      "facs_kind": "AU",
+      "facs_code": "AU4",
+      "facs_number": 4,
+      "facs_name": "Brow Lowerer",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.BrowLowererL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Brow_Lowerer_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_BROW_LOWERER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 1,
+      "fea_name": "BrowLowererR",
+      "facs_kind": "AU",
+      "facs_code": "AU4",
+      "facs_number": 4,
+      "facs_name": "Brow Lowerer",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.BrowLowererR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Brow_Lowerer_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_BROW_LOWERER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 2,
+      "fea_name": "CheekPuffL",
+      "facs_kind": "AD",
+      "facs_code": "AD34",
+      "facs_number": 34,
+      "facs_name": "Cheek Puff",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Maps to FACS action descriptor AD34 (cheek puff), not AU13 (sharp lip puller).",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.CheekPuffL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Cheek_Puff_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHEEK_PUFF_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 3,
+      "fea_name": "CheekPuffR",
+      "facs_kind": "AD",
+      "facs_code": "AD34",
+      "facs_number": 34,
+      "facs_name": "Cheek Puff",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Maps to FACS action descriptor AD34 (cheek puff), not AU13 (sharp lip puller).",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.CheekPuffR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Cheek_Puff_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHEEK_PUFF_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 4,
+      "fea_name": "CheekRaiserL",
+      "facs_kind": "AU",
+      "facs_code": "AU6",
+      "facs_number": 6,
+      "facs_name": "Cheek Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.CheekRaiserL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Cheek_Raiser_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHEEK_RAISER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 5,
+      "fea_name": "CheekRaiserR",
+      "facs_kind": "AU",
+      "facs_code": "AU6",
+      "facs_number": 6,
+      "facs_name": "Cheek Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.CheekRaiserR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Cheek_Raiser_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHEEK_RAISER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 6,
+      "fea_name": "CheekSuckL",
+      "facs_kind": "AD",
+      "facs_code": "AD35",
+      "facs_number": 35,
+      "facs_name": "Cheek Suck",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Maps to FACS action descriptor AD35 (cheek suck), not AU28 (lip suck).",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.CheekSuckL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Cheek_Suck_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHEEK_SUCK_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 7,
+      "fea_name": "CheekSuckR",
+      "facs_kind": "AD",
+      "facs_code": "AD35",
+      "facs_number": 35,
+      "facs_name": "Cheek Suck",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Maps to FACS action descriptor AD35 (cheek suck), not AU28 (lip suck).",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.CheekSuckR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Cheek_Suck_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHEEK_SUCK_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 8,
+      "fea_name": "ChinRaiserB",
+      "facs_kind": "AU",
+      "facs_code": "AU17",
+      "facs_number": 17,
+      "facs_name": "Chin Raiser",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Meta splits the chin-raiser-related deformation into bottom/top components; both are treated as components related to AU17, not as separate AUs.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.ChinRaiserB",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Chin_Raiser_B",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHIN_RAISER_B_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 9,
+      "fea_name": "ChinRaiserT",
+      "facs_kind": "AU",
+      "facs_code": "AU17",
+      "facs_number": 17,
+      "facs_name": "Chin Raiser",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Meta splits the chin-raiser-related deformation into bottom/top components; both are treated as components related to AU17, not as separate AUs.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.ChinRaiserT",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Chin_Raiser_T",
+      "openxr_enum": "XR_FACE_EXPRESSION_CHIN_RAISER_T_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 10,
+      "fea_name": "DimplerL",
+      "facs_kind": "AU",
+      "facs_code": "AU14",
+      "facs_number": 14,
+      "facs_name": "Dimpler",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.DimplerL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Dimpler_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_DIMPLER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 11,
+      "fea_name": "DimplerR",
+      "facs_kind": "AU",
+      "facs_code": "AU14",
+      "facs_number": 14,
+      "facs_name": "Dimpler",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.DimplerR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Dimpler_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_DIMPLER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 12,
+      "fea_name": "EyesClosedL",
+      "facs_kind": "AU",
+      "facs_code": "AU43",
+      "facs_number": 43,
+      "facs_name": "Eyes Closed",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Semantic correspondence to AU43. Meta documentation also describes interaction between EyesClosed and EyesLookDown when eye-following blendshapes are valid; interpret raw coefficients as vendor blendshape weights rather than validated AU43 intensity.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesClosedL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Closed_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_CLOSED_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 13,
+      "fea_name": "EyesClosedR",
+      "facs_kind": "AU",
+      "facs_code": "AU43",
+      "facs_number": 43,
+      "facs_name": "Eyes Closed",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Semantic correspondence to AU43. Meta documentation also describes interaction between EyesClosed and EyesLookDown when eye-following blendshapes are valid; interpret raw coefficients as vendor blendshape weights rather than validated AU43 intensity.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesClosedR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Closed_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_CLOSED_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 14,
+      "fea_name": "EyesLookDownL",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE64",
+      "facs_number": 64,
+      "facs_name": "Eyes Down",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookDownL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Down_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_DOWN_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 15,
+      "fea_name": "EyesLookDownR",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE64",
+      "facs_number": 64,
+      "facs_name": "Eyes Down",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookDownR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Down_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_DOWN_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 16,
+      "fea_name": "EyesLookLeftL",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE61",
+      "facs_number": 61,
+      "facs_name": "Eyes Turn Left",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookLeftL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Left_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_LEFT_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 17,
+      "fea_name": "EyesLookLeftR",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE61",
+      "facs_number": 61,
+      "facs_name": "Eyes Turn Left",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookLeftR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Left_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_LEFT_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 18,
+      "fea_name": "EyesLookRightL",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE62",
+      "facs_number": 62,
+      "facs_name": "Eyes Turn Right",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookRightL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Right_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_RIGHT_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 19,
+      "fea_name": "EyesLookRightR",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE62",
+      "facs_number": 62,
+      "facs_name": "Eyes Turn Right",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookRightR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Right_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_RIGHT_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 20,
+      "fea_name": "EyesLookUpL",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE63",
+      "facs_number": 63,
+      "facs_name": "Eyes Up",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookUpL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Up_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_UP_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 21,
+      "fea_name": "EyesLookUpR",
+      "facs_kind": "eye_position",
+      "facs_code": "EYE63",
+      "facs_number": 63,
+      "facs_name": "Eyes Up",
+      "mapping_status": "approximate_eye_position_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Approximate correspondence to the same-direction FACS eye-position code (61–64). Meta exposes these as eye-look-related blendshape coefficients; they are not treated here as calibrated gaze measurements.",
+      "source_ids": "meta_ovrfaceexpressions_current | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007 | cmu_facs_historical",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.EyesLookUpR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Eyes_Look_Up_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_EYES_LOOK_UP_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 22,
+      "fea_name": "InnerBrowRaiserL",
+      "facs_kind": "AU",
+      "facs_code": "AU1",
+      "facs_number": 1,
+      "facs_name": "Inner Brow Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.InnerBrowRaiserL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Inner_Brow_Raiser_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_INNER_BROW_RAISER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 23,
+      "fea_name": "InnerBrowRaiserR",
+      "facs_kind": "AU",
+      "facs_code": "AU1",
+      "facs_number": 1,
+      "facs_name": "Inner Brow Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.InnerBrowRaiserR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Inner_Brow_Raiser_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_INNER_BROW_RAISER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 24,
+      "fea_name": "JawDrop",
+      "facs_kind": "AU",
+      "facs_code": "AU26",
+      "facs_number": 26,
+      "facs_name": "Jaw Drop",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Semantic correspondence to AU26. FACS 2002 distinguishes AU25, AU26, and AU27; this single vendor coefficient is not a validated FACS coding of those distinctions.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.JawDrop",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Jaw_Drop",
+      "openxr_enum": "XR_FACE_EXPRESSION_JAW_DROP_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 25,
+      "fea_name": "JawSidewaysLeft",
+      "facs_kind": "AD",
+      "facs_code": "AD30",
+      "facs_number": 30,
+      "facs_name": "Jaw Sideways",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Jaw translation; do not conflate with MouthLeft/MouthRight, which move the mouth region rather than the jaw.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.JawSidewaysLeft",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Jaw_Sideways_Left",
+      "openxr_enum": "XR_FACE_EXPRESSION_JAW_SIDEWAYS_LEFT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 26,
+      "fea_name": "JawSidewaysRight",
+      "facs_kind": "AD",
+      "facs_code": "AD30",
+      "facs_number": 30,
+      "facs_name": "Jaw Sideways",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Jaw translation; do not conflate with MouthLeft/MouthRight, which move the mouth region rather than the jaw.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.JawSidewaysRight",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Jaw_Sideways_Right",
+      "openxr_enum": "XR_FACE_EXPRESSION_JAW_SIDEWAYS_RIGHT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 27,
+      "fea_name": "JawThrust",
+      "facs_kind": "AD",
+      "facs_code": "AD29",
+      "facs_number": 29,
+      "facs_name": "Jaw Thrust",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "FACS 2002 treats jaw thrust as an Action Descriptor (AD29), not a muscle-based facial AU.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | callifacs_human_ad_reference",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.JawThrust",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Jaw_Thrust",
+      "openxr_enum": "XR_FACE_EXPRESSION_JAW_THRUST_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 28,
+      "fea_name": "LidTightenerL",
+      "facs_kind": "AU",
+      "facs_code": "AU7",
+      "facs_number": 7,
+      "facs_name": "Lid Tightener",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LidTightenerL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lid_Tightener_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LID_TIGHTENER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 29,
+      "fea_name": "LidTightenerR",
+      "facs_kind": "AU",
+      "facs_code": "AU7",
+      "facs_number": 7,
+      "facs_name": "Lid Tightener",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LidTightenerR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lid_Tightener_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LID_TIGHTENER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 30,
+      "fea_name": "LipCornerDepressorL",
+      "facs_kind": "AU",
+      "facs_code": "AU15",
+      "facs_number": 15,
+      "facs_name": "Lip Corner Depressor",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipCornerDepressorL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Corner_Depressor_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_CORNER_DEPRESSOR_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 31,
+      "fea_name": "LipCornerDepressorR",
+      "facs_kind": "AU",
+      "facs_code": "AU15",
+      "facs_number": 15,
+      "facs_name": "Lip Corner Depressor",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipCornerDepressorR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Corner_Depressor_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_CORNER_DEPRESSOR_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 32,
+      "fea_name": "LipCornerPullerL",
+      "facs_kind": "AU",
+      "facs_code": "AU12",
+      "facs_number": 12,
+      "facs_name": "Lip Corner Puller",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipCornerPullerL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Corner_Puller_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_CORNER_PULLER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 33,
+      "fea_name": "LipCornerPullerR",
+      "facs_kind": "AU",
+      "facs_code": "AU12",
+      "facs_number": 12,
+      "facs_name": "Lip Corner Puller",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipCornerPullerR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Corner_Puller_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_CORNER_PULLER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 34,
+      "fea_name": "LipFunnelerLB",
+      "facs_kind": "AU",
+      "facs_code": "AU22",
+      "facs_number": 22,
+      "facs_name": "Lip Funneler",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-funneler components; together they correspond semantically to the AU22 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipFunnelerLB",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Funneler_LB",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_FUNNELER_LB_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 35,
+      "fea_name": "LipFunnelerLT",
+      "facs_kind": "AU",
+      "facs_code": "AU22",
+      "facs_number": 22,
+      "facs_name": "Lip Funneler",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-funneler components; together they correspond semantically to the AU22 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipFunnelerLT",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Funneler_LT",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_FUNNELER_LT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 36,
+      "fea_name": "LipFunnelerRB",
+      "facs_kind": "AU",
+      "facs_code": "AU22",
+      "facs_number": 22,
+      "facs_name": "Lip Funneler",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-funneler components; together they correspond semantically to the AU22 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipFunnelerRB",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Funneler_RB",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_FUNNELER_RB_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 37,
+      "fea_name": "LipFunnelerRT",
+      "facs_kind": "AU",
+      "facs_code": "AU22",
+      "facs_number": 22,
+      "facs_name": "Lip Funneler",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-funneler components; together they correspond semantically to the AU22 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipFunnelerRT",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Funneler_RT",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_FUNNELER_RT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 38,
+      "fea_name": "LipPressorL",
+      "facs_kind": "AU",
+      "facs_code": "AU24",
+      "facs_number": 24,
+      "facs_name": "Lip Pressor",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipPressorL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Pressor_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_PRESSOR_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 39,
+      "fea_name": "LipPressorR",
+      "facs_kind": "AU",
+      "facs_code": "AU24",
+      "facs_number": 24,
+      "facs_name": "Lip Pressor",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipPressorR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Pressor_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_PRESSOR_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 40,
+      "fea_name": "LipPuckerL",
+      "facs_kind": "AU",
+      "facs_code": "AU18",
+      "facs_number": 18,
+      "facs_name": "Lip Puckerer",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipPuckerL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Pucker_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_PUCKER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 41,
+      "fea_name": "LipPuckerR",
+      "facs_kind": "AU",
+      "facs_code": "AU18",
+      "facs_number": 18,
+      "facs_name": "Lip Puckerer",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipPuckerR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Pucker_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_PUCKER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 42,
+      "fea_name": "LipStretcherL",
+      "facs_kind": "AU",
+      "facs_code": "AU20",
+      "facs_number": 20,
+      "facs_name": "Lip Stretcher",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipStretcherL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Stretcher_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_STRETCHER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 43,
+      "fea_name": "LipStretcherR",
+      "facs_kind": "AU",
+      "facs_code": "AU20",
+      "facs_number": 20,
+      "facs_name": "Lip Stretcher",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipStretcherR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Stretcher_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_STRETCHER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 44,
+      "fea_name": "LipSuckLB",
+      "facs_kind": "AU",
+      "facs_code": "AU28",
+      "facs_number": 28,
+      "facs_name": "Lip Suck",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-suck components; together they correspond semantically to the AU28 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipSuckLB",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Suck_LB",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_SUCK_LB_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 45,
+      "fea_name": "LipSuckLT",
+      "facs_kind": "AU",
+      "facs_code": "AU28",
+      "facs_number": 28,
+      "facs_name": "Lip Suck",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-suck components; together they correspond semantically to the AU28 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipSuckLT",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Suck_LT",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_SUCK_LT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 46,
+      "fea_name": "LipSuckRB",
+      "facs_kind": "AU",
+      "facs_code": "AU28",
+      "facs_number": 28,
+      "facs_name": "Lip Suck",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-suck components; together they correspond semantically to the AU28 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipSuckRB",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Suck_RB",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_SUCK_RB_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 47,
+      "fea_name": "LipSuckRT",
+      "facs_kind": "AU",
+      "facs_code": "AU28",
+      "facs_number": 28,
+      "facs_name": "Lip Suck",
+      "mapping_status": "component_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "One of four Meta lip-suck components; together they correspond semantically to the AU28 movement.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipSuckRT",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Suck_RT",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_SUCK_RT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 48,
+      "fea_name": "LipTightenerL",
+      "facs_kind": "AU",
+      "facs_code": "AU23",
+      "facs_number": 23,
+      "facs_name": "Lip Tightener",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipTightenerL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Tightener_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_TIGHTENER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 49,
+      "fea_name": "LipTightenerR",
+      "facs_kind": "AU",
+      "facs_code": "AU23",
+      "facs_number": 23,
+      "facs_name": "Lip Tightener",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipTightenerR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lip_Tightener_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIP_TIGHTENER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 50,
+      "fea_name": "LipsToward",
+      "facs_kind": "AU",
+      "facs_code": "AU8",
+      "facs_number": 8,
+      "facs_name": "Lips Toward Each Other",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "Semantic correspondence to AU8. Do not use this coefficient as the numerical inverse of AU25 (Lips Part).",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LipsToward",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lips_Toward",
+      "openxr_enum": "XR_FACE_EXPRESSION_LIPS_TOWARD_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 51,
+      "fea_name": "LowerLipDepressorL",
+      "facs_kind": "AU",
+      "facs_code": "AU16",
+      "facs_number": 16,
+      "facs_name": "Lower Lip Depressor",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LowerLipDepressorL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lower_Lip_Depressor_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_LOWER_LIP_DEPRESSOR_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 52,
+      "fea_name": "LowerLipDepressorR",
+      "facs_kind": "AU",
+      "facs_code": "AU16",
+      "facs_number": 16,
+      "facs_name": "Lower Lip Depressor",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.LowerLipDepressorR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Lower_Lip_Depressor_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_LOWER_LIP_DEPRESSOR_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 53,
+      "fea_name": "MouthLeft",
+      "facs_kind": "unmapped",
+      "facs_code": "",
+      "facs_number": "",
+      "facs_name": "",
+      "mapping_status": "no_unique_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "No unique single FACS AU/AD correspondence is assigned; do not equate this mouth translation with AD30 jaw sideways.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.MouthLeft",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Mouth_Left",
+      "openxr_enum": "XR_FACE_EXPRESSION_MOUTH_LEFT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 54,
+      "fea_name": "MouthRight",
+      "facs_kind": "unmapped",
+      "facs_code": "",
+      "facs_number": "",
+      "facs_name": "",
+      "mapping_status": "no_unique_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "No unique single FACS AU/AD correspondence is assigned; do not equate this mouth translation with AD30 jaw sideways.",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.MouthRight",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Mouth_Right",
+      "openxr_enum": "XR_FACE_EXPRESSION_MOUTH_RIGHT_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 55,
+      "fea_name": "NoseWrinklerL",
+      "facs_kind": "AU",
+      "facs_code": "AU9",
+      "facs_number": 9,
+      "facs_name": "Nose Wrinkler",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.NoseWrinklerL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Nose_Wrinkler_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_NOSE_WRINKLER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 56,
+      "fea_name": "NoseWrinklerR",
+      "facs_kind": "AU",
+      "facs_code": "AU9",
+      "facs_number": 9,
+      "facs_name": "Nose Wrinkler",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.NoseWrinklerR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Nose_Wrinkler_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_NOSE_WRINKLER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 57,
+      "fea_name": "OuterBrowRaiserL",
+      "facs_kind": "AU",
+      "facs_code": "AU2",
+      "facs_number": 2,
+      "facs_name": "Outer Brow Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.OuterBrowRaiserL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Outer_Brow_Raiser_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_OUTER_BROW_RAISER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 58,
+      "fea_name": "OuterBrowRaiserR",
+      "facs_kind": "AU",
+      "facs_code": "AU2",
+      "facs_number": 2,
+      "facs_name": "Outer Brow Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.OuterBrowRaiserR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Outer_Brow_Raiser_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_OUTER_BROW_RAISER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 59,
+      "fea_name": "UpperLidRaiserL",
+      "facs_kind": "AU",
+      "facs_code": "AU5",
+      "facs_number": 5,
+      "facs_name": "Upper Lid Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.UpperLidRaiserL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Upper_Lid_Raiser_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_UPPER_LID_RAISER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 60,
+      "fea_name": "UpperLidRaiserR",
+      "facs_kind": "AU",
+      "facs_code": "AU5",
+      "facs_number": 5,
+      "facs_name": "Upper Lid Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.UpperLidRaiserR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Upper_Lid_Raiser_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_UPPER_LID_RAISER_R_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 61,
+      "fea_name": "UpperLipRaiserL",
+      "facs_kind": "AU",
+      "facs_code": "AU10",
+      "facs_number": 10,
+      "facs_name": "Upper Lip Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.UpperLipRaiserL",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Upper_Lip_Raiser_L",
+      "openxr_enum": "XR_FACE_EXPRESSION_UPPER_LIP_RAISER_L_FB"
+    },
+    {
+      "api_family": "Meta XR Face Tracking / XR_FB_face_tracking",
+      "api_id_0based": 62,
+      "fea_name": "UpperLipRaiserR",
+      "facs_kind": "AU",
+      "facs_code": "AU10",
+      "facs_number": 10,
+      "facs_name": "Upper Lip Raiser",
+      "mapping_status": "direct_semantic_correspondence",
+      "mapping_basis": "semantic crosswalk; not an official or validated FEA-to-FACS conversion",
+      "notes": "",
+      "source_ids": "meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007",
+      "meta_unity_member": "OVRFaceExpressions.FaceExpression.UpperLipRaiserR",
+      "meta_plugin_value": "OVRPlugin.FaceExpression2.Upper_Lip_Raiser_R",
+      "openxr_enum": "XR_FACE_EXPRESSION_UPPER_LIP_RAISER_R_FB"
+    }
+  ],
+  "facs_to_fea": {
+    "AU4": {
+      "facs_kind": "AU",
+      "facs_number": 4,
+      "facs_name": "Brow Lowerer",
+      "fea_names": [
+        "BrowLowererL",
+        "BrowLowererR"
+      ],
+      "fea_api_ids_0based": [
+        0,
+        1
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AD34": {
+      "facs_kind": "AD",
+      "facs_number": 34,
+      "facs_name": "Cheek Puff",
+      "fea_names": [
+        "CheekPuffL",
+        "CheekPuffR"
+      ],
+      "fea_api_ids_0based": [
+        2,
+        3
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU6": {
+      "facs_kind": "AU",
+      "facs_number": 6,
+      "facs_name": "Cheek Raiser",
+      "fea_names": [
+        "CheekRaiserL",
+        "CheekRaiserR"
+      ],
+      "fea_api_ids_0based": [
+        4,
+        5
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AD35": {
+      "facs_kind": "AD",
+      "facs_number": 35,
+      "facs_name": "Cheek Suck",
+      "fea_names": [
+        "CheekSuckL",
+        "CheekSuckR"
+      ],
+      "fea_api_ids_0based": [
+        6,
+        7
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU17": {
+      "facs_kind": "AU",
+      "facs_number": 17,
+      "facs_name": "Chin Raiser",
+      "fea_names": [
+        "ChinRaiserB",
+        "ChinRaiserT"
+      ],
+      "fea_api_ids_0based": [
+        8,
+        9
+      ],
+      "mapping_statuses": [
+        "component_correspondence"
+      ]
+    },
+    "AU14": {
+      "facs_kind": "AU",
+      "facs_number": 14,
+      "facs_name": "Dimpler",
+      "fea_names": [
+        "DimplerL",
+        "DimplerR"
+      ],
+      "fea_api_ids_0based": [
+        10,
+        11
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU43": {
+      "facs_kind": "AU",
+      "facs_number": 43,
+      "facs_name": "Eyes Closed",
+      "fea_names": [
+        "EyesClosedL",
+        "EyesClosedR"
+      ],
+      "fea_api_ids_0based": [
+        12,
+        13
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "EYE64": {
+      "facs_kind": "eye_position",
+      "facs_number": 64,
+      "facs_name": "Eyes Down",
+      "fea_names": [
+        "EyesLookDownL",
+        "EyesLookDownR"
+      ],
+      "fea_api_ids_0based": [
+        14,
+        15
+      ],
+      "mapping_statuses": [
+        "approximate_eye_position_correspondence"
+      ]
+    },
+    "EYE61": {
+      "facs_kind": "eye_position",
+      "facs_number": 61,
+      "facs_name": "Eyes Turn Left",
+      "fea_names": [
+        "EyesLookLeftL",
+        "EyesLookLeftR"
+      ],
+      "fea_api_ids_0based": [
+        16,
+        17
+      ],
+      "mapping_statuses": [
+        "approximate_eye_position_correspondence"
+      ]
+    },
+    "EYE62": {
+      "facs_kind": "eye_position",
+      "facs_number": 62,
+      "facs_name": "Eyes Turn Right",
+      "fea_names": [
+        "EyesLookRightL",
+        "EyesLookRightR"
+      ],
+      "fea_api_ids_0based": [
+        18,
+        19
+      ],
+      "mapping_statuses": [
+        "approximate_eye_position_correspondence"
+      ]
+    },
+    "EYE63": {
+      "facs_kind": "eye_position",
+      "facs_number": 63,
+      "facs_name": "Eyes Up",
+      "fea_names": [
+        "EyesLookUpL",
+        "EyesLookUpR"
+      ],
+      "fea_api_ids_0based": [
+        20,
+        21
+      ],
+      "mapping_statuses": [
+        "approximate_eye_position_correspondence"
+      ]
+    },
+    "AU1": {
+      "facs_kind": "AU",
+      "facs_number": 1,
+      "facs_name": "Inner Brow Raiser",
+      "fea_names": [
+        "InnerBrowRaiserL",
+        "InnerBrowRaiserR"
+      ],
+      "fea_api_ids_0based": [
+        22,
+        23
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU26": {
+      "facs_kind": "AU",
+      "facs_number": 26,
+      "facs_name": "Jaw Drop",
+      "fea_names": [
+        "JawDrop"
+      ],
+      "fea_api_ids_0based": [
+        24
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AD30": {
+      "facs_kind": "AD",
+      "facs_number": 30,
+      "facs_name": "Jaw Sideways",
+      "fea_names": [
+        "JawSidewaysLeft",
+        "JawSidewaysRight"
+      ],
+      "fea_api_ids_0based": [
+        25,
+        26
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AD29": {
+      "facs_kind": "AD",
+      "facs_number": 29,
+      "facs_name": "Jaw Thrust",
+      "fea_names": [
+        "JawThrust"
+      ],
+      "fea_api_ids_0based": [
+        27
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU7": {
+      "facs_kind": "AU",
+      "facs_number": 7,
+      "facs_name": "Lid Tightener",
+      "fea_names": [
+        "LidTightenerL",
+        "LidTightenerR"
+      ],
+      "fea_api_ids_0based": [
+        28,
+        29
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU15": {
+      "facs_kind": "AU",
+      "facs_number": 15,
+      "facs_name": "Lip Corner Depressor",
+      "fea_names": [
+        "LipCornerDepressorL",
+        "LipCornerDepressorR"
+      ],
+      "fea_api_ids_0based": [
+        30,
+        31
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU12": {
+      "facs_kind": "AU",
+      "facs_number": 12,
+      "facs_name": "Lip Corner Puller",
+      "fea_names": [
+        "LipCornerPullerL",
+        "LipCornerPullerR"
+      ],
+      "fea_api_ids_0based": [
+        32,
+        33
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU22": {
+      "facs_kind": "AU",
+      "facs_number": 22,
+      "facs_name": "Lip Funneler",
+      "fea_names": [
+        "LipFunnelerLB",
+        "LipFunnelerLT",
+        "LipFunnelerRB",
+        "LipFunnelerRT"
+      ],
+      "fea_api_ids_0based": [
+        34,
+        35,
+        36,
+        37
+      ],
+      "mapping_statuses": [
+        "component_correspondence"
+      ]
+    },
+    "AU24": {
+      "facs_kind": "AU",
+      "facs_number": 24,
+      "facs_name": "Lip Pressor",
+      "fea_names": [
+        "LipPressorL",
+        "LipPressorR"
+      ],
+      "fea_api_ids_0based": [
+        38,
+        39
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU18": {
+      "facs_kind": "AU",
+      "facs_number": 18,
+      "facs_name": "Lip Puckerer",
+      "fea_names": [
+        "LipPuckerL",
+        "LipPuckerR"
+      ],
+      "fea_api_ids_0based": [
+        40,
+        41
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU20": {
+      "facs_kind": "AU",
+      "facs_number": 20,
+      "facs_name": "Lip Stretcher",
+      "fea_names": [
+        "LipStretcherL",
+        "LipStretcherR"
+      ],
+      "fea_api_ids_0based": [
+        42,
+        43
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU28": {
+      "facs_kind": "AU",
+      "facs_number": 28,
+      "facs_name": "Lip Suck",
+      "fea_names": [
+        "LipSuckLB",
+        "LipSuckLT",
+        "LipSuckRB",
+        "LipSuckRT"
+      ],
+      "fea_api_ids_0based": [
+        44,
+        45,
+        46,
+        47
+      ],
+      "mapping_statuses": [
+        "component_correspondence"
+      ]
+    },
+    "AU23": {
+      "facs_kind": "AU",
+      "facs_number": 23,
+      "facs_name": "Lip Tightener",
+      "fea_names": [
+        "LipTightenerL",
+        "LipTightenerR"
+      ],
+      "fea_api_ids_0based": [
+        48,
+        49
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU8": {
+      "facs_kind": "AU",
+      "facs_number": 8,
+      "facs_name": "Lips Toward Each Other",
+      "fea_names": [
+        "LipsToward"
+      ],
+      "fea_api_ids_0based": [
+        50
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU16": {
+      "facs_kind": "AU",
+      "facs_number": 16,
+      "facs_name": "Lower Lip Depressor",
+      "fea_names": [
+        "LowerLipDepressorL",
+        "LowerLipDepressorR"
+      ],
+      "fea_api_ids_0based": [
+        51,
+        52
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU9": {
+      "facs_kind": "AU",
+      "facs_number": 9,
+      "facs_name": "Nose Wrinkler",
+      "fea_names": [
+        "NoseWrinklerL",
+        "NoseWrinklerR"
+      ],
+      "fea_api_ids_0based": [
+        55,
+        56
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU2": {
+      "facs_kind": "AU",
+      "facs_number": 2,
+      "facs_name": "Outer Brow Raiser",
+      "fea_names": [
+        "OuterBrowRaiserL",
+        "OuterBrowRaiserR"
+      ],
+      "fea_api_ids_0based": [
+        57,
+        58
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU5": {
+      "facs_kind": "AU",
+      "facs_number": 5,
+      "facs_name": "Upper Lid Raiser",
+      "fea_names": [
+        "UpperLidRaiserL",
+        "UpperLidRaiserR"
+      ],
+      "fea_api_ids_0based": [
+        59,
+        60
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    },
+    "AU10": {
+      "facs_kind": "AU",
+      "facs_number": 10,
+      "facs_name": "Upper Lip Raiser",
+      "fea_names": [
+        "UpperLipRaiserL",
+        "UpperLipRaiserR"
+      ],
+      "fea_api_ids_0based": [
+        61,
+        62
+      ],
+      "mapping_statuses": [
+        "direct_semantic_correspondence"
+      ]
+    }
+  },
+  "paper_table": {
+    "source_description": "Current WIP Table 1: upper- and lower-face AUs involved in typical configurations for six basic emotions, compiled from FACS Investigator's Guide Table 10-1.",
+    "category_definition": {
+      "Anger": {
+        "upper": [
+          4,
+          5,
+          7
+        ],
+        "lower": [
+          10,
+          17,
+          22,
+          23,
+          24,
+          25,
+          26
+        ]
+      },
+      "Disgust": {
+        "upper": [],
+        "lower": [
+          9,
+          10,
+          15,
+          16,
+          17,
+          25,
+          26
+        ]
+      },
+      "Fear": {
+        "upper": [
+          1,
+          2,
+          4,
+          5
+        ],
+        "lower": [
+          20,
+          25,
+          26,
+          27
+        ]
+      },
+      "Happiness": {
+        "upper": [
+          6
+        ],
+        "lower": [
+          12
+        ]
+      },
+      "Sadness": {
+        "upper": [
+          1,
+          4,
+          6
+        ],
+        "lower": [
+          11,
+          15,
+          17,
+          25,
+          26
+        ]
+      },
+      "Surprise": {
+        "upper": [
+          1,
+          2,
+          5
+        ],
+        "lower": [
+          26,
+          27
+        ]
+      }
+    },
+    "au_to_fea": [
+      {
+        "au_number": 1,
+        "au_code": "AU1",
+        "au_name": "Inner Brow Raiser",
+        "paper_face_region": "upper",
+        "paper_expression_categories": "Fear | Sadness | Surprise",
+        "fea_names": "InnerBrowRaiserL | InnerBrowRaiserR",
+        "fea_api_ids_0based": "22 | 23",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 2,
+        "au_code": "AU2",
+        "au_name": "Outer Brow Raiser",
+        "paper_face_region": "upper",
+        "paper_expression_categories": "Fear | Surprise",
+        "fea_names": "OuterBrowRaiserL | OuterBrowRaiserR",
+        "fea_api_ids_0based": "57 | 58",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 4,
+        "au_code": "AU4",
+        "au_name": "Brow Lowerer",
+        "paper_face_region": "upper",
+        "paper_expression_categories": "Anger | Fear | Sadness",
+        "fea_names": "BrowLowererL | BrowLowererR",
+        "fea_api_ids_0based": "0 | 1",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 5,
+        "au_code": "AU5",
+        "au_name": "Upper Lid Raiser",
+        "paper_face_region": "upper",
+        "paper_expression_categories": "Anger | Fear | Surprise",
+        "fea_names": "UpperLidRaiserL | UpperLidRaiserR",
+        "fea_api_ids_0based": "59 | 60",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 6,
+        "au_code": "AU6",
+        "au_name": "Cheek Raiser",
+        "paper_face_region": "upper",
+        "paper_expression_categories": "Happiness | Sadness",
+        "fea_names": "CheekRaiserL | CheekRaiserR",
+        "fea_api_ids_0based": "4 | 5",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 7,
+        "au_code": "AU7",
+        "au_name": "Lid Tightener",
+        "paper_face_region": "upper",
+        "paper_expression_categories": "Anger",
+        "fea_names": "LidTightenerL | LidTightenerR",
+        "fea_api_ids_0based": "28 | 29",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 9,
+        "au_code": "AU9",
+        "au_name": "Nose Wrinkler",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Disgust",
+        "fea_names": "NoseWrinklerL | NoseWrinklerR",
+        "fea_api_ids_0based": "55 | 56",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 10,
+        "au_code": "AU10",
+        "au_name": "Upper Lip Raiser",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger | Disgust",
+        "fea_names": "UpperLipRaiserL | UpperLipRaiserR",
+        "fea_api_ids_0based": "61 | 62",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 11,
+        "au_code": "AU11",
+        "au_name": "Nasolabial Deepener",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Sadness",
+        "fea_names": "",
+        "fea_api_ids_0based": "",
+        "fea_count": 0,
+        "mapping_status": "no_dedicated_fea",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "No dedicated FEA channel in the 63-channel EmoHeVRDB schema.",
+        "source_ids": "paper_table_facs_2002 | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 12,
+        "au_code": "AU12",
+        "au_name": "Lip Corner Puller",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Happiness",
+        "fea_names": "LipCornerPullerL | LipCornerPullerR",
+        "fea_api_ids_0based": "32 | 33",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 15,
+        "au_code": "AU15",
+        "au_name": "Lip Corner Depressor",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Disgust | Sadness",
+        "fea_names": "LipCornerDepressorL | LipCornerDepressorR",
+        "fea_api_ids_0based": "30 | 31",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 16,
+        "au_code": "AU16",
+        "au_name": "Lower Lip Depressor",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Disgust",
+        "fea_names": "LowerLipDepressorL | LowerLipDepressorR",
+        "fea_api_ids_0based": "51 | 52",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 17,
+        "au_code": "AU17",
+        "au_name": "Chin Raiser",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger | Disgust | Sadness",
+        "fea_names": "ChinRaiserB | ChinRaiserT",
+        "fea_api_ids_0based": "8 | 9",
+        "fea_count": 2,
+        "mapping_status": "component_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "Meta splits the chin-raiser-related deformation into bottom/top components; both are treated as components related to AU17, not as separate AUs.",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 20,
+        "au_code": "AU20",
+        "au_name": "Lip Stretcher",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Fear",
+        "fea_names": "LipStretcherL | LipStretcherR",
+        "fea_api_ids_0based": "42 | 43",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 22,
+        "au_code": "AU22",
+        "au_name": "Lip Funneler",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger",
+        "fea_names": "LipFunnelerLB | LipFunnelerLT | LipFunnelerRB | LipFunnelerRT",
+        "fea_api_ids_0based": "34 | 35 | 36 | 37",
+        "fea_count": 4,
+        "mapping_status": "component_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "One of four Meta lip-funneler components; together they correspond semantically to the AU22 movement.",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 23,
+        "au_code": "AU23",
+        "au_name": "Lip Tightener",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger",
+        "fea_names": "LipTightenerL | LipTightenerR",
+        "fea_api_ids_0based": "48 | 49",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 24,
+        "au_code": "AU24",
+        "au_name": "Lip Pressor",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger",
+        "fea_names": "LipPressorL | LipPressorR",
+        "fea_api_ids_0based": "38 | 39",
+        "fea_count": 2,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 25,
+        "au_code": "AU25",
+        "au_name": "Lips Part",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger | Disgust | Fear | Sadness",
+        "fea_names": "",
+        "fea_api_ids_0based": "",
+        "fea_count": 0,
+        "mapping_status": "no_dedicated_fea",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "No dedicated FEA channel. Neither JawDrop nor 1 − LipsToward is treated as a validated AU25 measure.",
+        "source_ids": "paper_table_facs_2002 | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 26,
+        "au_code": "AU26",
+        "au_name": "Jaw Drop",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Anger | Disgust | Fear | Sadness | Surprise",
+        "fea_names": "JawDrop",
+        "fea_api_ids_0based": "24",
+        "fea_count": 1,
+        "mapping_status": "direct_semantic_correspondence",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "Semantic correspondence to AU26. FACS 2002 distinguishes AU25, AU26, and AU27; this single vendor coefficient is not a validated FACS coding of those distinctions.",
+        "source_ids": "paper_table_facs_2002 | meta_face_tracking_guide | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      },
+      {
+        "au_number": 27,
+        "au_code": "AU27",
+        "au_name": "Mouth Stretch",
+        "paper_face_region": "lower",
+        "paper_expression_categories": "Fear | Surprise",
+        "fea_names": "",
+        "fea_api_ids_0based": "",
+        "fea_count": 0,
+        "mapping_status": "no_dedicated_fea",
+        "mapping_basis": "paper AU membership from current Table 1; FEA link is a semantic crosswalk, not a validated AU measurement",
+        "notes": "No dedicated FEA channel. A high JawDrop value is not treated as a validated AU27 measure.",
+        "source_ids": "paper_table_facs_2002 | openxr_xrfaceexpressionfb | cohn_ambadar_ekman_2007"
+      }
+    ]
+  },
+  "important_non_mappings": [
+    {
+      "facs_code": "AU11",
+      "facs_name": "Nasolabial Deepener",
+      "reason": "No dedicated channel in the 63-feature schema."
+    },
+    {
+      "facs_code": "AU13",
+      "facs_name": "Sharp Lip Puller",
+      "reason": "No dedicated channel; CheekPuff maps to AD34 instead."
+    },
+    {
+      "facs_code": "AU21",
+      "facs_name": "Neck Tightener",
+      "reason": "No dedicated channel in the 63-feature schema."
+    },
+    {
+      "facs_code": "AU25",
+      "facs_name": "Lips Part",
+      "reason": "No dedicated channel; do not derive it as the inverse of LipsToward."
+    },
+    {
+      "facs_code": "AU27",
+      "facs_name": "Mouth Stretch",
+      "reason": "No dedicated channel; JawDrop is not a validated substitute."
+    },
+    {
+      "facs_code": "AU31",
+      "facs_name": "Jaw Clencher",
+      "reason": "No dedicated channel in the 63-feature schema."
+    },
+    {
+      "facs_code": "AU38",
+      "facs_name": "Nostril Dilator",
+      "reason": "No dedicated channel; do not substitute NoseWrinkler."
+    },
+    {
+      "facs_code": "AU39",
+      "facs_name": "Nostril Compressor",
+      "reason": "No dedicated channel; do not substitute NoseWrinkler."
+    },
+    {
+      "facs_code": "AU45",
+      "facs_name": "Blink",
+      "reason": "No dedicated temporal blink channel; EyesClosed is not automatically coded as AU45."
+    },
+    {
+      "facs_code": "AU46",
+      "facs_name": "Wink",
+      "reason": "No dedicated wink channel; unilateral EyesClosed is not automatically coded as AU46."
+    }
+  ],
+  "naming_conventions": {
+    "canonical_project_field": "fea_name",
+    "canonical_style": "PascalCase",
+    "rationale": "The canonical project name matches both the EmoHeVRDB feature-column names and the public OVRFaceExpressions.FaceExpression enum member exposed by Meta's Unity API.",
+    "representations": {
+      "fea_name": {
+        "example": "BrowLowererL",
+        "meaning": "Canonical short name used in EmoHeVRDB CSVs, analysis code, and mapping files."
+      },
+      "meta_unity_member": {
+        "example": "OVRFaceExpressions.FaceExpression.BrowLowererL",
+        "meaning": "Fully qualified public Unity FaceExpression enum member; uses PascalCase."
+      },
+      "meta_plugin_value": {
+        "example": "OVRPlugin.FaceExpression2.Brow_Lowerer_L",
+        "meaning": "Lower-level OVRPlugin.FaceExpression2 enum value referenced by the public Unity member; uses underscores."
+      },
+      "openxr_enum": {
+        "example": "XR_FACE_EXPRESSION_BROW_LOWERER_L_FB",
+        "meaning": "Corresponding OpenXR XrFaceExpressionFB C enum constant."
+      }
+    },
+    "usage": "Use fea_name as the stable key in project data and analyses. Use the fully qualified Meta/OpenXR aliases when documenting API provenance or when matching code against the corresponding API layer."
+  }
+}

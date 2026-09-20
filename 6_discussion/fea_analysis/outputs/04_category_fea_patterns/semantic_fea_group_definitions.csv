@@ -1,0 +1,33 @@
+group_id,group_label,facs_kind,fea_count,fea_names,mapping_statuses
+AU1,AU1 Inner Brow Raiser,AU,2,InnerBrowRaiserL | InnerBrowRaiserR,direct_semantic_correspondence
+AU2,AU2 Outer Brow Raiser,AU,2,OuterBrowRaiserL | OuterBrowRaiserR,direct_semantic_correspondence
+AU4,AU4 Brow Lowerer,AU,2,BrowLowererL | BrowLowererR,direct_semantic_correspondence
+AU5,AU5 Upper Lid Raiser,AU,2,UpperLidRaiserL | UpperLidRaiserR,direct_semantic_correspondence
+AU6,AU6 Cheek Raiser,AU,2,CheekRaiserL | CheekRaiserR,direct_semantic_correspondence
+AU7,AU7 Lid Tightener,AU,2,LidTightenerL | LidTightenerR,direct_semantic_correspondence
+AU8,AU8 Lips Toward Each Other,AU,1,LipsToward,direct_semantic_correspondence
+AU9,AU9 Nose Wrinkler,AU,2,NoseWrinklerL | NoseWrinklerR,direct_semantic_correspondence
+AU10,AU10 Upper Lip Raiser,AU,2,UpperLipRaiserL | UpperLipRaiserR,direct_semantic_correspondence
+AU12,AU12 Lip Corner Puller,AU,2,LipCornerPullerL | LipCornerPullerR,direct_semantic_correspondence
+AU14,AU14 Dimpler,AU,2,DimplerL | DimplerR,direct_semantic_correspondence
+AU15,AU15 Lip Corner Depressor,AU,2,LipCornerDepressorL | LipCornerDepressorR,direct_semantic_correspondence
+AU16,AU16 Lower Lip Depressor,AU,2,LowerLipDepressorL | LowerLipDepressorR,direct_semantic_correspondence
+AU17,AU17 Chin Raiser,AU,2,ChinRaiserB | ChinRaiserT,component_correspondence
+AU18,AU18 Lip Puckerer,AU,2,LipPuckerL | LipPuckerR,direct_semantic_correspondence
+AU20,AU20 Lip Stretcher,AU,2,LipStretcherL | LipStretcherR,direct_semantic_correspondence
+AU22,AU22 Lip Funneler,AU,4,LipFunnelerLB | LipFunnelerLT | LipFunnelerRB | LipFunnelerRT,component_correspondence
+AU23,AU23 Lip Tightener,AU,2,LipTightenerL | LipTightenerR,direct_semantic_correspondence
+AU24,AU24 Lip Pressor,AU,2,LipPressorL | LipPressorR,direct_semantic_correspondence
+AU26,AU26 Jaw Drop,AU,1,JawDrop,direct_semantic_correspondence
+AU28,AU28 Lip Suck,AU,4,LipSuckLB | LipSuckLT | LipSuckRB | LipSuckRT,component_correspondence
+AU43,AU43 Eyes Closed,AU,2,EyesClosedL | EyesClosedR,direct_semantic_correspondence
+AD29,AD29 Jaw Thrust,AD,1,JawThrust,direct_semantic_correspondence
+AD30,AD30 Jaw Sideways,AD,2,JawSidewaysLeft | JawSidewaysRight,direct_semantic_correspondence
+AD34,AD34 Cheek Puff,AD,2,CheekPuffL | CheekPuffR,direct_semantic_correspondence
+AD35,AD35 Cheek Suck,AD,2,CheekSuckL | CheekSuckR,direct_semantic_correspondence
+EYE61,EYE61 Eyes Turn Left,eye_position,2,EyesLookLeftL | EyesLookLeftR,approximate_eye_position_correspondence
+EYE62,EYE62 Eyes Turn Right,eye_position,2,EyesLookRightL | EyesLookRightR,approximate_eye_position_correspondence
+EYE63,EYE63 Eyes Up,eye_position,2,EyesLookUpL | EyesLookUpR,approximate_eye_position_correspondence
+EYE64,EYE64 Eyes Down,eye_position,2,EyesLookDownL | EyesLookDownR,approximate_eye_position_correspondence
+UNMAPPED_MouthLeft,MouthLeft (unmapped),unmapped,1,MouthLeft,no_unique_correspondence
+UNMAPPED_MouthRight,MouthRight (unmapped),unmapped,1,MouthRight,no_unique_correspondence

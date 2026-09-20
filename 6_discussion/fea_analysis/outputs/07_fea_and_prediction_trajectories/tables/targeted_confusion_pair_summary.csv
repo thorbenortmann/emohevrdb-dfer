@@ -1,0 +1,5 @@
+true_class,final_predicted_class,n_errors,fea_groups_shown
+Anger,Disgust,23,AU4 · Brow Lowerer | AU17 · Chin Raiser | AU9 · Nose Wrinkler
+Disgust,Anger,2,AU9 · Nose Wrinkler | AU4 · Brow Lowerer | AU17 · Chin Raiser
+Fear,Surprise,8,AU5 · Upper Lid Raiser | AU2 · Outer Brow Raiser | AU26 · Jaw Drop
+Surprise,Fear,1,AU26 · Jaw Drop | AU2 · Outer Brow Raiser | AU5 · Upper Lid Raiser

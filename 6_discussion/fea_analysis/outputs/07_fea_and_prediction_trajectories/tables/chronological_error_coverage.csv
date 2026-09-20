@@ -1,0 +1,13 @@
+source,target,view,outcome,n_reenactments,n_participants,n_shared_participants
+Anger,Disgust,sample_weighted,Correct,28,6,3
+Anger,Disgust,sample_weighted,Error,23,5,3
+Anger,Disgust,shared_participant_balanced,Correct,8,3,3
+Anger,Disgust,shared_participant_balanced,Error,8,3,3
+Disgust,Happiness,sample_weighted,Correct,30,7,3
+Disgust,Happiness,sample_weighted,Error,10,3,3
+Disgust,Happiness,shared_participant_balanced,Correct,7,3,3
+Disgust,Happiness,shared_participant_balanced,Error,10,3,3
+Fear,Surprise,sample_weighted,Correct,33,6,1
+Fear,Surprise,sample_weighted,Error,8,3,1
+Fear,Surprise,shared_participant_balanced,Correct,3,1,1
+Fear,Surprise,shared_participant_balanced,Error,2,1,1

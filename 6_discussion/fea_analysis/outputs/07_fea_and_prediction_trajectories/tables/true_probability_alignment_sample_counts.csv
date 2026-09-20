@@ -1,0 +1,14 @@
+true_label,correct_final_prediction,n_reenactments,n_with_positive_event,fraction_with_positive_event
+Anger,False,26,26,1.0
+Anger,True,28,28,1.0
+Disgust,False,24,24,1.0
+Disgust,True,30,30,1.0
+Fear,False,21,21,1.0
+Fear,True,33,33,1.0
+Happiness,True,54,54,1.0
+Neutral,False,3,3,1.0
+Neutral,True,51,51,1.0
+Sadness,False,6,6,1.0
+Sadness,True,48,48,1.0
+Surprise,False,2,2,1.0
+Surprise,True,52,52,1.0

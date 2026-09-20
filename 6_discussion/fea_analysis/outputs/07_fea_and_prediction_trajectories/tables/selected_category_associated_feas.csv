@@ -1,0 +1,22 @@
+true_label,rank,fea_name,au_code,au_name,standardized_sequence_mean,listed_for_category_in_table_1
+Anger,1,BrowLowererR,AU4,Brow Lowerer,1.088233881945931,True
+Anger,2,BrowLowererL,AU4,Brow Lowerer,1.0656783908058367,True
+Anger,3,LidTightenerL,AU7,Lid Tightener,0.839722046241125,True
+Disgust,1,NoseWrinklerL,AU9,Nose Wrinkler,1.4619372927489478,True
+Disgust,2,NoseWrinklerR,AU9,Nose Wrinkler,1.4569386435100824,True
+Disgust,3,BrowLowererL,AU4,Brow Lowerer,1.0082784528560156,False
+Fear,1,OuterBrowRaiserR,AU2,Outer Brow Raiser,0.7139683056788877,True
+Fear,2,UpperLidRaiserR,AU5,Upper Lid Raiser,0.6939038627876585,True
+Fear,3,OuterBrowRaiserL,AU2,Outer Brow Raiser,0.6897532324251674,True
+Happiness,1,LipCornerPullerR,AU12,Lip Corner Puller,1.7416161853854972,True
+Happiness,2,LipCornerPullerL,AU12,Lip Corner Puller,1.7340956935230902,True
+Happiness,3,CheekRaiserR,AU6,Cheek Raiser,1.2041332158256801,True
+Neutral,1,LipPressorR,AU24,Lip Pressor,-0.199106398623778,False
+Neutral,2,LipPressorL,AU24,Lip Pressor,-0.2005080092816094,False
+Neutral,3,LipFunnelerRB,AU22,Lip Funneler,-0.20329355757894305,False
+Sadness,1,LipCornerDepressorR,AU15,Lip Corner Depressor,1.6942834709683434,True
+Sadness,2,LipCornerDepressorL,AU15,Lip Corner Depressor,1.6815478334589442,True
+Sadness,3,ChinRaiserB,AU17,Chin Raiser,1.346382099887479,True
+Surprise,1,JawDrop,AU26,Jaw Drop,1.3844036206467822,True
+Surprise,2,OuterBrowRaiserL,AU2,Outer Brow Raiser,0.9414586851469983,True
+Surprise,3,OuterBrowRaiserR,AU2,Outer Brow Raiser,0.938784461206339,True

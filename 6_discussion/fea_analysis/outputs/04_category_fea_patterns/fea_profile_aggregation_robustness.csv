@@ -1,0 +1,5 @@
+comparison,representation,correlation
+Mean: sample-weighted vs participant-balanced,standardized,0.9926000988076122
+P90: sample-weighted vs participant-balanced,standardized,0.9939206161421866
+Sample-weighted: Mean vs P90,standardized,0.9955968584005954
+Participant-balanced: Mean vs P90,standardized,0.994539910632237

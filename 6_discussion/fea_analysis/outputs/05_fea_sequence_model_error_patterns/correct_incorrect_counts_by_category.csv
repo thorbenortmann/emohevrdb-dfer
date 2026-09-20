@@ -1,0 +1,14 @@
+true_label,classification_result,n_reenactments,n_participants
+Anger,Correct,28,6
+Anger,Incorrect,26,6
+Disgust,Correct,30,7
+Disgust,Incorrect,24,7
+Fear,Correct,33,6
+Fear,Incorrect,21,4
+Happiness,Correct,54,8
+Neutral,Correct,51,8
+Neutral,Incorrect,3,2
+Sadness,Correct,48,8
+Sadness,Incorrect,6,2
+Surprise,Correct,52,8
+Surprise,Incorrect,2,1

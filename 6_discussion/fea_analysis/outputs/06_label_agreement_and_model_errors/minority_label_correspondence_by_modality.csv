@@ -1,0 +1,22 @@
+true_label,modality,majority label,dissenting label,neither,total,minority_match_among_errors
+Anger,Image,11,10,7,28,0.5882352941176471
+Disgust,Image,30,12,10,52,0.5454545454545454
+Fear,Image,47,8,15,70,0.34782608695652173
+Happiness,Image,0,0,0,0,
+Neutral,Image,6,3,5,14,0.375
+Sadness,Image,11,1,2,14,0.3333333333333333
+Surprise,Image,18,10,0,28,1.0
+Anger,FEA,5,8,1,14,0.8888888888888888
+Disgust,FEA,15,10,1,26,0.9090909090909091
+Fear,FEA,21,8,6,35,0.5714285714285714
+Happiness,FEA,0,0,0,0,
+Neutral,FEA,7,0,0,7,
+Sadness,FEA,6,0,1,7,0.0
+Surprise,FEA,14,0,0,14,
+Anger,Multimodal,11,15,2,28,0.8823529411764706
+Disgust,Multimodal,31,16,5,52,0.7619047619047619
+Fear,Multimodal,59,6,5,70,0.5454545454545454
+Happiness,Multimodal,0,0,0,0,
+Neutral,Multimodal,13,1,0,14,1.0
+Sadness,Multimodal,12,1,1,14,0.5
+Surprise,Multimodal,18,10,0,28,1.0

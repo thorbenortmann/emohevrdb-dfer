@@ -1,0 +1,205 @@
+pair,subset,participant_id,n
+Anger__Disgust,Anger: all,1,6
+Anger__Disgust,Anger: all,8,10
+Anger__Disgust,Anger: all,10,3
+Anger__Disgust,Anger: all,13,7
+Anger__Disgust,Anger: all,15,6
+Anger__Disgust,Anger: all,18,9
+Anger__Disgust,Anger: all,23,7
+Anger__Disgust,Anger: all,27,6
+Anger__Disgust,Anger: correct,1,4
+Anger__Disgust,Anger: correct,10,1
+Anger__Disgust,Anger: correct,13,5
+Anger__Disgust,Anger: correct,15,2
+Anger__Disgust,Anger: correct,18,9
+Anger__Disgust,Anger: correct,23,7
+Anger__Disgust,Anger → Disgust,8,9
+Anger__Disgust,Anger → Disgust,10,2
+Anger__Disgust,Anger → Disgust,13,2
+Anger__Disgust,Anger → Disgust,15,4
+Anger__Disgust,Anger → Disgust,27,6
+Anger__Disgust,Disgust: all,1,9
+Anger__Disgust,Disgust: all,8,9
+Anger__Disgust,Disgust: all,10,8
+Anger__Disgust,Disgust: all,13,5
+Anger__Disgust,Disgust: all,15,7
+Anger__Disgust,Disgust: all,18,5
+Anger__Disgust,Disgust: all,23,8
+Anger__Disgust,Disgust: all,27,3
+Anger__Disgust,Disgust: correct,8,9
+Anger__Disgust,Disgust: correct,10,3
+Anger__Disgust,Disgust: correct,13,4
+Anger__Disgust,Disgust: correct,15,2
+Anger__Disgust,Disgust: correct,18,4
+Anger__Disgust,Disgust: correct,23,6
+Anger__Disgust,Disgust: correct,27,2
+Anger__Disgust,Disgust → Anger,13,1
+Anger__Disgust,Disgust → Anger,23,1
+Fear__Surprise,Fear: all,1,7
+Fear__Surprise,Fear: all,8,10
+Fear__Surprise,Fear: all,10,8
+Fear__Surprise,Fear: all,13,6
+Fear__Surprise,Fear: all,15,7
+Fear__Surprise,Fear: all,18,1
+Fear__Surprise,Fear: all,23,9
+Fear__Surprise,Fear: all,27,6
+Fear__Surprise,Fear: correct,1,7
+Fear__Surprise,Fear: correct,8,10
+Fear__Surprise,Fear: correct,10,6
+Fear__Surprise,Fear: correct,13,6
+Fear__Surprise,Fear: correct,18,1
+Fear__Surprise,Fear: correct,27,3
+Fear__Surprise,Fear → Surprise,15,1
+Fear__Surprise,Fear → Surprise,23,5
+Fear__Surprise,Fear → Surprise,27,2
+Fear__Surprise,Surprise: all,1,6
+Fear__Surprise,Surprise: all,8,7
+Fear__Surprise,Surprise: all,10,6
+Fear__Surprise,Surprise: all,13,7
+Fear__Surprise,Surprise: all,15,7
+Fear__Surprise,Surprise: all,18,7
+Fear__Surprise,Surprise: all,23,7
+Fear__Surprise,Surprise: all,27,7
+Fear__Surprise,Surprise: correct,1,6
+Fear__Surprise,Surprise: correct,8,7
+Fear__Surprise,Surprise: correct,10,6
+Fear__Surprise,Surprise: correct,13,7
+Fear__Surprise,Surprise: correct,15,5
+Fear__Surprise,Surprise: correct,18,7
+Fear__Surprise,Surprise: correct,23,7
+Fear__Surprise,Surprise: correct,27,7
+Fear__Surprise,Surprise → Fear,15,1
+Disgust__Happiness,Disgust: all,1,9
+Disgust__Happiness,Disgust: all,8,9
+Disgust__Happiness,Disgust: all,10,8
+Disgust__Happiness,Disgust: all,13,5
+Disgust__Happiness,Disgust: all,15,7
+Disgust__Happiness,Disgust: all,18,5
+Disgust__Happiness,Disgust: all,23,8
+Disgust__Happiness,Disgust: all,27,3
+Disgust__Happiness,Disgust: correct,8,9
+Disgust__Happiness,Disgust: correct,10,3
+Disgust__Happiness,Disgust: correct,13,4
+Disgust__Happiness,Disgust: correct,15,2
+Disgust__Happiness,Disgust: correct,18,4
+Disgust__Happiness,Disgust: correct,23,6
+Disgust__Happiness,Disgust: correct,27,2
+Disgust__Happiness,Disgust → Happiness,10,4
+Disgust__Happiness,Disgust → Happiness,15,5
+Disgust__Happiness,Disgust → Happiness,27,1
+Disgust__Happiness,Happiness: all,1,6
+Disgust__Happiness,Happiness: all,8,6
+Disgust__Happiness,Happiness: all,10,7
+Disgust__Happiness,Happiness: all,13,7
+Disgust__Happiness,Happiness: all,15,7
+Disgust__Happiness,Happiness: all,18,7
+Disgust__Happiness,Happiness: all,23,7
+Disgust__Happiness,Happiness: all,27,7
+Disgust__Happiness,Happiness: correct,1,6
+Disgust__Happiness,Happiness: correct,8,6
+Disgust__Happiness,Happiness: correct,10,7
+Disgust__Happiness,Happiness: correct,13,7
+Disgust__Happiness,Happiness: correct,15,7
+Disgust__Happiness,Happiness: correct,18,7
+Disgust__Happiness,Happiness: correct,23,7
+Disgust__Happiness,Happiness: correct,27,7
+Disgust__Fear,Disgust: all,1,9
+Disgust__Fear,Disgust: all,8,9
+Disgust__Fear,Disgust: all,10,8
+Disgust__Fear,Disgust: all,13,5
+Disgust__Fear,Disgust: all,15,7
+Disgust__Fear,Disgust: all,18,5
+Disgust__Fear,Disgust: all,23,8
+Disgust__Fear,Disgust: all,27,3
+Disgust__Fear,Disgust: correct,8,9
+Disgust__Fear,Disgust: correct,10,3
+Disgust__Fear,Disgust: correct,13,4
+Disgust__Fear,Disgust: correct,15,2
+Disgust__Fear,Disgust: correct,18,4
+Disgust__Fear,Disgust: correct,23,6
+Disgust__Fear,Disgust: correct,27,2
+Disgust__Fear,Disgust → Fear,1,6
+Disgust__Fear,Disgust → Fear,23,1
+Disgust__Fear,Fear: all,1,7
+Disgust__Fear,Fear: all,8,10
+Disgust__Fear,Fear: all,10,8
+Disgust__Fear,Fear: all,13,6
+Disgust__Fear,Fear: all,15,7
+Disgust__Fear,Fear: all,18,1
+Disgust__Fear,Fear: all,23,9
+Disgust__Fear,Fear: all,27,6
+Disgust__Fear,Fear: correct,1,7
+Disgust__Fear,Fear: correct,8,10
+Disgust__Fear,Fear: correct,10,6
+Disgust__Fear,Fear: correct,13,6
+Disgust__Fear,Fear: correct,18,1
+Disgust__Fear,Fear: correct,27,3
+Disgust__Fear,Fear → Disgust,15,2
+Disgust__Fear,Fear → Disgust,27,1
+Disgust__Sadness,Disgust: all,1,9
+Disgust__Sadness,Disgust: all,8,9
+Disgust__Sadness,Disgust: all,10,8
+Disgust__Sadness,Disgust: all,13,5
+Disgust__Sadness,Disgust: all,15,7
+Disgust__Sadness,Disgust: all,18,5
+Disgust__Sadness,Disgust: all,23,8
+Disgust__Sadness,Disgust: all,27,3
+Disgust__Sadness,Disgust: correct,8,9
+Disgust__Sadness,Disgust: correct,10,3
+Disgust__Sadness,Disgust: correct,13,4
+Disgust__Sadness,Disgust: correct,15,2
+Disgust__Sadness,Disgust: correct,18,4
+Disgust__Sadness,Disgust: correct,23,6
+Disgust__Sadness,Disgust: correct,27,2
+Disgust__Sadness,Disgust → Sadness,1,1
+Disgust__Sadness,Disgust → Sadness,18,1
+Disgust__Sadness,Sadness: all,1,7
+Disgust__Sadness,Sadness: all,8,6
+Disgust__Sadness,Sadness: all,10,7
+Disgust__Sadness,Sadness: all,13,7
+Disgust__Sadness,Sadness: all,15,7
+Disgust__Sadness,Sadness: all,18,7
+Disgust__Sadness,Sadness: all,23,8
+Disgust__Sadness,Sadness: all,27,5
+Disgust__Sadness,Sadness: correct,1,6
+Disgust__Sadness,Sadness: correct,8,1
+Disgust__Sadness,Sadness: correct,10,7
+Disgust__Sadness,Sadness: correct,13,7
+Disgust__Sadness,Sadness: correct,15,7
+Disgust__Sadness,Sadness: correct,18,7
+Disgust__Sadness,Sadness: correct,23,8
+Disgust__Sadness,Sadness: correct,27,5
+Disgust__Sadness,Sadness → Disgust,8,4
+Fear__Neutral,Fear: all,1,7
+Fear__Neutral,Fear: all,8,10
+Fear__Neutral,Fear: all,10,8
+Fear__Neutral,Fear: all,13,6
+Fear__Neutral,Fear: all,15,7
+Fear__Neutral,Fear: all,18,1
+Fear__Neutral,Fear: all,23,9
+Fear__Neutral,Fear: all,27,6
+Fear__Neutral,Fear: correct,1,7
+Fear__Neutral,Fear: correct,8,10
+Fear__Neutral,Fear: correct,10,6
+Fear__Neutral,Fear: correct,13,6
+Fear__Neutral,Fear: correct,18,1
+Fear__Neutral,Fear: correct,27,3
+Fear__Neutral,Fear → Neutral,10,1
+Fear__Neutral,Fear → Neutral,15,4
+Fear__Neutral,Fear → Neutral,23,1
+Fear__Neutral,Neutral: all,1,6
+Fear__Neutral,Neutral: all,8,6
+Fear__Neutral,Neutral: all,10,7
+Fear__Neutral,Neutral: all,13,7
+Fear__Neutral,Neutral: all,15,7
+Fear__Neutral,Neutral: all,18,7
+Fear__Neutral,Neutral: all,23,7
+Fear__Neutral,Neutral: all,27,7
+Fear__Neutral,Neutral: correct,1,5
+Fear__Neutral,Neutral: correct,8,6
+Fear__Neutral,Neutral: correct,10,7
+Fear__Neutral,Neutral: correct,13,7
+Fear__Neutral,Neutral: correct,15,7
+Fear__Neutral,Neutral: correct,18,7
+Fear__Neutral,Neutral: correct,23,7
+Fear__Neutral,Neutral: correct,27,5

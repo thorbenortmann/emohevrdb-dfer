@@ -1,0 +1,36 @@
+au_code,au_name,fea_name,heatmap_label
+AU1,Inner Brow Raiser,InnerBrowRaiserL,AU1 · InnerBrowRaiserL
+AU1,Inner Brow Raiser,InnerBrowRaiserR,AU1 · InnerBrowRaiserR
+AU2,Outer Brow Raiser,OuterBrowRaiserL,AU2 · OuterBrowRaiserL
+AU2,Outer Brow Raiser,OuterBrowRaiserR,AU2 · OuterBrowRaiserR
+AU4,Brow Lowerer,BrowLowererL,AU4 · BrowLowererL
+AU4,Brow Lowerer,BrowLowererR,AU4 · BrowLowererR
+AU5,Upper Lid Raiser,UpperLidRaiserL,AU5 · UpperLidRaiserL
+AU5,Upper Lid Raiser,UpperLidRaiserR,AU5 · UpperLidRaiserR
+AU6,Cheek Raiser,CheekRaiserL,AU6 · CheekRaiserL
+AU6,Cheek Raiser,CheekRaiserR,AU6 · CheekRaiserR
+AU7,Lid Tightener,LidTightenerL,AU7 · LidTightenerL
+AU7,Lid Tightener,LidTightenerR,AU7 · LidTightenerR
+AU9,Nose Wrinkler,NoseWrinklerL,AU9 · NoseWrinklerL
+AU9,Nose Wrinkler,NoseWrinklerR,AU9 · NoseWrinklerR
+AU10,Upper Lip Raiser,UpperLipRaiserL,AU10 · UpperLipRaiserL
+AU10,Upper Lip Raiser,UpperLipRaiserR,AU10 · UpperLipRaiserR
+AU12,Lip Corner Puller,LipCornerPullerL,AU12 · LipCornerPullerL
+AU12,Lip Corner Puller,LipCornerPullerR,AU12 · LipCornerPullerR
+AU15,Lip Corner Depressor,LipCornerDepressorL,AU15 · LipCornerDepressorL
+AU15,Lip Corner Depressor,LipCornerDepressorR,AU15 · LipCornerDepressorR
+AU16,Lower Lip Depressor,LowerLipDepressorL,AU16 · LowerLipDepressorL
+AU16,Lower Lip Depressor,LowerLipDepressorR,AU16 · LowerLipDepressorR
+AU17,Chin Raiser,ChinRaiserB,AU17 · ChinRaiserB
+AU17,Chin Raiser,ChinRaiserT,AU17 · ChinRaiserT
+AU20,Lip Stretcher,LipStretcherL,AU20 · LipStretcherL
+AU20,Lip Stretcher,LipStretcherR,AU20 · LipStretcherR
+AU22,Lip Funneler,LipFunnelerLB,AU22 · LipFunnelerLB
+AU22,Lip Funneler,LipFunnelerLT,AU22 · LipFunnelerLT
+AU22,Lip Funneler,LipFunnelerRB,AU22 · LipFunnelerRB
+AU22,Lip Funneler,LipFunnelerRT,AU22 · LipFunnelerRT
+AU23,Lip Tightener,LipTightenerL,AU23 · LipTightenerL
+AU23,Lip Tightener,LipTightenerR,AU23 · LipTightenerR
+AU24,Lip Pressor,LipPressorL,AU24 · LipPressorL
+AU24,Lip Pressor,LipPressorR,AU24 · LipPressorR
+AU26,Jaw Drop,JawDrop,AU26 · JawDrop

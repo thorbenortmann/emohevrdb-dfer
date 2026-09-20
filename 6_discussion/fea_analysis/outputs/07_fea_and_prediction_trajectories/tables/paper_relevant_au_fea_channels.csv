@@ -1,0 +1,36 @@
+au_code,au_name,fea_name,paper_expression_categories
+AU1,Inner Brow Raiser,InnerBrowRaiserL,Fear | Sadness | Surprise
+AU1,Inner Brow Raiser,InnerBrowRaiserR,Fear | Sadness | Surprise
+AU2,Outer Brow Raiser,OuterBrowRaiserL,Fear | Surprise
+AU2,Outer Brow Raiser,OuterBrowRaiserR,Fear | Surprise
+AU4,Brow Lowerer,BrowLowererL,Anger | Fear | Sadness
+AU4,Brow Lowerer,BrowLowererR,Anger | Fear | Sadness
+AU5,Upper Lid Raiser,UpperLidRaiserL,Anger | Fear | Surprise
+AU5,Upper Lid Raiser,UpperLidRaiserR,Anger | Fear | Surprise
+AU6,Cheek Raiser,CheekRaiserL,Happiness | Sadness
+AU6,Cheek Raiser,CheekRaiserR,Happiness | Sadness
+AU7,Lid Tightener,LidTightenerL,Anger
+AU7,Lid Tightener,LidTightenerR,Anger
+AU9,Nose Wrinkler,NoseWrinklerL,Disgust
+AU9,Nose Wrinkler,NoseWrinklerR,Disgust
+AU10,Upper Lip Raiser,UpperLipRaiserL,Anger | Disgust
+AU10,Upper Lip Raiser,UpperLipRaiserR,Anger | Disgust
+AU12,Lip Corner Puller,LipCornerPullerL,Happiness
+AU12,Lip Corner Puller,LipCornerPullerR,Happiness
+AU15,Lip Corner Depressor,LipCornerDepressorL,Disgust | Sadness
+AU15,Lip Corner Depressor,LipCornerDepressorR,Disgust | Sadness
+AU16,Lower Lip Depressor,LowerLipDepressorL,Disgust
+AU16,Lower Lip Depressor,LowerLipDepressorR,Disgust
+AU17,Chin Raiser,ChinRaiserB,Anger | Disgust | Sadness
+AU17,Chin Raiser,ChinRaiserT,Anger | Disgust | Sadness
+AU20,Lip Stretcher,LipStretcherL,Fear
+AU20,Lip Stretcher,LipStretcherR,Fear
+AU22,Lip Funneler,LipFunnelerLB,Anger
+AU22,Lip Funneler,LipFunnelerLT,Anger
+AU22,Lip Funneler,LipFunnelerRB,Anger
+AU22,Lip Funneler,LipFunnelerRT,Anger
+AU23,Lip Tightener,LipTightenerL,Anger
+AU23,Lip Tightener,LipTightenerR,Anger
+AU24,Lip Pressor,LipPressorL,Anger
+AU24,Lip Pressor,LipPressorR,Anger
+AU26,Jaw Drop,JawDrop,Anger | Disgust | Fear | Sadness | Surprise
