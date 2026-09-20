@@ -1,0 +1,9 @@
+setting,unimodal_group,n_view_rows,fusion_correct,fusion_wrong,fusion_accuracy
+Static,both_correct,414,411,3,0.9927536231884058
+Static,image_only_correct,114,95,19,0.8333333333333334
+Static,fea_only_correct,128,84,44,0.65625
+Static,both_wrong,100,18,82,0.18
+Dynamic,both_correct,476,474,2,0.9957983193277311
+Dynamic,image_only_correct,74,52,22,0.7027027027027027
+Dynamic,fea_only_correct,116,86,30,0.7413793103448276
+Dynamic,both_wrong,90,5,85,0.05555555555555555

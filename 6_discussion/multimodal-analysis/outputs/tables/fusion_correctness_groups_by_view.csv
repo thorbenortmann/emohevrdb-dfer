@@ -1,0 +1,17 @@
+setting,perspective,unimodal_group,n_view_rows,fusion_correct,fusion_wrong,fusion_accuracy
+Static,Central,both_correct,212,211,1,0.9952830188679245
+Static,Central,image_only_correct,63,55,8,0.873015873015873
+Static,Central,fea_only_correct,59,42,17,0.711864406779661
+Static,Central,both_wrong,44,8,36,0.18181818181818182
+Static,Side,both_correct,202,200,2,0.9900990099009901
+Static,Side,image_only_correct,51,40,11,0.7843137254901961
+Static,Side,fea_only_correct,69,42,27,0.6086956521739131
+Static,Side,both_wrong,56,10,46,0.17857142857142858
+Dynamic,Central,both_correct,240,239,1,0.9958333333333333
+Dynamic,Central,image_only_correct,36,25,11,0.6944444444444444
+Dynamic,Central,fea_only_correct,56,42,14,0.75
+Dynamic,Central,both_wrong,46,3,43,0.06521739130434782
+Dynamic,Side,both_correct,236,235,1,0.9957627118644068
+Dynamic,Side,image_only_correct,38,27,11,0.7105263157894737
+Dynamic,Side,fea_only_correct,60,44,16,0.7333333333333333
+Dynamic,Side,both_wrong,44,2,42,0.045454545454545456
