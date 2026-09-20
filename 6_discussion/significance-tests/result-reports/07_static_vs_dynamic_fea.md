@@ -52,11 +52,11 @@ None; FEA has no camera-specific prediction.
 | 10 | 46 | 78.26 | 80.43 | +2.17 |
 | 13 | 46 | 80.43 | 93.48 | +13.04 |
 | 15 | 48 | 64.58 | 62.50 | -2.08 |
-| 18 | 43 | 90.70 | 100.00 | +9.30 |
+| 18 | 43 | 90.70 | 97.67 | +6.98 |
 | 23 | 53 | 83.02 | 79.25 | -3.77 |
-| 27 | 41 | 51.22 | 68.29 | +17.07 |
+| 27 | 41 | 51.22 | 70.73 | +19.51 |
 
-Participants favoring B/A/tied: **6/2/0**; median Δ: **+7.43 pp**. Pooled effects weight reenactments equally; the median summarizes eight participant effects.
+Participants favoring B/A/tied: **6/2/0**; median Δ: **+6.27 pp**. Pooled effects weight reenactments equally; the median summarizes eight participant effects.
 
 ## Interpretation and scope
 

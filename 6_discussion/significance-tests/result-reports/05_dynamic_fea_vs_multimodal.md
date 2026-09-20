@@ -16,8 +16,8 @@
 | --- | --- |
 | A accuracy | 78.31% (296/378 correct) |
 | B accuracy | 81.61% (617/756 correct) |
-| Δ; 95% CI | **+3.31 pp; [0.13, 6.61] pp** |
-| Primary p | **0.049319** |
+| Δ; 95% CI | **+3.31 pp; [0.26, 6.48] pp** |
+| Primary p | **0.043552** |
 | Main result | **Significant at nominal α = 0.05** |
 
 ### 2. Paired correctness overlap (descriptive)
@@ -26,18 +26,18 @@ Counts use **756 view-level samples (Central and Side)**. The two views are depe
 
 | Paired outcome | Count | Share |
 | --- | ---: | ---: |
-| Both correct | 558 | 73.81% |
-| Only A correct | 34 | 4.50% |
-| Only B correct | 59 | 7.80% |
-| Both wrong | 105 | 13.89% |
+| Both correct | 560 | 74.07% |
+| Only A correct | 32 | 4.23% |
+| Only B correct | 57 | 7.54% |
+| Both wrong | 107 | 14.15% |
 
-Relative to A, B corrects **59** errors and introduces **34** errors; net **+25** correct view predictions (+3.31 pp). B retains 558/592 (94.26%) of A’s correct outcomes. The gain therefore includes both corrections and losses, rather than only additional correct outcomes.
+Relative to A, B corrects **57** errors and introduces **32** errors; net **+25** correct view predictions (+3.31 pp). B retains 560/592 (94.59%) of A’s correct outcomes. The gain therefore includes both corrections and losses, rather than only additional correct outcomes.
 
 ### 3. Sensitivity check
 
 | Test | t | df | p | Decision |
 | --- | ---: | ---: | ---: | --- |
-| Two-sided one-sample t-test on paired differences | 2.003 | 377 | 0.045876 | Significant |
+| Two-sided one-sample t-test on paired differences | 2.057 | 377 | 0.040392 | Significant |
 
 ### 4. Secondary view comparisons
 
@@ -45,8 +45,8 @@ Exact two-sided McNemar on 378 pairs per row; Holm correction across these three
 
 | Comparison | Accuracies (%) | Δ (pp) | Discordants | Raw p | Holm p | Significant after Holm? |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| FEA vs. Central Multimodal | 78.31 / 81.75 | +3.44 | 16 / 29 | 0.072454 | 0.217363 | No |
-| FEA vs. Side Multimodal | 78.31 / 81.48 | +3.17 | 18 / 30 | 0.111403 | 0.222806 | No |
+| FEA vs. Central Multimodal | 78.31 / 81.75 | +3.44 | 15 / 28 | 0.065994 | 0.197982 | No |
+| FEA vs. Side Multimodal | 78.31 / 81.48 | +3.17 | 17 / 29 | 0.103805 | 0.207611 | No |
 | Central Multimodal vs. Side Multimodal | 81.75 / 81.48 | -0.26 | 15 / 14 | 1.000000 | 1.000000 | No |
 
 ### 5. Participant heterogeneity (descriptive)
@@ -58,14 +58,14 @@ Exact two-sided McNemar on 378 pairs per row; Holm correction across these three
 | 10 | 46 | 80.43 | 72.83 | -7.61 |
 | 13 | 46 | 93.48 | 89.13 | -4.35 |
 | 15 | 48 | 62.50 | 78.12 | +15.62 |
-| 18 | 43 | 100.00 | 96.51 | -3.49 |
+| 18 | 43 | 97.67 | 96.51 | -1.16 |
 | 23 | 53 | 79.25 | 85.85 | +6.60 |
-| 27 | 41 | 68.29 | 75.61 | +7.32 |
+| 27 | 41 | 70.73 | 75.61 | +4.88 |
 
-Participants favoring B/A/tied: **4/4/0**; median Δ: **+2.38 pp**. Pooled effects weight reenactments equally; the median summarizes eight participant effects.
+Participants favoring B/A/tied: **4/4/0**; median Δ: **+1.86 pp**. Pooled effects weight reenactments equally; the median summarizes eight participant effects.
 
 ## Interpretation and scope
 
-The 3.31 pp Multimodal advantage has borderline nominal evidence (p = 0.049319) and a 4–4 participant split. No secondary comparison survives Holm correction; this is limited evidence for a consistent advantage over FEA.
+The 3.31 pp Multimodal advantage has borderline nominal evidence (p = 0.043552) and a 4–4 participant split. No secondary comparison survives Holm correction; this is limited evidence for a consistent advantage over FEA.
 
 Primary p-values are not jointly adjusted across nine comparisons. Reenactment-level tests do not account for dependence among reenactments from the same participant or model-training variability. Participant tables and overlap counts are descriptive.

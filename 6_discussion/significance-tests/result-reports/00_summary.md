@@ -9,8 +9,8 @@ Nine paired comparisons of fitted FER models on 378 reenactments from eight part
 | [Static Image vs. Static FEA](01_static_image_vs_fea.md) | 69.84 | 71.69 | +1.85 | [-3.31, 6.88] | 0.493626 | Not significant |
 | [Static FEA vs. Static Multimodal](02_static_fea_vs_multimodal.md) | 71.69 | 80.42 | +8.73 | [4.63, 12.83] | 0.000044 | Significant: B higher (nominal) |
 | [Static Image vs. Static Multimodal](03_static_image_vs_multimodal.md) | 69.84 | 80.42 | +10.58 | [7.54, 13.76] | 1e-06 | Significant: B higher (nominal) |
-| [Dynamic Image vs. Dynamic FEA](04_dynamic_image_vs_fea.md) | 72.75 | 78.31 | +5.56 | [1.06, 10.05] | 0.017591 | Significant: B higher (nominal) |
-| [Dynamic FEA vs. Dynamic Multimodal](05_dynamic_fea_vs_multimodal.md) | 78.31 | 81.61 | +3.31 | [0.13, 6.61] | 0.049319 | Significant: B higher (nominal; borderline) |
+| [Dynamic Image vs. Dynamic FEA](04_dynamic_image_vs_fea.md) | 72.75 | 78.31 | +5.56 | [1.06, 10.05] | 0.016963 | Significant: B higher (nominal) |
+| [Dynamic FEA vs. Dynamic Multimodal](05_dynamic_fea_vs_multimodal.md) | 78.31 | 81.61 | +3.31 | [0.26, 6.48] | 0.043552 | Significant: B higher (nominal; borderline) |
 | [Dynamic Image vs. Dynamic Multimodal](06_dynamic_image_vs_multimodal.md) | 72.75 | 81.61 | +8.86 | [5.69, 12.04] | 1e-06 | Significant: B higher (nominal) |
 | [Static FEA vs. Dynamic FEA](07_static_vs_dynamic_fea.md) | 71.69 | 78.31 | +6.61 | [2.91, 10.58] | 0.001264 | Significant: B higher (nominal) |
 | [Static Image vs. Dynamic Image](08_static_vs_dynamic_image.md) | 69.84 | 72.75 | +2.91 | [-0.79, 6.61] | 0.129288 | Not significant |
@@ -28,9 +28,9 @@ Significance below refers to the planned primary tests at the nominal 5% level, 
 
 - **The Dynamic models do not show a statistically significant overall gain for Image or Multimodal FER.** Image accuracy increases by **2.91 pp** (p = **0.129288**), and Multimodal accuracy by **1.19 pp** (p = **0.494278**). Both point estimates favor Dynamic, but the tests provide insufficient evidence for an overall difference. They do not establish equivalence between Static and Dynamic performance.
 
-- **FEA has a clearer advantage over Image FER in the Dynamic setting.** Static FEA exceeds Static Image by **1.85 pp**, without a significant difference (p = **0.493626**). Dynamic FEA exceeds Dynamic Image by **5.56 pp**, which is nominally significant (p = **0.017591**). This pattern is descriptive evidence of a larger Dynamic advantage; the difference between the two modality effects was not itself tested.
+- **FEA has a clearer advantage over Image FER in the Dynamic setting.** Static FEA exceeds Static Image by **1.85 pp**, without a significant difference (p = **0.493626**). Dynamic FEA exceeds Dynamic Image by **5.56 pp**, which is nominally significant (p = **0.016963**). This pattern is descriptive evidence of a larger Dynamic advantage; the difference between the two modality effects was not itself tested.
 
-- **Multimodal FER exceeds FEA in both settings, but its Dynamic advantage is smaller and less consistent.** The Static gain is **8.73 pp** (p = **0.000044**), with **six of eight participants** favoring Multimodal. The Dynamic gain is **3.31 pp**, with a borderline primary p-value (**0.049319**) and an even participant split: **four improve and four deteriorate**. The Dynamic result therefore supports only a small, heterogeneous advantage over FEA.
+- **Multimodal FER exceeds FEA in both settings, but its Dynamic advantage is smaller and less consistent.** The Static gain is **8.73 pp** (p = **0.000044**), with **six of eight participants** favoring Multimodal. The Dynamic gain is **3.31 pp**, with a borderline primary p-value (**0.043552**) and an even participant split: **four improve and four deteriorate**. The Dynamic result therefore supports only a small, heterogeneous advantage over FEA.
 
 - **Descriptive view results suggest that the Dynamic–Static gains are concentrated in the Side view.** For Image FER, the changes are **+0.26 pp Central** versus **+5.56 pp Side**. For Multimodal FER, they are **−1.85 pp Central** versus **+4.23 pp Side**. These view-specific Static–Dynamic differences and their contrast were not tested inferentially.
 
