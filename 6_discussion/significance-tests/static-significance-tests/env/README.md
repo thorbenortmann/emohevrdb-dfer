@@ -1,5 +1,7 @@
 # EmoHeVRDB-SFER TensorFlow 2.15 environment
 
+[Up one level](../README.md) · [Repository home](../../../../README.md)
+
 This folder provides a Windows/Docker setup for reproducing the original
 TensorFlow 2.15 environment used by the static EmoHeVRDB-SFER experiments.
 It follows the container/Jupyter workflow used in `emohevrdb-dfer`, while

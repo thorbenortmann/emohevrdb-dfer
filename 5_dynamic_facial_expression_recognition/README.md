@@ -1,15 +1,20 @@
-# 6. Dynamic Facial Expression Recognition
+# 5. Dynamic Facial Expression Recognition
 
-Section 6 'Dynamic Facial Expression Recognition' provides the dynamic facial expression recognition baselines introduced by **Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB**.
+[Up one level](../README.md) · [Repository home](../README.md)
 
-The shared execution environment for the dynamic FER experiments is available in [env](env).
+This section contains the dynamic baselines and temporal-order experiments introduced by the journal revision.
 
-Accompanying material is available for the following subsections:
+## Models and experiments
 
-- [6.1 Image-Sequence-Based FER](6_1_image_sequence_based_fer)
-- [6.2 FEA-Sequence-Based FER](6_2_fea_sequence_based_fer)
-- [6.3 Multimodal FER](6_3_multimodal_fer)
-  - [6.3.1 Complementarity Analysis](6_3_multimodal_fer/6_3_1_complementarity_analysis)
-  - [6.3.2 Multimodal Dataset](6_3_multimodal_fer/6_3_2_multimodal_dataset)
-  - [6.3.3 Late Fusion](6_3_multimodal_fer/6_3_3_late_fusion)
-  - [6.3.4 Intermediate Fusion](6_3_multimodal_fer/6_3_4_intermediate_fusion)
+| Area | Entry point | What to find |
+|---|---|---|
+| 5.1 Image sequences | [Image FER](5_1_image_sequence_based_fer/README.md) | Ordered EfficientNetV2–LSTM, sequence-order controls, significance tests, and prefix trajectories. |
+| 5.2 FEA sequences | [FEA FER](5_2_fea_sequence_based_fer/README.md) | Ordered FEA LSTM, sequence-order controls, significance tests, and prefix trajectories. |
+| 5.3 Multimodal FER | [Multimodal FER](5_3_multimodal_fer/README.md) | Complementarity, two late-fusion variants, and intermediate fusion. |
+| Environment | [Dynamic environment](env/README.md) | Existing Docker and dependency definitions. |
+
+## Comparisons and interpretation
+
+[Section 6](../6_discussion/README.md) contains cross-model significance tests, detailed fusion/error analysis, and FEA signal/annotation analyses. Within-modality order-ablation tests remain alongside their experiments in Sections 5.1 and 5.2.
+
+The current dynamic accuracies are 72.75% for Image, 78.31% for FEA, and 81.61% for intermediate-fusion Multimodal. Each model entry links to its classification report.

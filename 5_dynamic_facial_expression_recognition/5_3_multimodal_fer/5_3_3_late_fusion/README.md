@@ -1,8 +1,10 @@
-# 6.3.3 Late Fusion
+# 5.3.3 Late Fusion
 
-This directory contains accompanying material for Subsection 6.3.3 'Late Fusion', where the frozen image-sequence and FEA-sequence baseline models are combined at the prediction level.
+[Up one level](../README.md) · [Repository home](../../../README.md)
 
-Accompanying material is available for the following late-fusion variants:
+Late-fusion experiments combine the image-sequence and FEA-sequence models at the prediction level.
 
-- [Average](average)
-- [Cross-Attention](cross_attention)
+- [Average fusion](average/README.md): averaging-based baseline.
+- [Cross-attention fusion](cross_attention/README.md): learned fusion variant.
+
+For the canonical dynamic Multimodal model, see [intermediate fusion](../5_3_4_intermediate_fusion/README.md).

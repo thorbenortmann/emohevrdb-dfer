@@ -1,30 +1,31 @@
 # EmoHeVRDB DFER
 
-This repository provides accompanying information, code, and model links for the journal paper:
+Code, saved experiment runs, predictions, and analyses accompanying **Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB**, by Thorben Ortmann, Qi Wang, and Larissa Putzar.
 
-**Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB**  
-by Thorben Ortmann, Qi Wang, and Larissa Putzar
+The repository follows the revised article structure: the study and database are combined in Section 3, static FER is Section 4, dynamic FER is Section 5, and Discussion is Section 6. Documentation reflects the September 21, 2026 repository snapshot.
 
-The paper is an invited submission to the Special Issue **Best of ACII 2024** of **IEEE Transactions on Affective Computing** and is **still under review**.
+## Navigate by paper section
 
-It extends the 2024 ACII paper **[EmojiHeroVR: A Study on Facial Expression Recognition under Partial Occlusion from Head-Mounted Displays](https://doi.org/10.1109/ACII63134.2024.00014)** by introducing dynamic facial expression recognition (DFER) baselines on EmoHeVRDB.  
-The journal paper also builds on the 2025 AIxVR paper **[Unimodal and Multimodal Static Facial Expression Recognition for Virtual Reality Users with EmoHeVRDB](https://doi.org/10.1109/AIxVR63409.2025.00048)** about static FER with EmoHeVRDB.  
-Content that is already maintained in the corresponding repositories is linked here rather than duplicated.
+| Section | Entry point | Contents |
+|---|---|---|
+| 3 | [EmojiHeroVR and EmoHeVRDB](3_emojiherovr_and_emohevrdb/README.md) | Game, study, annotation, splits, and dataset construction; links to the original repository. |
+| 4 | [Static facial expression recognition](4_static_facial_expression_recognition/README.md) | Original Image, FEA, and Multimodal baselines and current comparison analyses. |
+| 5 | [Dynamic facial expression recognition](5_dynamic_facial_expression_recognition/README.md) | Model training, fusion variants, sequence-order ablations, prediction trajectories, and environment. |
+| 6 | [Discussion analyses](6_discussion/README.md) | Significance tests, multimodal error analysis, FEA patterns, annotation agreement, and signal/prediction trajectories. |
 
-This repository mirrors the relevant structure of the journal paper.
+Start with a section README and follow its experiment links. Each experiment points to its notebooks, saved reports, and relevant result files. Generated-output directories are linked directly and do not require additional README layers.
 
-## Table of Contents
+## Reading and running
 
-- [3. User Study](3_user_study)
-- [4. EmojiHeroVR Database](4_emojiherovr_database)
-- [5. Static Facial Expression Recognition](5_static_facial_expression_recognition)
-- [6. Dynamic Facial Expression Recognition](6_dynamic_facial_expression_recognition)
-  - [6.1 Image-Sequence-Based FER](6_dynamic_facial_expression_recognition/6_1_image_sequence_based_fer)
-  - [6.2 FEA-Sequence-Based FER](6_dynamic_facial_expression_recognition/6_2_fea_sequence_based_fer)
-  - [6.3 Multimodal FER](6_dynamic_facial_expression_recognition/6_3_multimodal_fer)
-    - [6.3.1 Complementarity Analysis](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_1_complementarity_analysis)
-    - [6.3.3 Late Fusion](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_3_late_fusion)
-    - [6.3.4 Intermediate Fusion](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_4_intermediate_fusion)
+- To **read results**, follow the report links in the experiment READMEs.
+- To **inspect methods**, open the corresponding notebook; saved outputs document the supplied runs.
+- To **rerun an analysis**, inspect its input paths and run it from its containing directory unless the notebook specifies otherwise. Prediction analysis can use existing CSVs; new inference or training requires the external datasets and model files.
+
+Dynamic Image and Multimodal evaluation uses 756 view predictions from 378 reenactments; FEA evaluation uses one prediction per reenactment. Both views belong to the same reenactment. FEAs are vendor-defined coefficients, and sequence positions are not annotated onset/apex/offset phases.
+
+## Related work and repositories
+
+The journal contribution builds on [ACII 2024](https://doi.org/10.1109/ACII63134.2024.00014) and [AIxVR 2025](https://doi.org/10.1109/AIxVR63409.2025.00048). Inherited implementation material remains in [emoji-hero-vr-database](https://github.com/thorbenortmann/emoji-hero-vr-database) and [emohevrdb-sfer](https://github.com/thorbenortmann/emohevrdb-sfer).
 
 ## Referencing
 

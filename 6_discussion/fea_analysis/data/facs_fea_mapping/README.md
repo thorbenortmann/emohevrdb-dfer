@@ -1,14 +1,18 @@
 # FACS–FEA mapping for EmoHeVRDB
 
+[Up one level](../README.md) · [Repository home](../../../../README.md)
+
 Version **1.2.1** — 2026-09-20
 
 This directory contains a project-canonical **semantic crosswalk** between the 63 facial expression activation (FEA) channels used by EmoHeVRDB and movements described by the Facial Action Coding System (FACS), plus a paper-specific mapping for the Action Units (AUs) listed in the current manuscript's Table 1.
 
 ## Files
 
+The JSON mapping is included in this snapshot. The two CSV views listed below are described by the original mapping documentation but are not included here; the JSON contains their structured information.
+
 - `fea_to_facs_all_63.csv` — one row for each of the 63 EmoHeVRDB FEA channels.
 - `paper_aus_to_fea.csv` — one row for each of the 20 unique AUs occurring in the manuscript's Table 1, including upper/lower-face assignment, expression categories, and corresponding FEA channels.
-- `facs_fea_mapping.json` — structured representation of both views, source metadata, reverse mappings, coverage summaries, and caveats.
+- [facs_fea_mapping.json](facs_fea_mapping.json) — structured representation of both views, source metadata, reverse mappings, coverage summaries, and caveats.
 
 ## Scope
 
