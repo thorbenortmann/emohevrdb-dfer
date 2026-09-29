@@ -1,0 +1,7 @@
+Category,Channel,All sequences,With positive increase,No positive increase
+Anger,BrowLowererL,175,174,1
+Disgust,NoseWrinklerR,211,198,13
+Fear,UpperLidRaiserR,214,168,46
+Happiness,LipCornerPullerR,300,295,5
+Sadness,LipCornerDepressorL,240,240,0
+Surprise,JawDrop,281,281,0

@@ -1,0 +1,4 @@
+source,target,correct_views,correct_reenactments,correct_participants,confused_views,confused_reenactments,confused_participants,overlap_reenactments,shared_participants
+Anger,Disgust,60,34,7,44,26,7,8,6
+Disgust,Happiness,72,39,8,20,11,3,2,3
+Surprise,Fear,87,48,8,20,14,5,8,5
