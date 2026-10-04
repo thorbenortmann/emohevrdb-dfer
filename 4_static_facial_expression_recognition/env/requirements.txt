@@ -1,0 +1,9 @@
+# TensorFlow 2.15.0.post1 and its GPU/CUDA stack are provided by the base image.
+jupyterlab==4.0.13
+matplotlib==3.7.5
+numpy==1.26.4
+pandas==2.3.3
+scikit-learn==1.7.2
+scipy==1.15.3
+seaborn==0.13.2
+statsmodels==0.14.6

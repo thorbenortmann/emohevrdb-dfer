@@ -4,7 +4,7 @@ WORKDIR /workspace
 
 COPY requirements.txt /workspace/
 
-RUN pip install --upgrade-strategy only-if-needed -r requirements.txt
+RUN python -m pip install --no-cache-dir --upgrade-strategy only-if-needed -r requirements.txt
 
 EXPOSE 8888
 
