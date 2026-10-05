@@ -7,7 +7,7 @@ The ordered dynamic baseline uses 30 chronological observations per sequence. It
 ## Baseline
 
 - [efficientnetv2_lstm.ipynb](efficientnetv2_lstm.ipynb): training and evaluation.
-- [Model download](https://drive.google.com/file/d/1ymkR9QVbyUi1XF4lfTCQIEhoKR-oGkIk/view?usp=sharing): existing repository model link.
+- [Model download](https://drive.google.com/file/d/16vcD4SpQOyqDomiMzXUgq8GjBWGX8buK/view?usp=sharing): https://drive.google.com/file/d/16vcD4SpQOyqDomiMzXUgq8GjBWGX8buK/view?usp=sharing.
 
 ## Further experiments
 
