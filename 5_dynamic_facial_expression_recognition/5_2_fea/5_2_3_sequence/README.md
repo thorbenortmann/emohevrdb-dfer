@@ -1,24 +1,15 @@
-# FEA sequence-order ablation
+# 5.2.3 FEA Sequence-Order Controls
 
-[Up one level](../README.md) · [Repository home](../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../README.md)
 
-This experiment compares the Ordered LSTM with Shuffled LSTM and Mean aggregation controls. The original chronological baseline is linked from the parent modality README.
+Compare the ordered FEA baseline against Shuffled sequence order and Mean pooling over the FEA sequence.
 
-## Navigate the experiment
+| Saved control run | Test accuracy |
+| --- | --- |
+| [Shuffled, unoptimized](20260912-1355-checkpoint-lstm-shuffled-unoptimzed-b-32-lr-5e-04-seed-31_val_7272_test_6719/README.md) | 67.20% |
+| [Shuffled, optimized](20260912-1528-checkpoint-lstm-shuffled-optimzed-c-23-b-32-lr-5e-04-seed-31_val_7636_test_7010/README.md) | 70.11% |
+| [Mean](20260912-1907-checkpoint-lstm-mean-unoptimzed-b-32-lr-5e-04-seed-31_val_7740_test_6904/README.md) | 69.05% |
 
-- [Paired significance tests](statistical-significance-tests/README.md): final predictions, test notebook, result summary, and statistical tables.
-- [Prediction trajectories](trajectories/README.md): frozen ordered-model prefix probes, kept separate from the order-control comparisons.
+For Mean, the initial configuration remained best after optimization, so the same saved run represents the selected control. The unoptimized Shuffled run is retained to show the tuning improvement.
 
-## Saved training runs
-
-The directory labels below are preserved as stored. The common prediction CSV in the significance-test directory defines the evaluated models' sample-level results.
-
-| Run | Directory |
-|---|---|
-| Shuffled LSTM; unoptimized run | [20260912-1355](20260912-1355-checkpoint-lstm-shuffled-unoptimzed-b-32-lr-5e-04-seed-31_val_7272_test_6719/README.md) |
-| Shuffled LSTM; optimized run | [20260912-1528](20260912-1528-checkpoint-lstm-shuffled-optimzed-c-23-b-32-lr-5e-04-seed-31_val_7636_test_7010/README.md) |
-| Mean aggregation; unoptimized run | [20260912-1907](20260912-1907-checkpoint-lstm-mean-unoptimzed-b-32-lr-5e-04-seed-31_val_7740_test_6904/README.md) |
-
-## Interpretation
-
-Chronological models outperform both controls in the supplied paired analyses. These comparisons evaluate separately configured/trained models; they do not isolate temporal order as the sole experimental difference. Prefix probes are not independently retrained sequence-length experiments.
+The ordered baseline is in [Section 5.2](../README.md). [results.txt](results.txt) summarizes validation and test results. Use [statistical-significance-tests](statistical-significance-tests/README.md) for predictions and paired comparisons of Ordered versus the selected Shuffled and Mean controls.

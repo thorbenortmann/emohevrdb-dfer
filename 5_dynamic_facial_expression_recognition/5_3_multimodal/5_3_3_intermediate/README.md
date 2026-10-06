@@ -1,25 +1,15 @@
-# 5.3.4 Intermediate Fusion
+# 5.3.3 Intermediate Fusion
 
-[Up one level](../README.md) · [Repository home](../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../README.md)
 
-The canonical dynamic Multimodal accuracy is **81.61% (617/756)**. The local [classification report](classification_report.txt) is the authoritative result for this model, superseding the previously documented 81.48%.
+[intermediate_fusion_cross_attention.ipynb](intermediate_fusion_cross_attention.ipynb) trains the selected intermediate-fusion Multimodal baseline. The saved test accuracy is **81.61% (617/756)**; class-wise results support Table 6. The [architecture PDF](dfer-intermediate-fusion-compact.pdf) is Figure 4.
 
-## Model and notebook
+Use the shared [model setup](../README.md#model-setup).
 
-- [intermediate_fusion_cross_attention.ipynb](intermediate_fusion_cross_attention.ipynb): training/evaluation implementation and saved outputs.
-- [Model download](https://drive.google.com/file/d/1G5BK0YGuJCS-NiMgNhn8EeHhi19SZSW9/view?usp=sharing): existing repository model link.
+## Outputs and checkpoints
 
-## Saved results
+Training creates a timestamped results directory with `best_int_fusion_model.keras`, logs, plots, and evaluation outputs. The saved [classification report](classification_report.txt), [confusion matrix](confusion_matrix.png), and [training log](training_log.csv) record the reported run.
 
-- [classification_report.txt](classification_report.txt)
-- [confusion_matrix.png](confusion_matrix.png)
-- [training_history_accuracy.png](training_history_accuracy.png)
-- [training_history_loss.png](training_history_loss.png)
-- [training_log.csv](training_log.csv)
+An [experiment-model download](https://drive.google.com/file/d/1G5BK0YGuJCS-NiMgNhn8EeHhi19SZSW9/view?usp=sharing) is available. For the shared prediction collector, see [Section 5 models](../../models/README.md).
 
-## Related analyses
-
-- [Fusion and error analysis](../../../6_discussion/multimodal-analysis/README.md).
-- [Dynamic comparison tests](../../../6_discussion/significance-tests/dynamic-significance-tests/README.md).
-
-The Section 6 comparisons use the selected intermediate-fusion model for the dynamic Multimodal setting; the two late-fusion variants are separate experiments.
+The shared [dynamic prediction CSV](../../dynamic_test_predictions.csv) supports the complementarity analysis and [Section 6.2 fusion analysis](../../../6_discussion/6_2_complementarity/dynamic_fusion_correctness_groups.ipynb).

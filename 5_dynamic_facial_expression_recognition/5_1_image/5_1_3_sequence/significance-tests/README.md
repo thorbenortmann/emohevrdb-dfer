@@ -1,22 +1,17 @@
-# Image sequence-order significance tests
+# Image Sequence-Order Comparisons
 
-[Up one level](../README.md) · [Repository home](../../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../../README.md)
 
-Start with the [results summary](results_summary.md). It reports Ordered versus Shuffled and Ordered versus Mean, with Holm correction across these two primary tests within the Image modality.
+Paired comparisons of Ordered versus optimized Shuffled and Ordered versus optimized Mean, with Holm correction across the two Image comparisons. Image predictions cover 756 views; the primary bootstrap resamples paired reenactments (378 units).
 
-## Files and execution order
+## Execution
 
-1. [Collect test predictions](collect_image_sequence_order_test_predictions.ipynb) if a new inference export is needed. This requires the datasets and three trained models configured in the notebook.
-2. [image_test_predictions.csv](image_test_predictions.csv) is the saved common input.
-3. [Run paired significance tests](image_sequence_order_significance_tests.ipynb) to regenerate statistical outputs from that CSV.
-4. [Statistical tables](statistical_results) contains primary results, paired reenactment tables, participant summaries, sensitivity tests, and Holm-adjustment results.
+1. Run [image_sequence_order_significance_tests.ipynb](image_sequence_order_significance_tests.ipynb) to analyze the included [image_test_predictions.csv](image_test_predictions.csv). This does not require model files or datasets.
+2. To regenerate that CSV first, run [collect_image_sequence_order_test_predictions.ipynb](collect_image_sequence_order_test_predictions.ipynb). It uses the test split described in the [environment README](../../../../env/README.md) and expects these checkpoints in this directory's `models/` subfolder:
+   - `image_sequence_model.keras`: selected ordered baseline.
+   - `image_sequence_shuffled_model.keras`: selected optimized Shuffled control.
+   - `image_sequence_mean_model.keras`: selected optimized Mean control.
 
-Run the notebooks from this directory after checking their path settings. The CSV is already included; reading or reanalyzing the saved predictions does not require rerunning model inference.
+The ordered-model download is in [Section 5 models](../../../models/README.md). Use the selected control checkpoints from their corresponding training runs. Copy and rename the chosen checkpoints to the filenames above.
 
-## Evaluation unit
-
-Image uses 756 view predictions from 378 reenactments. The primary centered bootstrap resamples reenactments, retaining their Central and Side views together.
-
-Participant summaries are descriptive; these primary tests do not model additional dependence between reenactments from the same participant.
-
-For chronological prefix behavior, continue to [prediction trajectories](../trajectories/README.md).
+The test notebook writes tables into [statistical_results/](statistical_results/). [results_summary.md](results_summary.md) summarizes the saved comparisons. Participant-level and individual-view results are additional sensitivity/descriptive analyses.

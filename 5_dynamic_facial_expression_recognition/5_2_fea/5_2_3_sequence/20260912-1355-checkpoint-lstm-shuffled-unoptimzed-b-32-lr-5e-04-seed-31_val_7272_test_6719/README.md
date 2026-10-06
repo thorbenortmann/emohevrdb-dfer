@@ -1,17 +1,9 @@
-# FEA Shuffled LSTM — saved training run
+# 5.2.3 FEA Control: Shuffled, unoptimized
 
-[Up one level](../README.md) · [Repository home](../../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../../README.md)
 
-Run identifier: `20260912-1355-checkpoint-lstm-shuffled-unoptimzed-b-32-lr-5e-04-seed-31_val_7272_test_6719`.
+The ordered baseline configuration with shuffled FEA sequence order. The saved run has test accuracy **67.20%**.
 
-This directory preserves the unoptimized run named in the original directory. Use the [common prediction export and significance tests](../statistical-significance-tests/README.md) for the reported paired ablation comparisons; do not infer final-model selection from a directory name alone.
+The training notebook is [lstm-shuffled-unoptimzed.ipynb](lstm-shuffled-unoptimzed.ipynb). A rerun creates a new timestamped subdirectory here containing `fea_model.keras`, training logs, plots, and evaluation results.
 
-## Notebook
-
-- [lstm-shuffled-unoptimzed.ipynb](lstm-shuffled-unoptimzed.ipynb): saved training and evaluation run.
-
-## Saved outputs
-
-- [classification_report.txt](classification_report.txt)
-- [confusion_matrix.png](confusion_matrix.png)
-- [training_history.png](training_history.png)
+[classification_report.txt](classification_report.txt) and [confusion_matrix.png](confusion_matrix.png) contain the saved evaluation.

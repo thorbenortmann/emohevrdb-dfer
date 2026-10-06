@@ -1,22 +1,11 @@
-# Average Late Fusion
+# 5.3.2 Late Fusion: Averaging
 
-[Up one level](../README.md) · [Repository home](../../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../../README.md)
 
-The local classification report records the saved result for this fusion variant.
+[late_fusion_avg.ipynb](late_fusion_avg.ipynb) averages the two models' class probabilities without training a fusion head. The saved test accuracy is **78.44%**.
 
-## Model and notebook
+Use the shared [model setup](../../README.md#model-setup).
 
-- [late_fusion_avg.ipynb](late_fusion_avg.ipynb): training/evaluation implementation and saved outputs.
-- [Model download](https://drive.google.com/file/d/1yp4o7Ztz3m683ffQVuDqfrUM_p5ydNdT/view?usp=sharing): existing repository model link.
+## Outputs
 
-## Saved results
-
-- [classification_report.txt](classification_report.txt)
-- [confusion_matrix.png](confusion_matrix.png)
-
-## Related analyses
-
-- [Fusion and error analysis](../../../../6_discussion/multimodal-analysis/README.md).
-- [Dynamic comparison tests](../../../../6_discussion/significance-tests/dynamic-significance-tests/README.md).
-
-The Section 6 comparisons use the selected intermediate-fusion model for the dynamic Multimodal setting; the two late-fusion variants are separate experiments.
+The notebook creates a timestamped results directory and saves `average_model.keras` and evaluation outputs. The saved [classification report](classification_report.txt) and [confusion matrix](confusion_matrix.png) record the reported experiment. An existing [averaging-model download](https://drive.google.com/file/d/1yp4o7Ztz3m683ffQVuDqfrUM_p5ydNdT/view?usp=sharing) is retained for this experiment.

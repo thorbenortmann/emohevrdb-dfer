@@ -1,22 +1,11 @@
-# 5.1 Image-Sequence-Based FER
+# 5.1 Image Sequences
 
-[Up one level](../README.md) · [Repository home](../../README.md)
+[Up one level](../README.md) · [Repository README](../../README.md)
 
-The ordered dynamic baseline uses 30 chronological observations per sequence. Its saved test accuracy is **72.75%**, as documented in the [classification report](classification_report.txt).
+[efficientnetv2_lstm.ipynb](efficientnetv2_lstm.ipynb) trains and evaluates the ordered EfficientNetV2–LSTM baseline. Its class-wise results support Table 4 (test accuracy: 72.75%).
 
-## Baseline
+For setup, see the [environment README](../../env/README.md). The notebook writes phase checkpoints, training logs, plots, and evaluation results into a new timestamped directory, then copies itself into that directory. The saved [classification report](classification_report.txt), [confusion matrix](confusion_matrix.png), and [training history](training_history.csv) record the reported run.
 
-- [efficientnetv2_lstm.ipynb](efficientnetv2_lstm.ipynb): training and evaluation.
-- [Model download](https://drive.google.com/file/d/16vcD4SpQOyqDomiMzXUgq8GjBWGX8buK/view?usp=sharing): https://drive.google.com/file/d/16vcD4SpQOyqDomiMzXUgq8GjBWGX8buK/view?usp=sharing.
+The selected pretrained checkpoint and its inference filename are documented in [Section 5 models](../models/README.md).
 
-## Further experiments
-
-- [Sequence-order ablation](5_1_4_sequence_order_ablation/README.md): Shuffled and Mean controls, paired significance tests, and prefix-trajectory analysis.
-- [Discussion analyses](../../6_discussion/README.md): model comparisons, errors, and interpretation.
-
-## Saved baseline results
-
-- [classification_report.txt](classification_report.txt)
-- [confusion_matrix.png](confusion_matrix.png)
-- [training_history.csv](training_history.csv)
-- [training_history.png](training_history.png)
+[Section 5.1.3](5_1_3_sequence/README.md) contains the unoptimized and optimized Shuffled and Mean controls, plus the paired sequence-order comparisons.

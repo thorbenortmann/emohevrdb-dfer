@@ -1,22 +1,17 @@
-# FEA sequence-order significance tests
+# FEA Sequence-Order Comparisons
 
-[Up one level](../README.md) · [Repository home](../../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../../README.md)
 
-Start with the [results summary](results_summary.md). It reports Ordered versus Shuffled and Ordered versus Mean, with Holm correction across these two primary tests within the FEA modality.
+Paired comparisons of Ordered versus optimized Shuffled and Ordered versus selected Mean on 378 reenactments. The primary test is exact paired McNemar; paired bootstrap intervals describe accuracy differences. Holm correction covers the two FEA comparisons.
 
-## Files and execution order
+## Execution
 
-1. [Collect test predictions](collect_fea_sequence_order_test_predictions.ipynb) if a new inference export is needed. This requires the datasets and three trained models configured in the notebook.
-2. [fea_test_predictions.csv](fea_test_predictions.csv) is the saved common input.
-3. [Run paired significance tests](fea_sequence_order_significance_tests.ipynb) to regenerate statistical outputs from that CSV.
-4. [Statistical tables](statistical_results) contains primary results, paired reenactment tables, participant summaries, sensitivity tests, and Holm-adjustment results.
+1. Run [fea_sequence_order_significance_tests.ipynb](fea_sequence_order_significance_tests.ipynb) to analyze the included [fea_test_predictions.csv](fea_test_predictions.csv). This does not require model files or datasets.
+2. To regenerate that CSV first, run [collect_fea_sequence_order_test_predictions.ipynb](collect_fea_sequence_order_test_predictions.ipynb). It uses the test split described in the [environment README](../../../../env/README.md) and expects these checkpoints in `../models/` (the `5_2_3_sequence/models/` directory):
+   - `fea_sequence_model.keras`: selected ordered baseline.
+   - `fea_sequence_shuffled_model.keras`: selected optimized Shuffled control.
+   - `fea_sequence_mean_model.keras`: selected Mean control.
 
-Run the notebooks from this directory after checking their path settings. The CSV is already included; reading or reanalyzing the saved predictions does not require rerunning model inference.
+The ordered-model download is in [Section 5 models](../../../models/README.md). Use the selected control checkpoints from their corresponding training runs. Copy and rename the chosen checkpoints to the filenames above. The collector uses seed 33 for the test sequence shuffle.
 
-## Evaluation unit
-
-FEA uses 378 reenactments. The primary test is exact paired McNemar; paired bootstrap intervals describe the accuracy difference. The collector reproduces the training test-shuffle rule using seed 31 + 2 = 33.
-
-Participant summaries are descriptive; these primary tests do not model additional dependence between reenactments from the same participant.
-
-For chronological prefix behavior, continue to [prediction trajectories](../trajectories/README.md).
+The test notebook writes tables into [statistical_results/](statistical_results/). [results_summary.md](results_summary.md) summarizes the saved comparisons. Participant summaries and sensitivity tests are additional analyses.

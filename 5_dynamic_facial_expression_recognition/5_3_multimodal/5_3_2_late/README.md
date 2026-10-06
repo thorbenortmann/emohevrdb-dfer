@@ -1,10 +1,14 @@
-# 5.3.3 Late Fusion
+# 5.3.2 Late Fusion
 
-[Up one level](../README.md) · [Repository home](../../../README.md)
+[Up one level](../README.md) · [Repository README](../../../README.md)
 
-Late-fusion experiments combine the image-sequence and FEA-sequence models at the prediction level.
+Two late-fusion experiments combine the ordered Image and FEA sequence models:
 
-- [Average fusion](average/README.md): averaging-based baseline.
-- [Cross-attention fusion](cross_attention/README.md): learned fusion variant.
+| Experiment | Test accuracy | Notebook |
+| --- | --- | --- |
+| Average of class probabilities | 78.44% | [average](average/README.md) |
+| Cross-attention fusion | 80.56% | [cross_attention](cross_attention/README.md) |
 
-For the canonical dynamic Multimodal model, see [intermediate fusion](../5_3_4_intermediate_fusion/README.md).
+Each experiment keeps its notebook, classification report, and confusion matrix in its own folder. Both use the shared [model setup](../README.md#model-setup).
+
+The selected Multimodal baseline is the [intermediate-fusion model](../5_3_3_intermediate/README.md), evaluated separately in Section 5.3.3.

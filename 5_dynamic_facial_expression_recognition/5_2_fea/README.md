@@ -1,21 +1,11 @@
-# 5.2 FEA-Sequence-Based FER
+# 5.2 FEA Sequences
 
-[Up one level](../README.md) · [Repository home](../../README.md)
+[Up one level](../README.md) · [Repository README](../../README.md)
 
-The ordered dynamic baseline uses 30 chronological observations per sequence. Its saved test accuracy is **78.31%**, as documented in the [classification report](classification_report.txt).
+[lstm.ipynb](lstm.ipynb) trains and evaluates the ordered FEA LSTM baseline. Its class-wise results support Table 5 (test accuracy: 78.31%).
 
-## Baseline
+For setup, see the [environment README](../../env/README.md). A run creates a timestamped directory with `fea_model.keras`, training logs, plots, and evaluation results, then copies the notebook into it.
 
-- [lstm.ipynb](lstm.ipynb): training and evaluation.
-- [Model download](https://drive.google.com/file/d/19mTZPnM31N70cwycBfKGOsrvAMYTWyUD/view?usp=sharing): https://drive.google.com/file/d/19mTZPnM31N70cwycBfKGOsrvAMYTWyUD/view?usp=sharing.
+The saved [classification report](classification_report.txt), [confusion matrix](confusion_matrix.png), and [training history](training_history.png) record the reported run. The selected pretrained checkpoint and its inference filename are documented in [Section 5 models](../models/README.md).
 
-## Further experiments
-
-- [Sequence-order ablation](5_2_4_sequence_order_ablation/README.md): Shuffled and Mean controls, paired significance tests, and prefix-trajectory analysis.
-- [Discussion analyses](../../6_discussion/README.md): model comparisons, errors, and interpretation.
-
-## Saved baseline results
-
-- [classification_report.txt](classification_report.txt)
-- [confusion_matrix.png](confusion_matrix.png)
-- [training_history.png](training_history.png)
+[Section 5.2.3](5_2_3_sequence/README.md) contains Shuffled and Mean controls and the paired sequence-order comparisons.

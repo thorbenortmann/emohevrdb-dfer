@@ -1,20 +1,25 @@
-# 5.3 Multimodal FER
+# 5.3 Multimodal Fusion
 
-[Up one level](../README.md) · [Repository home](../../README.md)
+[Up one level](../README.md) · [Repository README](../../README.md)
 
-These experiments combine image sequences and FEA sequences for dynamic FER.
+Combine the selected ordered Image and FEA sequence models.
 
-## Experiments
+| Paper section | Analysis or experiment |
+| --- | --- |
+| 5.3.1 | [Prediction complementarity](5_3_1_complementarity/README.md), computed from the shared dynamic prediction CSV |
+| 5.3.2 | [Late fusion](5_3_2_late/README.md): averaging and cross-attention |
+| 5.3.3 | [Intermediate fusion](5_3_3_intermediate/README.md): selected Multimodal baseline |
 
-| Experiment | Entry point | Purpose |
-|---|---|---|
-| 5.3.1 Complementarity | [Unimodal prediction overlap](5_3_1_complementarity_analysis/README.md) | Both-correct, Image-only, FEA-only, and both-wrong cases. |
-| 5.3.3 Late fusion | [Late-fusion variants](5_3_3_late_fusion/README.md) | Average and cross-attention fusion. |
-| 5.3.4 Intermediate fusion | [Intermediate cross-attention fusion](5_3_4_intermediate_fusion/README.md) | Canonical dynamic Multimodal result: **81.61%**. |
+For the runtime and dataset layout, see the [environment README](../../env/README.md).
 
-Numbering follows the existing experiment folders; there is no separate dataset-construction directory for Subsection 5.3.2 in this snapshot.
+## Model setup
 
-## Detailed comparisons
+Download the selected ordered Image and FEA checkpoints using the links in [Section 5 models](../models/README.md). Copy them as `image_model.keras` and `fea_model.keras` into each experiment's local model directory:
 
-- [Dynamic model significance tests](../../6_discussion/significance-tests/dynamic-significance-tests/README.md).
-- [Multimodal error and fusion analysis](../../6_discussion/multimodal-analysis/README.md), including what fusion preserves, corrects, and loses within the four unimodal correctness groups.
+| Experiment | Model directory, relative to this folder |
+| --- | --- |
+| Late fusion: averaging | `5_3_2_late/average/models/` |
+| Late fusion: cross-attention | `5_3_2_late/cross_attention/models/` |
+| Intermediate fusion | `5_3_3_intermediate/models/` |
+
+The selected intermediate-fusion predictions are included in [dynamic_test_predictions.csv](../dynamic_test_predictions.csv) and used in the Section 6 analyses. Late-fusion models remain separate experiments.
