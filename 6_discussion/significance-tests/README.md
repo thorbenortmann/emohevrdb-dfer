@@ -1,23 +1,28 @@
-# Model Significance Tests
+# Paired Model Accuracy Comparisons
 
-[Up one level](../README.md) · [Repository home](../../README.md)
+[Up one level](../README.md) · [Repository README](../../README.md)
 
-Nine comparisons cover the three static modalities, the three dynamic modalities, and Static–Dynamic changes within each modality.
+Nine comparison notebooks evaluate the fitted static and dynamic models on the same 378 test reenactments from eight participants. **Seven comparisons appear in Table 7**; Static Image–Static FEA and Dynamic Image–Dynamic FEA are additional repository analyses.
 
-## Start here
+## Navigation
 
-- [Combined results summary](result-reports/00_summary.md): all nine comparisons with links to their individual reports.
-- [Statistical comparison plan](statistical_comparison_plan.md): analysis methods and interpretation scope.
+- [Static comparisons](static-significance-tests/README.md): three modality comparisons.
+- [Dynamic and static–dynamic comparisons](dynamic-significance-tests/README.md): six comparisons.
+- [Result reports](result-reports/README.md), including the [combined nine-comparison summary](result-reports/00_summary.md).
+- [Statistical comparison plan](statistical_comparison_plan.md): methods and inference scope.
 
-## Notebooks and prediction exports
+## Shared inputs and regeneration
 
-- [Static comparisons](static-significance-tests/README.md): three tests and static prediction collection.
-- [Dynamic and Static–Dynamic comparisons](dynamic-significance-tests/README.md): six tests and dynamic prediction collection.
+The notebooks use the shared [Section 4 static CSV](../../4_static_facial_expression_recognition/static_test_predictions.csv) and/or [Section 5 dynamic CSV](../../5_dynamic_facial_expression_recognition/dynamic_test_predictions.csv). Collection and checkpoint setup remain in those sections. The comparison notebooks require no trained models or raw datasets.
 
-The `result-reports` directory contains the synthesis and individual reports; generated numeric tables remain in each analysis directory's `statistical_results` folder.
+Use the [shared environment and execution instructions](../../env/README.md). Each notebook regenerates CSV tables in its containing directory's `statistical_results/` folder. The Markdown result reports are saved written summaries, separate from those numerical exports.
 
-## Inference scope
+## Methods and evaluation units
 
-Image/Multimodal accuracies use 756 view predictions; FEA uses 378 reenactments. Eight primary comparisons use a centered paired reenactment bootstrap, retaining both views together. Static versus Dynamic FEA uses exact McNemar. The nine primary tests are nominal, without a joint correction; the separately reported secondary families use Holm adjustment. Reenactments from the same participant and model-training variability are not modeled by these primary tests.
+Image and Multimodal accuracies use 756 view predictions. The paired bootstrap averages central- and side-view correctness within each reenactment and resamples the 378 paired units. FEA uses one prediction per reenactment.
 
-Sequence-order ablations use their own two-test Holm families and are documented in [Section 5](../../5_dynamic_facial_expression_recognition/README.md).
+Eight repository comparisons use a two-sided centered paired bootstrap for the primary p-value. Static–Dynamic FEA uses exact two-sided McNemar. All primary confidence intervals are paired percentile-bootstrap intervals; notebooks use 1,000,000 resamples and seed 42.
+
+Primary p-values are nominal, without joint multiplicity correction. Holm correction applies separately to the secondary view-test families where reported. Participant summaries and paired t-tests are descriptive/sensitivity outputs. The primary analyses do not model dependence among reenactments from the same participant or training variability.
+
+Sequence-order comparisons use separate two-test Holm families in [Section 5](../../5_dynamic_facial_expression_recognition/README.md).

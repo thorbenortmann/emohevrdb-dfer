@@ -1,6 +1,6 @@
 # Section 6.3 — Category and error-associated FEA profiles
 
-Generated (UTC): 2026-10-06T15:34:36.137968+00:00
+Generated (UTC): 2026-10-06T19:54:50.519186+00:00
 
 ## Scope and validation
 
@@ -168,7 +168,7 @@ Complete tables retain all channels/groups regardless of top-N selection. Group 
 | training_set.csv | /workspace/datasets/emoji-hero-vr-db-dfea-as-csv/training_set.csv | cd316cf0c77c48127de38c4822aa073b0f15fdd13ecc619e4f189aaa270d5d1e |
 | validation_set.csv | /workspace/datasets/emoji-hero-vr-db-dfea-as-csv/validation_set.csv | 8de231e80fdbe61d106b3fcf2c62565f3da710759bfe97e40a82b75f57a20e1c |
 | test_set.csv | /workspace/datasets/emoji-hero-vr-db-dfea-as-csv/test_set.csv | cebe86d2fffb7b8446602247ad713d5d12e2c674837d9205e3d0c68cc496fcbf |
-| facs_fea_mapping.json | /workspace/repos/emohevrdb-dfer/6_discussion/6_3_interpreting_persistent_error_patterns/facs_fea_mapping.json | a421cb17385b637f5d1b207407d1de5da9b1bbd4021a7c5a33118b3a30f70bb0 |
+| facs_fea_mapping.json | /workspace/repos/emohevrdb-dfer/6_discussion/6_3_interpreting/facs_fea_mapping.json | a421cb17385b637f5d1b207407d1de5da9b1bbd4021a7c5a33118b3a30f70bb0 |
 
 ## Interpretation
 

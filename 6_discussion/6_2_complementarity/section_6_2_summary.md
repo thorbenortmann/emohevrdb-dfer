@@ -1,6 +1,6 @@
 # Section 6.2 — Descriptive results
 
-Generated (UTC): 2026-10-06T14:47:28.566232+00:00
+Generated (UTC): 2026-10-06T19:52:44.981395+00:00
 
 ## Fusion outcomes
 
@@ -55,7 +55,7 @@ Exactly-one-correct cases: 242 → 190.
 
 | setting | path | sha256 |
 | --- | --- | --- |
-| Static | /workspace/repos/emohevrdb-dfer/4_static_facial_expression_recognition/static_test_predictions.csv | 020e8bdfde96130d44a77e549441423aea10793b296ab651e2a5245d75622fd6 |
+| Static | /workspace/repos/emohevrdb-dfer/4_static_facial_expression_recognition/static_test_predictions.csv | b4536fc35d0d0150d46d50586d36f48e9c33ee2c3d0c9135b8987f73a95501e0 |
 | Dynamic | /workspace/repos/emohevrdb-dfer/5_dynamic_facial_expression_recognition/dynamic_test_predictions.csv | ac322c3232bd9a8bcb46f1be049233c2260b3193ebd19197c421ea372e007cde |
 
 - [dynamic_fusion_correctness_groups.csv](tables/dynamic_fusion_correctness_groups.csv)
