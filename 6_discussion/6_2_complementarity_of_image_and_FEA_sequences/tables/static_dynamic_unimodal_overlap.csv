@@ -1,0 +1,9 @@
+setting,group,n_view_rows,percent
+Static,both_correct,414,54.761904761904766
+Static,image_only_correct,114,15.079365079365079
+Static,fea_only_correct,128,16.93121693121693
+Static,both_wrong,100,13.227513227513226
+Dynamic,both_correct,476,62.96296296296296
+Dynamic,image_only_correct,74,9.788359788359788
+Dynamic,fea_only_correct,116,15.343915343915343
+Dynamic,both_wrong,90,11.904761904761903

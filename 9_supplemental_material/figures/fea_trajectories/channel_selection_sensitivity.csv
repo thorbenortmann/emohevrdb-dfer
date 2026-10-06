@@ -1,8 +1,0 @@
-Category,Raw / 63,Raw / 35,Standardized / 63,Standardized / 35
-Anger,BrowLowererL,BrowLowererL,BrowLowererR,BrowLowererR
-Disgust,NoseWrinklerR,NoseWrinklerR,NoseWrinklerL,NoseWrinklerL
-Fear,UpperLidRaiserR,UpperLidRaiserR,OuterBrowRaiserR,OuterBrowRaiserR
-Happiness,LipCornerPullerR,LipCornerPullerR,LipCornerPullerR,LipCornerPullerR
-Neutral,EyesLookLeftR,UpperLidRaiserR,EyesLookLeftL,LipPressorR
-Sadness,LipCornerDepressorL,LipCornerDepressorL,LipCornerDepressorR,LipCornerDepressorR
-Surprise,JawDrop,JawDrop,JawDrop,JawDrop

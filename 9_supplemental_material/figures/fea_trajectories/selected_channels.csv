@@ -1,7 +1,0 @@
-Category,Channel,Raw category mean,N sequences,Tied highest-mean channels
-Anger,BrowLowererL,0.3123276463741002,175,BrowLowererL
-Disgust,NoseWrinklerR,0.3391804217513091,211,NoseWrinklerR
-Fear,UpperLidRaiserR,0.24602818222240047,214,UpperLidRaiserR
-Happiness,LipCornerPullerR,0.5018601198680409,300,LipCornerPullerR
-Sadness,LipCornerDepressorL,0.38326658324878904,240,LipCornerDepressorL
-Surprise,JawDrop,0.32200976433595824,281,JawDrop
