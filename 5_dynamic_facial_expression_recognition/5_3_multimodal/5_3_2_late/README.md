@@ -1,14 +1,12 @@
 # 5.3.2 Late Fusion
 
-[Up one level](../README.md) · [Repository README](../../../README.md)
+[Multimodal FER](../README.md)
 
-Two late-fusion experiments combine the ordered Image and FEA sequence models:
+These experiments combine the frozen models' seven-class prediction vectors.
 
-| Experiment | Test accuracy | Notebook |
-| --- | --- | --- |
-| Average of class probabilities | 78.44% | [average](average/README.md) |
-| Cross-attention fusion | 80.56% | [cross_attention](cross_attention/README.md) |
+| Method | Test accuracy | Notebook and results |
+| --- | ---: | --- |
+| Average probabilities | 78.44% | [Averaging](average/README.md) |
+| Learned cross-attention | 80.56% | [Cross-attention](cross_attention/README.md) |
 
-Each experiment keeps its notebook, classification report, and confusion matrix in its own folder. Both use the shared [model setup](../README.md#model-setup).
-
-The selected Multimodal baseline is the [intermediate-fusion model](../5_3_3_intermediate/README.md), evaluated separately in Section 5.3.3.
+Checkpoint placement is documented once in [model setup](../README.md#model-setup). The selected Multimodal baseline is the separately evaluated [intermediate-fusion model](../5_3_3_intermediate/README.md).

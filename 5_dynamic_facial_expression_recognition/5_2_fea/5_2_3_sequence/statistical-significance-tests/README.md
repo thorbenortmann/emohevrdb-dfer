@@ -1,17 +1,19 @@
 # FEA Sequence-Order Comparisons
 
-[Up one level](../README.md) · [Repository README](../../../../README.md)
+[FEA controls](../README.md)
 
-Paired comparisons of Ordered versus optimized Shuffled and Ordered versus selected Mean on 378 reenactments. The primary test is exact paired McNemar; paired bootstrap intervals describe accuracy differences. Holm correction covers the two FEA comparisons.
+[results_summary.md](results_summary.md) records the Section 5.2.3 results: Ordered–Shuffled **+8.20 pp**, CI **[4.76, 11.90]**, and Ordered–Mean **+9.26 pp**, CI **[5.82, 12.96]**. Both Holm-adjusted p-values are below .0001.
 
-## Execution
+[fea_sequence_order_significance_tests.ipynb](fea_sequence_order_significance_tests.ipynb) reads the included [fea_test_predictions.csv](fea_test_predictions.csv) and exports [statistical_results/](statistical_results/). It uses exact paired McNemar tests on 378 reenactments and paired-bootstrap confidence intervals. Holm adjustment covers the two primary comparisons; confidence intervals are unadjusted. Participant and sensitivity results are additional outputs.
 
-1. Run [fea_sequence_order_significance_tests.ipynb](fea_sequence_order_significance_tests.ipynb) to analyze the included [fea_test_predictions.csv](fea_test_predictions.csv). This does not require model files or datasets.
-2. To regenerate that CSV first, run [collect_fea_sequence_order_test_predictions.ipynb](collect_fea_sequence_order_test_predictions.ipynb). It uses the test split described in the [environment README](../../../../env/README.md) and expects these checkpoints in `../models/` (the `5_2_3_sequence/models/` directory):
-   - `fea_sequence_model.keras`: selected ordered baseline.
-   - `fea_sequence_shuffled_model.keras`: selected optimized Shuffled control.
-   - `fea_sequence_mean_model.keras`: selected Mean control.
+## Regenerate predictions
 
-The ordered-model download is in [Section 5 models](../../../models/README.md). Use the selected control checkpoints from their corresponding training runs. Copy and rename the chosen checkpoints to the filenames above. The collector uses seed 33 for the test sequence shuffle.
+[collect_fea_sequence_order_test_predictions.ipynb](collect_fea_sequence_order_test_predictions.ipynb) expects these files in `../models/`, relative to this directory:
 
-The test notebook writes tables into [statistical_results/](statistical_results/). [results_summary.md](results_summary.md) summarizes the saved comparisons. Participant summaries and sensitivity tests are additional analyses.
+| Filename | Checkpoint |
+| --- | --- |
+| `fea_sequence_model.keras` | Selected Ordered baseline |
+| `fea_sequence_shuffled_model.keras` | Selected optimized Shuffled control |
+| `fea_sequence_mean_model.keras` | Selected Mean control |
+
+The Ordered download is in [Section 5 models](../../../models/README.md); control checkpoints come from the linked training runs. The collector uses seed 33 for test-sequence shuffling. Dataset and execution setup are in [the environment README](../../../../env/README.md).

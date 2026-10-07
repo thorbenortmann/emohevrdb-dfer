@@ -1,8 +1,8 @@
 # 5.2.3 FEA Sequence-Order Controls
 
-[Up one level](../README.md) · [Repository README](../../../README.md)
+[Ordered baseline](../README.md)
 
-Compare the ordered FEA baseline against Shuffled sequence order and Mean pooling over the FEA sequence.
+Mean averages the 30 FEA vectors before classification; Shuffled preserves the recurrent architecture but shuffles observation order. The optimized Shuffled run and the Mean run are the controls used in the paper. The initial Mean configuration remained best after optimization.
 
 | Saved control run | Test accuracy |
 | --- | --- |
@@ -10,6 +10,6 @@ Compare the ordered FEA baseline against Shuffled sequence order and Mean poolin
 | [Shuffled, optimized](20260912-1528-checkpoint-lstm-shuffled-optimzed-c-23-b-32-lr-5e-04-seed-31_val_7636_test_7010/README.md) | 70.11% |
 | [Mean](20260912-1907-checkpoint-lstm-mean-unoptimzed-b-32-lr-5e-04-seed-31_val_7740_test_6904/README.md) | 69.05% |
 
-For Mean, the initial configuration remained best after optimization, so the same saved run represents the selected control. The unoptimized Shuffled run is retained to show the tuning improvement.
+[results.txt](results.txt) records validation/test accuracies and tuning budgets. Each run README links to its training notebook and evaluation report.
 
-The ordered baseline is in [Section 5.2](../README.md). [results.txt](results.txt) summarizes validation and test results. Use [statistical-significance-tests](statistical-significance-tests/README.md) for predictions and paired comparisons of Ordered versus the selected Shuffled and Mean controls.
+[Paired comparisons](statistical-significance-tests/README.md) provide the prediction export, producer notebook, numerical tables, and summary for the reported Ordered–Shuffled and Ordered–Mean differences and confidence intervals.

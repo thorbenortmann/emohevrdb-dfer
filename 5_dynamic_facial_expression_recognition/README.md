@@ -1,25 +1,23 @@
 # 5. Dynamic Facial Expression Recognition
 
-[Repository README](../README.md)
+[Repository README](../README.md) · [Environment setup](../env/README.md)
 
-Training, evaluation, sequence-order controls, and fusion experiments for Section 5 of the paper.
+## Paper outputs and experiments
 
-Environment, workspace layout, datasets, and notebook execution are documented in [env/README.md](../env/README.md).
+| Paper content | Producer and saved results |
+| --- | --- |
+| Section 5.1; Table 4: ordered Image model | [Image sequences](5_1_image/README.md) |
+| Section 5.1.3: Image sequence-order controls and paired tests | [Image controls](5_1_image/5_1_3_sequence/README.md) |
+| Section 5.2; Table 5: ordered FEA model | [FEA sequences](5_2_fea/README.md) |
+| Section 5.2.3: FEA sequence-order controls and paired tests | [FEA controls](5_2_fea/5_2_3_sequence/README.md) |
+| Section 5.3.1; Figure 3: unimodal correctness overlap | [Complementarity](5_3_multimodal/5_3_1_complementarity/README.md) |
+| Section 5.3.2: late-fusion accuracies | [Late fusion](5_3_multimodal/5_3_2_late/README.md) |
+| Section 5.3.3; Figure 4; Table 6: selected Multimodal model | [Intermediate fusion](5_3_multimodal/5_3_3_intermediate/README.md) |
 
-## Experiments
-
-| Paper section | Directory | Main notebook |
-| --- | --- | --- |
-| 5.1 Image sequences | [5_1_image](5_1_image/README.md) | [efficientnetv2_lstm.ipynb](5_1_image/efficientnetv2_lstm.ipynb) |
-| 5.2 FEA sequences | [5_2_fea](5_2_fea/README.md) | [lstm.ipynb](5_2_fea/lstm.ipynb) |
-| 5.3 Multimodal fusion | [5_3_multimodal](5_3_multimodal/README.md) | Complementarity, late fusion, and intermediate fusion |
+Supplemental Tables S4–S11 document the baseline configurations; Figure S3 shows their confusion matrices. See the [supplement index](../supplemental_material/README.md).
 
 ## Shared test predictions
 
-[dynamic_test_predictions.csv](dynamic_test_predictions.csv) contains predictions from the selected ordered Image, ordered FEA, and intermediate-fusion Multimodal models. It has one row per image view (756 rows from 378 reenactments); each FEA prediction is repeated for the two corresponding views.
+[collect_dynamic_test_predictions.ipynb](collect_dynamic_test_predictions.ipynb) runs the selected ordered Image, ordered FEA, and intermediate-fusion Multimodal models and exports [dynamic_test_predictions.csv](dynamic_test_predictions.csv). Checkpoint filenames and downloads are in [models/README.md](models/README.md).
 
-To regenerate it, place the three checkpoints in [models/](models/README.md), then run [collect_dynamic_test_predictions.ipynb](collect_dynamic_test_predictions.ipynb). Saved-prediction analyses can use the included CSV without datasets or model inference. Sequence-order comparisons use their own prediction CSVs in Sections 5.1.3 and 5.2.3.
-
-## Paper and supplement
-
-Tables 4–6 report the selected dynamic baselines. The complementarity notebook produces Figure 3; the [intermediate-fusion architecture](5_3_multimodal/5_3_3_intermediate/dfer-intermediate-fusion-compact.pdf) is Figure 4. Experimental settings for Section 5 are described in supplemental Tables S4–S11. The shared [confusion-matrix notebook](../supplemental_material/confusion_matrices.ipynb) produces the dynamic panels in supplemental Figure S3. Further analyses of the shared predictions are in [Section 6](../6_discussion/README.md).
+The included CSV supplies the complementarity and [Section 6 analyses](../6_discussion/README.md) without inference. Evaluation units and class order are documented in the [repository README](../README.md#shared-predictions). Sequence-order tests use separate prediction exports linked from their control sections.

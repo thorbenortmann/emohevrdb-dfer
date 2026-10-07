@@ -1,56 +1,36 @@
 # Supplemental Material
 
-[Repository README](../README.md) · [Environment setup](../env/README.md)
+[Repository README](../README.md)
 
-This README maps all seven figures and eleven tables in the submitted Supplemental Material to their sources. Analyses remain beside the main-article section they support. The shared [confusion-matrix notebook](confusion_matrices.ipynb) stays here because it covers human annotation and both static and dynamic baselines.
+This index maps the seven supplementary figures and eleven tables to their sources. Most analyses remain beside the main-paper section they support. [confusion_matrices.ipynb](confusion_matrices.ipynb) is shared across human annotation and static/dynamic models.
 
-## Reference tables
+## Figures
 
-| Supplemental section | Table | Source |
+| Figure | Content | Producer and saved output |
 | --- | --- | --- |
-| 1. FACS Action Unit Reference | S1: AU numbers and names | Reference table compiled from the FACS manual in the submitted manuscript; no analysis notebook. |
-| 2. Meta Quest Pro FEA Coefficients | S2: 63 coefficients and semantic AU correspondences | Reference table in the submitted manuscript. The machine-readable [FEA/FACS mapping](../6_discussion/6_3_interpreting/facs_fea_mapping.json) documents the correspondences used by the Section 6.3 analysis. |
+| S1 | Human-rater annotations | [Confusion-matrix notebook](confusion_matrices.ipynb); [all annotations](figures/confusion_matrices/human_rater.pdf), [final benchmark](figures/confusion_matrices/filtered_human_rater.pdf) |
+| S2 | Static confusion matrices | Same notebook; [Image](figures/confusion_matrices/si.pdf), [FEA](figures/confusion_matrices/sfea.pdf), [Multimodal](figures/confusion_matrices/smul.pdf) |
+| S3 | Dynamic confusion matrices | Same notebook; [Image](figures/confusion_matrices/di.pdf), [FEA](figures/confusion_matrices/dfea.pdf), [Multimodal](figures/confusion_matrices/dmul.pdf) |
+| S4 | Largest-increase positions | [Temporal notebook](../6_discussion/6_1_temporal/fea_temporal_analysis.ipynb); [heatmap](../6_discussion/6_1_temporal/figures/fea_temporal_analysis/largest_increase_heatmap.pdf) |
+| S5 | Six FEA category trajectories | Same notebook; [panel links](../6_discussion/6_1_temporal/README.md#saved-figures) |
+| S6 | Category-level FEA profiles | [FEA-profile notebook](../6_discussion/6_3_interpreting/multimodal_fea_analysis.ipynb); [profile figure](../6_discussion/6_3_interpreting/outputs/multimodal_fea_analysis/03_category_profiles_compact.pdf) |
+| S7 | Confused-minus-correct FEA differences | Same notebook; [contrast figure](../6_discussion/6_3_interpreting/outputs/multimodal_fea_analysis/04_confused_minus_correct_compact.pdf) |
 
-FEA coefficients are proprietary facial-movement estimates. Semantic correspondences do not establish validated AU measurements.
+The confusion-matrix notebook plots embedded counts and exports PDF/PNG panels to `figures/confusion_matrices/`; it does not load CSVs or perform inference. The six model matrices correspond to the shared [static](../4_static_facial_expression_recognition/static_test_predictions.csv) and [dynamic](../5_dynamic_facial_expression_recognition/dynamic_test_predictions.csv) predictions. FEA matrices use 378 reenactments; Image/Multimodal use 756 views. Cells show counts and row percentages on a common 0–100% color scale.
 
-## Human annotation and baseline results
+S1 contains 7,770 ratings for all 2,590 reenactments and 5,334 for the final 1,778 benchmark reenactments. The retained matrix is conditioned on agreement filtering and benchmark selection. Annotation provenance is documented in [Section 3](../3_emojiherovr_and_emohevrdb/README.md).
 
-| Supplemental section | Item | Producer and saved output |
+## Tables
+
+| Table | Content | Source |
 | --- | --- | --- |
-| 3. Human-Rater Annotation Results | Figure S1 | [confusion_matrices.ipynb](confusion_matrices.ipynb): [all annotations](figures/confusion_matrices/human_rater.pdf) and [retained benchmark](figures/confusion_matrices/filtered_human_rater.pdf). |
-| 4. Class-Wise Baseline Results | Table S3: static precision, recall, and F1 | [Section 4 baseline sources](../4_static_facial_expression_recognition/README.md#reported-baselines). The shared [static predictions](../4_static_facial_expression_recognition/static_test_predictions.csv) support recomputation. |
-| 4. Class-Wise Baseline Results | Figure S2: static confusion matrices | [confusion_matrices.ipynb](confusion_matrices.ipynb): [Image](figures/confusion_matrices/si.pdf), [FEA](figures/confusion_matrices/sfea.pdf), and [Multimodal](figures/confusion_matrices/smul.pdf). |
-| 4. Class-Wise Baseline Results | Figure S3: dynamic confusion matrices | [confusion_matrices.ipynb](confusion_matrices.ipynb): [Image](figures/confusion_matrices/di.pdf), [FEA](figures/confusion_matrices/dfea.pdf), and [Multimodal](figures/confusion_matrices/dmul.pdf). |
+| S1 | FACS AU names | Manuscript reference table compiled from the FACS manual; no analysis notebook |
+| S2 | 63 FEA coefficients and semantic AU correspondences | Manuscript reference table; machine-readable [FEA/FACS mapping](../6_discussion/6_3_interpreting/facs_fea_mapping.json) supports the Section 6.3 analysis |
+| S3 | Static class-wise precision, recall, and F1 | [Static collector](../4_static_facial_expression_recognition/collect_static_test_predictions.ipynb), **Test results and static complementarity** section; [original baseline reports](../4_static_facial_expression_recognition/README.md#baselines--table-3) |
+| S4–S6 | Image augmentation, architecture, and training schedule | [Image training notebook](../5_dynamic_facial_expression_recognition/5_1_image/efficientnetv2_lstm.ipynb) |
+| S7–S8 | FEA architecture and training settings | [FEA training notebook](../5_dynamic_facial_expression_recognition/5_2_fea/lstm.ipynb) |
+| S9–S11 | Multimodal augmentation, fusion architecture, and training settings | [Intermediate-fusion notebook](../5_dynamic_facial_expression_recognition/5_3_multimodal/5_3_3_intermediate/intermediate_fusion_cross_attention.ipynb) |
 
-The confusion-matrix notebook plots embedded count matrices; it does not load prediction CSVs or run model inference. Run it from this directory using the [shared environment](../env/README.md). It exports PDF and PNG panels to `figures/confusion_matrices/`. Figure assembly and subcaptions belong to the manuscript.
+S4–S11 describe implemented settings rather than generated analysis outputs. AU correspondences are semantic mappings, not validated AU measurements.
 
-Rows represent reference categories and columns assigned or predicted categories. Cells show counts and row-normalized percentages on a common 0–100% color scale. Class order is Anger, Disgust, Fear, Happiness, Neutral, Sadness, Surprise.
-
-Human-rater matrices contain 7,770 ratings for all 2,590 reenactments and 5,334 ratings for the final 1,778 benchmark reenactments. The latter is conditioned on agreement-based retention and subsequent benchmark selection; it does not measure annotation performance before filtering. See [Section 3](../3_emojiherovr_and_emohevrdb/README.md) for annotation provenance and construction.
-
-Model matrices contain 756 camera-view predictions for Image and Multimodal, and 378 reenactment predictions for FEA. The FEA prediction is repeated across both views in the shared CSVs, so retain one row per reenactment when reconstructing FEA matrices. Dynamic predictions are stored in [Section 5](../5_dynamic_facial_expression_recognition/dynamic_test_predictions.csv).
-
-## Experimental configuration
-
-Supplemental Section 5 documents the selected dynamic baselines. The tables describe settings implemented in these notebooks; they are not generated analysis outputs.
-
-| Tables | Content | Implementation |
-| --- | --- | --- |
-| S4–S6 | Image augmentation, architecture, and five-phase training schedule | [efficientnetv2_lstm.ipynb](../5_dynamic_facial_expression_recognition/5_1_image/efficientnetv2_lstm.ipynb); [Section 5.1 documentation](../5_dynamic_facial_expression_recognition/5_1_image/README.md). |
-| S7–S8 | FEA architecture and training configuration | [lstm.ipynb](../5_dynamic_facial_expression_recognition/5_2_fea/lstm.ipynb); [Section 5.2 documentation](../5_dynamic_facial_expression_recognition/5_2_fea/README.md). |
-| S9–S11 | Multimodal image augmentation, fusion-head architecture, and training configuration | [intermediate_fusion_cross_attention.ipynb](../5_dynamic_facial_expression_recognition/5_3_multimodal/5_3_3_intermediate/intermediate_fusion_cross_attention.ipynb); [Section 5.3.3 documentation](../5_dynamic_facial_expression_recognition/5_3_multimodal/5_3_3_intermediate/README.md). |
-
-Environment and dataset placement are documented in [env/README.md](../env/README.md). Checkpoint links and inference filenames are in [Section 5 models](../5_dynamic_facial_expression_recognition/models/README.md).
-
-## Temporal variation and error interpretation
-
-| Supplemental section | Figure | Producer and saved output |
-| --- | --- | --- |
-| 6. FEA-Sequence Trajectories | S4: largest-increase positions | [fea_temporal_analysis.ipynb](../6_discussion/6_1_temporal/fea_temporal_analysis.ipynb); [heatmap](../6_discussion/6_1_temporal/figures/fea_temporal_analysis/largest_increase_heatmap.pdf). |
-| 6. FEA-Sequence Trajectories | S5: six category trajectories | Same notebook; [panel links and method](../6_discussion/6_1_temporal/README.md#saved-figures). |
-| 7. Interpreting Persistent Error Patterns | S6: category-level FEA profiles | [multimodal_fea_analysis.ipynb](../6_discussion/6_3_interpreting/multimodal_fea_analysis.ipynb); [profile figure](../6_discussion/6_3_interpreting/outputs/multimodal_fea_analysis/03_category_profiles_compact.pdf). |
-| 7. Interpreting Persistent Error Patterns | S7: confused-minus-correct FEA differences | Same notebook; [contrast figure](../6_discussion/6_3_interpreting/outputs/multimodal_fea_analysis/04_confused_minus_correct_compact.pdf). |
-
-Run these notebooks from their respective Section 6 directories. [Section 6.1](../6_discussion/6_1_temporal/README.md) documents the raw-DFEA trajectory analysis; [Section 6.3](../6_discussion/6_3_interpreting/README.md) documents the profile inputs, grouped coefficients, and exported numerical tables.
-
-Temporal and category-level summaries pool retained training, validation, and test sequences. Error contrasts use test predictions only. The trajectories are not aligned to annotated expression phases, and error-associated coefficient differences do not establish causal model reliance.
+Run notebooks from their containing directories using [the shared setup](../env/README.md). [Section 6.1](../6_discussion/6_1_temporal/README.md) documents temporal inputs/methods; [Section 6.3](../6_discussion/6_3_interpreting/README.md) links the numerical profile and contrast tables. These category summaries pool retained splits, while error contrasts are test-only and describe associations rather than causal feature reliance.

@@ -1,9 +1,10 @@
 # 5.2.3 FEA Control: Mean
 
-[Up one level](../README.md) · [Repository README](../../../../README.md)
+[Control summary](../README.md)
 
 Mean pooling over the FEA sequence. The initial configuration remained the selected configuration after optimization. The saved run has test accuracy **69.05%**.
 
-The training notebook is [lstm-mean-unoptimzed.ipynb](lstm-mean-unoptimzed.ipynb). A rerun creates a new timestamped subdirectory here containing `fea_model.keras`, training logs, plots, and evaluation results.
+- [Training notebook](lstm-mean-unoptimzed.ipynb)
+- [Classification report](classification_report.txt) and [confusion matrix](confusion_matrix.png)
 
-[classification_report.txt](classification_report.txt) and [confusion_matrix.png](confusion_matrix.png) contain the saved evaluation.
+Training creates a new timestamped result directory with checkpoints and evaluation outputs, following the shared [execution instructions](../../../../env/README.md#run-notebooks).

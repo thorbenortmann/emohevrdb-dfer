@@ -1,8 +1,6 @@
 # Static Model Comparisons
 
-[Up one level](../README.md) · [Repository README](../../../README.md)
-
-These notebooks use the shared prediction CSVs documented in the [parent README](../README.md#shared-inputs-and-regeneration). Methods, execution instructions, and inference scope are documented there.
+[Comparison methods and inputs](../README.md)
 
 | Comparison | Implementation | Saved results | Paper |
 | --- | --- | --- | --- |
@@ -10,6 +8,4 @@ These notebooks use the shared prediction CSVs documented in the [parent README]
 | Static FEA vs. Static Multimodal | [Notebook](static_fea_vs_multimodal_significance_tests.ipynb) | [Report](../result-reports/02_static_fea_vs_multimodal.md) | Table 7 |
 | Static Image vs. Static Multimodal | [Notebook](static_image_vs_multimodal_significance_tests.ipynb) | [Report](../result-reports/03_static_image_vs_multimodal.md) | Table 7 |
 
-Run the relevant comparison notebook to regenerate its numerical exports in [statistical_results/](statistical_results/). The exported tables include the primary result, paired reenactment data, sensitivity test, participant summaries, and secondary tests where applicable.
-
-The [combined summary](../result-reports/00_summary.md) collects all nine repository comparisons.
+Numerical exports are in [statistical_results/](statistical_results/), including primary results and paired reenactment data. Reports summarize the saved outputs; [00_summary.md](../result-reports/00_summary.md) combines all nine comparisons. “Additional” rows are not part of Table 7.

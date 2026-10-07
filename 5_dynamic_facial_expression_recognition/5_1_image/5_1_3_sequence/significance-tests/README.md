@@ -1,17 +1,19 @@
 # Image Sequence-Order Comparisons
 
-[Up one level](../README.md) · [Repository README](../../../../README.md)
+[Image controls](../README.md)
 
-Paired comparisons of Ordered versus optimized Shuffled and Ordered versus optimized Mean, with Holm correction across the two Image comparisons. Image predictions cover 756 views; the primary bootstrap resamples paired reenactments (378 units).
+[results_summary.md](results_summary.md) records the Section 5.1.3 results: Ordered–Shuffled **+10.85 pp**, CI **[7.28, 14.42]**, and Ordered–Mean **+11.90 pp**, CI **[7.94, 15.87]**. Both Holm-adjusted p-values are below .0001.
 
-## Execution
+[image_sequence_order_significance_tests.ipynb](image_sequence_order_significance_tests.ipynb) reads the included [image_test_predictions.csv](image_test_predictions.csv) and exports [statistical_results/](statistical_results/). It uses a centered paired bootstrap over 378 reenactments, keeping both camera views together. Holm adjustment covers the two primary comparisons; confidence intervals are unadjusted. Participant and view summaries are additional descriptive/sensitivity outputs.
 
-1. Run [image_sequence_order_significance_tests.ipynb](image_sequence_order_significance_tests.ipynb) to analyze the included [image_test_predictions.csv](image_test_predictions.csv). This does not require model files or datasets.
-2. To regenerate that CSV first, run [collect_image_sequence_order_test_predictions.ipynb](collect_image_sequence_order_test_predictions.ipynb). It uses the test split described in the [environment README](../../../../env/README.md) and expects these checkpoints in this directory's `models/` subfolder:
-   - `image_sequence_model.keras`: selected ordered baseline.
-   - `image_sequence_shuffled_model.keras`: selected optimized Shuffled control.
-   - `image_sequence_mean_model.keras`: selected optimized Mean control.
+## Regenerate predictions
 
-The ordered-model download is in [Section 5 models](../../../models/README.md). Use the selected control checkpoints from their corresponding training runs. Copy and rename the chosen checkpoints to the filenames above.
+[collect_image_sequence_order_test_predictions.ipynb](collect_image_sequence_order_test_predictions.ipynb) expects these files in a local `models/` directory:
 
-The test notebook writes tables into [statistical_results/](statistical_results/). [results_summary.md](results_summary.md) summarizes the saved comparisons. Participant-level and individual-view results are additional sensitivity/descriptive analyses.
+| Filename | Checkpoint |
+| --- | --- |
+| `image_sequence_model.keras` | Selected Ordered baseline |
+| `image_sequence_shuffled_model.keras` | Selected optimized Shuffled control |
+| `image_sequence_mean_model.keras` | Selected optimized Mean control |
+
+The Ordered download is in [Section 5 models](../../../models/README.md); control checkpoints come from the linked training runs. Dataset and execution setup are in [the environment README](../../../../env/README.md).

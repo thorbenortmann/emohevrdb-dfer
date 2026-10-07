@@ -1,25 +1,23 @@
-# 5.3 Multimodal Fusion
+# 5.3 Multimodal Sequence-Based FER
 
-[Up one level](../README.md) · [Repository README](../../README.md)
+[Section 5](../README.md)
 
-Combine the selected ordered Image and FEA sequence models.
-
-| Paper section | Analysis or experiment |
+| Paper section | Producer and output |
 | --- | --- |
-| 5.3.1 | [Prediction complementarity](5_3_1_complementarity/README.md), computed from the shared dynamic prediction CSV |
-| 5.3.2 | [Late fusion](5_3_2_late/README.md): averaging and cross-attention |
-| 5.3.3 | [Intermediate fusion](5_3_3_intermediate/README.md): selected Multimodal baseline |
+| 5.3.1; Figure 3 | [Prediction complementarity](5_3_1_complementarity/README.md) |
+| 5.3.2 | [Late fusion](5_3_2_late/README.md): averaging (78.44%) and cross-attention (80.56%) |
+| 5.3.3; Figure 4; Table 6 | [Intermediate fusion](5_3_3_intermediate/README.md): selected Multimodal baseline (81.61%) |
 
-For the runtime and dataset layout, see the [environment README](../../env/README.md).
+The selected intermediate-fusion predictions are included in [dynamic_test_predictions.csv](../dynamic_test_predictions.csv). Late-fusion results are separate experiments.
 
 ## Model setup
 
-Download the selected ordered Image and FEA checkpoints using the links in [Section 5 models](../models/README.md). Copy them as `image_model.keras` and `fea_model.keras` into each experiment's local model directory:
+Download the ordered Image and FEA checkpoints from [Section 5 models](../models/README.md), then save them as `image_model.keras` and `fea_model.keras` in the relevant experiment's local directory:
 
 | Experiment | Model directory, relative to this folder |
 | --- | --- |
-| Late fusion: averaging | `5_3_2_late/average/models/` |
-| Late fusion: cross-attention | `5_3_2_late/cross_attention/models/` |
+| Averaging | `5_3_2_late/average/models/` |
+| Late cross-attention | `5_3_2_late/cross_attention/models/` |
 | Intermediate fusion | `5_3_3_intermediate/models/` |
 
-The selected intermediate-fusion predictions are included in [dynamic_test_predictions.csv](../dynamic_test_predictions.csv) and used in the Section 6 analyses. Late-fusion models remain separate experiments.
+Dataset placement and execution are described in [the environment README](../../env/README.md).

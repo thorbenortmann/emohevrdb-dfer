@@ -1,20 +1,14 @@
 # 6.2 Complementarity of Image and FEA Sequences
 
-[Up one level](../README.md) · [Repository README](../../README.md)
+[Discussion](../README.md)
 
-[dynamic_fusion_correctness_groups.ipynb](dynamic_fusion_correctness_groups.ipynb) produces Figure 5 and the descriptive results used in Section 6.2. It reads the shared [static](../../4_static_facial_expression_recognition/static_test_predictions.csv) and [dynamic](../../5_dynamic_facial_expression_recognition/dynamic_test_predictions.csv) prediction CSVs; no raw datasets or checkpoints are needed. Follow the [shared execution setup](../../env/README.md).
+[dynamic_fusion_correctness_groups.ipynb](dynamic_fusion_correctness_groups.ipynb) reads the shared static/dynamic predictions and produces **Figure 5** and the descriptive results in Section 6.2. Start with [section_6_2_summary.md](section_6_2_summary.md).
 
-## Results and outputs
+| Reported result | Saved output |
+| --- | --- |
+| Fusion correctness within four unimodal groups; 138/190 = 72.63% of exactly-one-correct cases resolved | [Figure 5](figures/dynamic_fusion_correctness_groups.pdf) and [group counts](tables/dynamic_fusion_correctness_groups.csv) |
+| Class-wise precision/recall/F1 and fusion recall differences | [Metrics](tables/dynamic_class_metrics.csv) and [recall comparison](tables/dynamic_class_recall_comparison.csv) |
+| Three dominant confusions: 84/139 = 60.43% of errors | [Named confusions](tables/dominant_multimodal_confusions.csv) and [all error pairs](tables/dynamic_multimodal_error_pairs.csv) |
+| Static–dynamic overlap; exactly-one-correct cases decrease from 242 to 190 | [Overlap table](tables/static_dynamic_unimodal_overlap.csv) |
 
-Start with [section_6_2_summary.md](section_6_2_summary.md). The notebook computes:
-
-- Multimodal correctness within the four unimodal correctness groups, plotted in [Figure 5](figures/dynamic_fusion_correctness_groups.pdf).
-- Dynamic class-wise precision, recall, and F1, using each modality's native evaluation unit, plus fusion recall differences.
-- Dominant multimodal confusion pairs and their share of all errors.
-- Static–dynamic changes in unimodal correctness overlap.
-
-The six numerical exports are in [tables/](tables/). The summary links to each table.
-
-Image and Multimodal use 756 view predictions; FEA-only metrics deduplicate to 378 reenactments. Correctness overlaps pair each FEA prediction with both image views. Conditional fusion outcomes are descriptive, and the prediction-selection oracle is not a strict ceiling on learned fusion.
-
-The [Section 5.3.1 overlap analysis](../../5_dynamic_facial_expression_recognition/5_3_multimodal/5_3_1_complementarity/README.md) describes the unimodal overlap before evaluating fusion. Paired accuracy comparisons are in [significance-tests](../significance-tests/README.md), while coefficient profiles and annotation agreement are in [Section 6.3](../6_3_interpreting/README.md).
+Class-wise FEA metrics use one prediction per reenactment; overlap/fusion outcomes use both camera views. These are descriptive comparisons. Accuracy significance tests are in [model comparisons](../significance-tests/README.md); signal and annotation analyses are in [Section 6.3](../6_3_interpreting/README.md).
