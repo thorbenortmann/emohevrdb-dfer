@@ -1,0 +1,232 @@
+category,feature,mean_sequence_mean,n_reenactments,splits,semantic_facs_code,channels_averaged
+Anger,BrowLowererL/R,0.3011574975630608,175,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Disgust,BrowLowererL/R,0.2858880708224268,211,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Fear,BrowLowererL/R,0.06995611272873081,214,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Happiness,BrowLowererL/R,0.0516765142294781,300,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Neutral,BrowLowererL/R,0.03278957218749622,306,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Sadness,BrowLowererL/R,0.1585710876290187,240,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Surprise,BrowLowererL/R,0.03440303563550049,281,"train,validation,test",AU4,"BrowLowererL, BrowLowererR"
+Anger,CheekPuffL/R,0.009187254239662889,175,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Disgust,CheekPuffL/R,0.0032505164765854,211,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Fear,CheekPuffL/R,0.0006076858685352958,214,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Happiness,CheekPuffL/R,0.0005268458012767735,300,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Neutral,CheekPuffL/R,0.00037990170650504596,306,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Sadness,CheekPuffL/R,0.012191797143333486,240,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Surprise,CheekPuffL/R,0.005274522501637308,281,"train,validation,test",AD34,"CheekPuffL, CheekPuffR"
+Anger,CheekRaiserL/R,0.1972518723392862,175,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Disgust,CheekRaiserL/R,0.25972294247929545,211,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Fear,CheekRaiserL/R,0.056241256915739724,214,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Happiness,CheekRaiserL/R,0.37580567095135525,300,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Neutral,CheekRaiserL/R,0.03947517767607515,306,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Sadness,CheekRaiserL/R,0.08826613074462884,240,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Surprise,CheekRaiserL/R,0.03648042216246723,281,"train,validation,test",AU6,"CheekRaiserL, CheekRaiserR"
+Anger,CheekSuckL/R,1.6232301063661627e-06,175,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Disgust,CheekSuckL/R,4.2596620129593025e-05,211,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Fear,CheekSuckL/R,5.447055475857914e-05,214,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Happiness,CheekSuckL/R,9.781874803979512e-07,300,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Neutral,CheekSuckL/R,2.9788195491574565e-07,306,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Sadness,CheekSuckL/R,3.550620712803886e-06,240,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Surprise,CheekSuckL/R,0.005371571875783164,281,"train,validation,test",AD35,"CheekSuckL, CheekSuckR"
+Anger,ChinRaiserT/B,0.2648346149697446,175,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Disgust,ChinRaiserT/B,0.2074105320580851,211,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Fear,ChinRaiserT/B,0.028296105825819595,214,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Happiness,ChinRaiserT/B,0.06581270549086778,300,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Neutral,ChinRaiserT/B,0.008287952072360947,306,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Sadness,ChinRaiserT/B,0.33794737188205265,240,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Surprise,ChinRaiserT/B,0.031972319130117374,281,"train,validation,test",AU17,"ChinRaiserT, ChinRaiserB"
+Anger,DimplerL/R,0.03244535879608395,175,"train,validation,test",AU14,"DimplerL, DimplerR"
+Disgust,DimplerL/R,0.04554770461927542,211,"train,validation,test",AU14,"DimplerL, DimplerR"
+Fear,DimplerL/R,0.04549559717560608,214,"train,validation,test",AU14,"DimplerL, DimplerR"
+Happiness,DimplerL/R,0.207211243564962,300,"train,validation,test",AU14,"DimplerL, DimplerR"
+Neutral,DimplerL/R,0.011659965913491192,306,"train,validation,test",AU14,"DimplerL, DimplerR"
+Sadness,DimplerL/R,0.009465748952782129,240,"train,validation,test",AU14,"DimplerL, DimplerR"
+Surprise,DimplerL/R,0.021760032200762922,281,"train,validation,test",AU14,"DimplerL, DimplerR"
+Anger,EyesClosedL/R,0.07358739029136677,175,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Disgust,EyesClosedL/R,0.10012209412066703,211,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Fear,EyesClosedL/R,0.017126302350770124,214,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Happiness,EyesClosedL/R,0.026167892268232445,300,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Neutral,EyesClosedL/R,0.015530469500369896,306,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Sadness,EyesClosedL/R,0.06672498143334876,240,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Surprise,EyesClosedL/R,0.019418408530793577,281,"train,validation,test",AU43,"EyesClosedL, EyesClosedR"
+Anger,EyesLookDownL/R,0.0699463775356868,175,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Disgust,EyesLookDownL/R,0.08608169498659567,211,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Fear,EyesLookDownL/R,0.017710499624112443,214,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Happiness,EyesLookDownL/R,0.03874310355009385,300,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Neutral,EyesLookDownL/R,0.018178281188716987,306,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Sadness,EyesLookDownL/R,0.048260638410155154,240,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Surprise,EyesLookDownL/R,0.018390628692022157,281,"train,validation,test",EYE64,"EyesLookDownL, EyesLookDownR"
+Anger,EyesLookLeftL/R,0.08363269206182544,175,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Disgust,EyesLookLeftL/R,0.08886232253177692,211,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Fear,EyesLookLeftL/R,0.0870817826742195,214,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Happiness,EyesLookLeftL/R,0.08872472216763985,300,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Neutral,EyesLookLeftL/R,0.09796235545275514,306,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Sadness,EyesLookLeftL/R,0.0905547242476303,240,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Surprise,EyesLookLeftL/R,0.0917508030205996,281,"train,validation,test",EYE61,"EyesLookLeftL, EyesLookLeftR"
+Anger,EyesLookRightL/R,0.06509189479673315,175,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Disgust,EyesLookRightL/R,0.06894114747673048,211,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Fear,EyesLookRightL/R,0.07434593859820098,214,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Happiness,EyesLookRightL/R,0.07257237664318461,300,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Neutral,EyesLookRightL/R,0.06306287898215399,306,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Sadness,EyesLookRightL/R,0.07292068755247308,240,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Surprise,EyesLookRightL/R,0.07500395871783753,281,"train,validation,test",EYE62,"EyesLookRightL, EyesLookRightR"
+Anger,EyesLookUpL/R,0.06909320603924805,175,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Disgust,EyesLookUpL/R,0.04566911840870223,211,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Fear,EyesLookUpL/R,0.029032473796539764,214,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Happiness,EyesLookUpL/R,0.05038823600526908,300,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Neutral,EyesLookUpL/R,0.04858795172375144,306,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Sadness,EyesLookUpL/R,0.0337737847913503,240,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Surprise,EyesLookUpL/R,0.02989626689184047,281,"train,validation,test",EYE63,"EyesLookUpL, EyesLookUpR"
+Anger,InnerBrowRaiserL/R,0.06153445342034734,175,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Disgust,InnerBrowRaiserL/R,0.06300065187987043,211,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Fear,InnerBrowRaiserL/R,0.1610402104362133,214,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Happiness,InnerBrowRaiserL/R,0.04072537032536175,300,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Neutral,InnerBrowRaiserL/R,0.01733295105991517,306,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Sadness,InnerBrowRaiserL/R,0.08107609754873153,240,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Surprise,InnerBrowRaiserL/R,0.17547130109123585,281,"train,validation,test",AU1,"InnerBrowRaiserL, InnerBrowRaiserR"
+Anger,JawDrop,0.040781895003790744,175,"train,validation,test",AU26,JawDrop
+Disgust,JawDrop,0.08006996367661344,211,"train,validation,test",AU26,JawDrop
+Fear,JawDrop,0.17847839831748416,214,"train,validation,test",AU26,JawDrop
+Happiness,JawDrop,0.08428615109682995,300,"train,validation,test",AU26,JawDrop
+Neutral,JawDrop,0.013873865490748075,306,"train,validation,test",AU26,JawDrop
+Sadness,JawDrop,0.033177679091322874,240,"train,validation,test",AU26,JawDrop
+Surprise,JawDrop,0.3220097643359583,281,"train,validation,test",AU26,JawDrop
+Anger,JawSidewaysLeft,0.014503100675245257,175,"train,validation,test",AD30,JawSidewaysLeft
+Disgust,JawSidewaysLeft,0.008041137233241836,211,"train,validation,test",AD30,JawSidewaysLeft
+Fear,JawSidewaysLeft,0.002356615165762287,214,"train,validation,test",AD30,JawSidewaysLeft
+Happiness,JawSidewaysLeft,0.000964393121555955,300,"train,validation,test",AD30,JawSidewaysLeft
+Neutral,JawSidewaysLeft,0.0004748437560401376,306,"train,validation,test",AD30,JawSidewaysLeft
+Sadness,JawSidewaysLeft,0.020027116520405265,240,"train,validation,test",AD30,JawSidewaysLeft
+Surprise,JawSidewaysLeft,0.014384933893237755,281,"train,validation,test",AD30,JawSidewaysLeft
+Anger,JawSidewaysRight,0.016062628103889462,175,"train,validation,test",AD30,JawSidewaysRight
+Disgust,JawSidewaysRight,0.008246509496202217,211,"train,validation,test",AD30,JawSidewaysRight
+Fear,JawSidewaysRight,0.004144730991007386,214,"train,validation,test",AD30,JawSidewaysRight
+Happiness,JawSidewaysRight,0.0069019475783567074,300,"train,validation,test",AD30,JawSidewaysRight
+Neutral,JawSidewaysRight,0.0007231788150997557,306,"train,validation,test",AD30,JawSidewaysRight
+Sadness,JawSidewaysRight,0.01868019716337305,240,"train,validation,test",AD30,JawSidewaysRight
+Surprise,JawSidewaysRight,0.01921207216304639,281,"train,validation,test",AD30,JawSidewaysRight
+Anger,JawThrust,0.026460165768936426,175,"train,validation,test",AD29,JawThrust
+Disgust,JawThrust,0.02466994087745948,211,"train,validation,test",AD29,JawThrust
+Fear,JawThrust,0.03415828804226623,214,"train,validation,test",AD29,JawThrust
+Happiness,JawThrust,0.009428085618018726,300,"train,validation,test",AD29,JawThrust
+Neutral,JawThrust,0.006874277560084202,306,"train,validation,test",AD29,JawThrust
+Sadness,JawThrust,0.05951370729479086,240,"train,validation,test",AD29,JawThrust
+Surprise,JawThrust,0.09760008666810975,281,"train,validation,test",AD29,JawThrust
+Anger,LidTightenerL/R,0.2789492190366455,175,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Disgust,LidTightenerL/R,0.2937907675499167,211,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Fear,LidTightenerL/R,0.07422178753480627,214,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Happiness,LidTightenerL/R,0.1939982750508396,300,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Neutral,LidTightenerL/R,0.03767035626055996,306,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Sadness,LidTightenerL/R,0.10461751681137736,240,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Surprise,LidTightenerL/R,0.05768688179529329,281,"train,validation,test",AU7,"LidTightenerL, LidTightenerR"
+Anger,LipCornerDepressorL/R,0.09523828738826132,175,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Disgust,LipCornerDepressorL/R,0.13865860100091307,211,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Fear,LipCornerDepressorL/R,0.03069987309072793,214,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Happiness,LipCornerDepressorL/R,0.007364125419791683,300,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Neutral,LipCornerDepressorL/R,0.00582510965527434,306,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Sadness,LipCornerDepressorL/R,0.3773980928138145,240,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Surprise,LipCornerDepressorL/R,0.01729710828050818,281,"train,validation,test",AU15,"LipCornerDepressorL, LipCornerDepressorR"
+Anger,LipCornerPullerL/R,0.04706333316475577,175,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Disgust,LipCornerPullerL/R,0.058207104263989555,211,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Fear,LipCornerPullerL/R,0.03231643498667536,214,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Happiness,LipCornerPullerL/R,0.49486882300560797,300,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Neutral,LipCornerPullerL/R,0.012872030873424764,306,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Sadness,LipCornerPullerL/R,0.015823585313818368,240,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Surprise,LipCornerPullerL/R,0.013413225891819645,281,"train,validation,test",AU12,"LipCornerPullerL, LipCornerPullerR"
+Anger,LipFunnelerLT/LB/RT/RB,0.007976262293808746,175,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Disgust,LipFunnelerLT/LB/RT/RB,0.003287749730088756,211,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Fear,LipFunnelerLT/LB/RT/RB,0.0019419525484265976,214,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Happiness,LipFunnelerLT/LB/RT/RB,0.0006838134682745187,300,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Neutral,LipFunnelerLT/LB/RT/RB,0.0003887717935699067,306,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Sadness,LipFunnelerLT/LB/RT/RB,0.04825176794453037,240,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Surprise,LipFunnelerLT/LB/RT/RB,0.030867155254937925,281,"train,validation,test",AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB"
+Anger,LipPressorL/R,0.013886938048488612,175,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Disgust,LipPressorL/R,0.01690378340864746,211,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Fear,LipPressorL/R,0.000660247927340017,214,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Happiness,LipPressorL/R,0.0006531464421718964,300,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Neutral,LipPressorL/R,2.3821917403019587e-05,306,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Sadness,LipPressorL/R,0.011012760672456729,240,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Surprise,LipPressorL/R,0.0013079372308571788,281,"train,validation,test",AU24,"LipPressorL, LipPressorR"
+Anger,LipPuckerL/R,0.10966709252937429,175,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Disgust,LipPuckerL/R,0.06129081442974615,211,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Fear,LipPuckerL/R,0.007122103411297515,214,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Happiness,LipPuckerL/R,0.004254009673780065,300,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Neutral,LipPuckerL/R,0.0009686279555208243,306,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Sadness,LipPuckerL/R,0.059379729770979765,240,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Surprise,LipPuckerL/R,0.11061756251536568,281,"train,validation,test",AU18,"LipPuckerL, LipPuckerR"
+Anger,LipStretcherL/R,0.026277869122505154,175,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Disgust,LipStretcherL/R,0.059147459230205014,211,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Fear,LipStretcherL/R,0.05833341794801919,214,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Happiness,LipStretcherL/R,0.06805930189472642,300,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Neutral,LipStretcherL/R,0.003076026014606515,306,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Sadness,LipStretcherL/R,0.05344508213203,240,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Surprise,LipStretcherL/R,0.007299778089864444,281,"train,validation,test",AU20,"LipStretcherL, LipStretcherR"
+Anger,LipSuckLT/LB/RT/RB,0.09554581682076917,175,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Disgust,LipSuckLT/LB/RT/RB,0.08757423554551319,211,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Fear,LipSuckLT/LB/RT/RB,0.025114868495805968,214,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Happiness,LipSuckLT/LB/RT/RB,0.13577319104132932,300,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Neutral,LipSuckLT/LB/RT/RB,0.015687002660323263,306,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Sadness,LipSuckLT/LB/RT/RB,0.026262609768908263,240,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Surprise,LipSuckLT/LB/RT/RB,0.014354181132808798,281,"train,validation,test",AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB"
+Anger,LipTightenerL/R,0.06930227476843007,175,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Disgust,LipTightenerL/R,0.01569425314932174,211,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Fear,LipTightenerL/R,0.0030759110981741574,214,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Happiness,LipTightenerL/R,0.0009854952413467766,300,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Neutral,LipTightenerL/R,0.0004644744524907872,306,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Sadness,LipTightenerL/R,0.0646468472139599,240,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Surprise,LipTightenerL/R,0.04580194183628902,281,"train,validation,test",AU23,"LipTightenerL, LipTightenerR"
+Anger,LipsToward,0.035605607680087435,175,"train,validation,test",AU8,LipsToward
+Disgust,LipsToward,0.03923307431326167,211,"train,validation,test",AU8,LipsToward
+Fear,LipsToward,0.030242813748418307,214,"train,validation,test",AU8,LipsToward
+Happiness,LipsToward,0.027778861137202928,300,"train,validation,test",AU8,LipsToward
+Neutral,LipsToward,0.010621655870793624,306,"train,validation,test",AU8,LipsToward
+Sadness,LipsToward,0.032580175916427125,240,"train,validation,test",AU8,LipsToward
+Surprise,LipsToward,0.0647881544391553,281,"train,validation,test",AU8,LipsToward
+Anger,LowerLipDepressorL/R,0.018119967711928153,175,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Disgust,LowerLipDepressorL/R,0.061782228425043086,211,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Fear,LowerLipDepressorL/R,0.07113705753790345,214,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Happiness,LowerLipDepressorL/R,0.12748065661357375,300,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Neutral,LowerLipDepressorL/R,0.003520459963345996,306,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Sadness,LowerLipDepressorL/R,0.010847596062902858,240,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Surprise,LowerLipDepressorL/R,0.011782805427358878,281,"train,validation,test",AU16,"LowerLipDepressorL, LowerLipDepressorR"
+Anger,MouthLeft,0.010178943211524403,175,"train,validation,test",,MouthLeft
+Disgust,MouthLeft,0.011144317156828697,211,"train,validation,test",,MouthLeft
+Fear,MouthLeft,0.002275451559626432,214,"train,validation,test",,MouthLeft
+Happiness,MouthLeft,0.005748258014882725,300,"train,validation,test",,MouthLeft
+Neutral,MouthLeft,0.0007888086403211238,306,"train,validation,test",,MouthLeft
+Sadness,MouthLeft,0.0026696457146226926,240,"train,validation,test",,MouthLeft
+Surprise,MouthLeft,0.0022147045658978235,281,"train,validation,test",,MouthLeft
+Anger,MouthRight,0.003404548730339449,175,"train,validation,test",,MouthRight
+Disgust,MouthRight,0.0033710377138422886,211,"train,validation,test",,MouthRight
+Fear,MouthRight,0.0006506867993713615,214,"train,validation,test",,MouthRight
+Happiness,MouthRight,0.0019768107651408156,300,"train,validation,test",,MouthRight
+Neutral,MouthRight,0.000149481984671669,306,"train,validation,test",,MouthRight
+Sadness,MouthRight,0.000204961286204463,240,"train,validation,test",,MouthRight
+Surprise,MouthRight,0.0021562166498019565,281,"train,validation,test",,MouthRight
+Anger,NoseWrinklerL/R,0.21309722965180072,175,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Disgust,NoseWrinklerL/R,0.33854152913188906,211,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Fear,NoseWrinklerL/R,0.024923344347097788,214,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Happiness,NoseWrinklerL/R,0.011152323171938374,300,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Neutral,NoseWrinklerL/R,0.003812392647538778,306,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Sadness,NoseWrinklerL/R,0.05687240247355462,240,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Surprise,NoseWrinklerL/R,0.012330869283394063,281,"train,validation,test",AU9,"NoseWrinklerL, NoseWrinklerR"
+Anger,OuterBrowRaiserL/R,0.018874166425128912,175,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Disgust,OuterBrowRaiserL/R,0.02934043247849141,211,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Fear,OuterBrowRaiserL/R,0.15104240869052155,214,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Happiness,OuterBrowRaiserL/R,0.03479200052719336,300,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Neutral,OuterBrowRaiserL/R,0.013923899562212768,306,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Sadness,OuterBrowRaiserL/R,0.029837217599008075,240,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Surprise,OuterBrowRaiserL/R,0.17982523322888602,281,"train,validation,test",AU2,"OuterBrowRaiserL, OuterBrowRaiserR"
+Anger,UpperLidRaiserL/R,0.09306436751339746,175,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Disgust,UpperLidRaiserL/R,0.05776921438110812,211,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Fear,UpperLidRaiserL/R,0.2253952344644785,214,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Happiness,UpperLidRaiserL/R,0.05653331041701147,300,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Neutral,UpperLidRaiserL/R,0.044547926355470155,306,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Sadness,UpperLidRaiserL/R,0.055833704094909974,240,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Surprise,UpperLidRaiserL/R,0.18622114301349257,281,"train,validation,test",AU5,"UpperLidRaiserL, UpperLidRaiserR"
+Anger,UpperLipRaiserL/R,0.17947921566508507,175,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"
+Disgust,UpperLipRaiserL/R,0.28391778615316676,211,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"
+Fear,UpperLipRaiserL/R,0.10179740840442313,214,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"
+Happiness,UpperLipRaiserL/R,0.2692495327891696,300,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"
+Neutral,UpperLipRaiserL/R,0.02334323039757171,306,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"
+Sadness,UpperLipRaiserL/R,0.038115041123698526,240,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"
+Surprise,UpperLipRaiserL/R,0.06034147153955833,281,"train,validation,test",AU10,"UpperLipRaiserL, UpperLipRaiserR"

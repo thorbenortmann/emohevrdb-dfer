@@ -1,0 +1,17 @@
+# tensorflow==2.17.0 and support for a Nvida RTX 5090 via a CUDA stack are provided by the base image.
+# Pre-installed packages:
+# jupyterlab==4.3.5
+# pandas==2.2.3
+# scikit-learn==1.5.2
+# tensorflow==2.17.0+nv25.2
+
+numpy==1.26.4
+ml-dtypes==0.4.1
+keras==3.12.0
+
+# Additional packages
+contourpy==1.3.2
+seaborn==0.13.2
+matplotlib==3.9.4
+statsmodels==0.14.6
+scipy==1.15.3

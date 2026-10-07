@@ -1,0 +1,19 @@
+metric,value
+Ordered FEA accuracy,0.783068783068783
+Mean FEA accuracy,0.6904761904761905
+Ordered - Mean FEA difference (pp),9.25925925925926
+Paired-bootstrap CI low (pp),5.82010582010582
+Paired-bootstrap CI high (pp),12.962962962962962
+Exact McNemar p-value,3.6245783263666453e-07
+Ordered-only correct reenactments,42.0
+Mean-only correct reenactments,7.0
+Sensitivity t statistic,5.167176861099397
+Sensitivity t-test p-value,3.8608631975268716e-07
+Participants favoring Ordered FEA,6.0
+Participants favoring Mean FEA,0.0
+Participants tied,2.0
+Median participant difference Ordered - Mean FEA (pp),7.841981132075476
+Primary Holm-adjusted p-value (within modality),7.249156652733291e-07
+Reject primary null after Holm correction,1.0
+Holm family size,2.0
+Family-wise alpha,0.05

@@ -1,0 +1,13 @@
+metric,value
+Pooled Static Multimodal accuracy,0.8042328042328042
+Pooled Dynamic Multimodal accuracy,0.8161375661375662
+Dynamic - Static Multimodal difference (pp),1.1904761904761905
+Primary bootstrap CI low (pp),-1.984126984126984
+Primary bootstrap CI high (pp),4.365079365079365
+Primary bootstrap p-value,0.4942775057224943
+Sensitivity t statistic,0.7224401045490356
+Sensitivity t-test p-value,0.47047183117881886
+Participants favoring Dynamic Multimodal,4.0
+Participants favoring Static Multimodal,4.0
+Participants tied,0.0
+Median participant difference Dynamic - Static Multimodal (pp),1.2007077856420634

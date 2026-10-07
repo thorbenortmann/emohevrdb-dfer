@@ -1,0 +1,2 @@
+comparison,n_reenactments,fea_accuracy,multimodal_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap
+Multimodal - FEA,378,0.716931216931217,0.8042328042328042,8.73015873015873,4.62962962962963,12.83068783068783,4.3999956000044e-05,1000000

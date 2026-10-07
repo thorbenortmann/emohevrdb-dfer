@@ -1,0 +1,2 @@
+comparison,n_reenactments,mean_difference_pp,t_statistic,df,p_value
+Ordered FEA vs. Mean FEA,378,9.25925925925926,5.167176861099397,377,3.8608631975268716e-07

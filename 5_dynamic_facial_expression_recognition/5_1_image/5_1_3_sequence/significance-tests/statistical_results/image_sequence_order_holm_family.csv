@@ -1,0 +1,3 @@
+alternative,p_value,p_value_holm,reject_holm
+shuffled,9.99999000001e-07,1.999998000002e-06,True
+mean,9.99999000001e-07,1.999998000002e-06,True

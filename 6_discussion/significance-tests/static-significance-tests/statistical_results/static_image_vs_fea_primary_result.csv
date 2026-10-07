@@ -1,0 +1,2 @@
+comparison,n_reenactments,image_accuracy,fea_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap
+FEA - pooled image,378,0.6984126984126984,0.716931216931217,1.8518518518518516,-3.3068783068783065,6.878306878306878,0.49362550637449365,1000000

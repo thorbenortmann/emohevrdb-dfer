@@ -1,0 +1,2 @@
+comparison,n_reenactments,ordered_image_accuracy,mean_image_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap,p_value_holm,reject_holm,holm_family,holm_family_size,alpha
+Pooled Ordered Image - pooled Mean Image,378,0.7275132275132276,0.6084656084656085,11.904761904761903,7.936507936507936,15.873015873015872,9.99999000001e-07,1000000,1.999998000002e-06,True,image_sequence_order,2,0.05

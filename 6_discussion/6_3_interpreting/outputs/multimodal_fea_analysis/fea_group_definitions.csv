@@ -1,0 +1,34 @@
+group,semantic_facs_code,channels_averaged,n_channels,maximum_category_mean,is_au,passes_mean_filter,retained,retention_reason
+BrowLowererL/R,AU4,"BrowLowererL, BrowLowererR",2,0.3011574975630608,True,True,True,filter disabled
+CheekPuffL/R,AD34,"CheekPuffL, CheekPuffR",2,0.012191797143333486,False,True,True,filter disabled
+CheekRaiserL/R,AU6,"CheekRaiserL, CheekRaiserR",2,0.37580567095135525,True,True,True,filter disabled
+CheekSuckL/R,AD35,"CheekSuckL, CheekSuckR",2,0.005371571875783164,False,True,True,filter disabled
+ChinRaiserT/B,AU17,"ChinRaiserT, ChinRaiserB",2,0.33794737188205265,True,True,True,filter disabled
+DimplerL/R,AU14,"DimplerL, DimplerR",2,0.207211243564962,True,True,True,filter disabled
+EyesClosedL/R,AU43,"EyesClosedL, EyesClosedR",2,0.10012209412066703,True,True,True,filter disabled
+EyesLookDownL/R,EYE64,"EyesLookDownL, EyesLookDownR",2,0.08608169498659567,False,True,True,filter disabled
+EyesLookLeftL/R,EYE61,"EyesLookLeftL, EyesLookLeftR",2,0.09796235545275514,False,True,True,filter disabled
+EyesLookRightL/R,EYE62,"EyesLookRightL, EyesLookRightR",2,0.07500395871783753,False,True,True,filter disabled
+EyesLookUpL/R,EYE63,"EyesLookUpL, EyesLookUpR",2,0.06909320603924805,False,True,True,filter disabled
+InnerBrowRaiserL/R,AU1,"InnerBrowRaiserL, InnerBrowRaiserR",2,0.17547130109123585,True,True,True,filter disabled
+JawDrop,AU26,JawDrop,1,0.3220097643359583,True,True,True,filter disabled
+JawSidewaysLeft,AD30,JawSidewaysLeft,1,0.020027116520405265,False,True,True,filter disabled
+JawSidewaysRight,AD30,JawSidewaysRight,1,0.01921207216304639,False,True,True,filter disabled
+JawThrust,AD29,JawThrust,1,0.09760008666810975,False,True,True,filter disabled
+LidTightenerL/R,AU7,"LidTightenerL, LidTightenerR",2,0.2937907675499167,True,True,True,filter disabled
+LipCornerDepressorL/R,AU15,"LipCornerDepressorL, LipCornerDepressorR",2,0.3773980928138145,True,True,True,filter disabled
+LipCornerPullerL/R,AU12,"LipCornerPullerL, LipCornerPullerR",2,0.49486882300560797,True,True,True,filter disabled
+LipFunnelerLT/LB/RT/RB,AU22,"LipFunnelerLT, LipFunnelerLB, LipFunnelerRT, LipFunnelerRB",4,0.04825176794453037,True,True,True,filter disabled
+LipPressorL/R,AU24,"LipPressorL, LipPressorR",2,0.01690378340864746,True,True,True,filter disabled
+LipPuckerL/R,AU18,"LipPuckerL, LipPuckerR",2,0.11061756251536568,True,True,True,filter disabled
+LipStretcherL/R,AU20,"LipStretcherL, LipStretcherR",2,0.06805930189472642,True,True,True,filter disabled
+LipSuckLT/LB/RT/RB,AU28,"LipSuckLT, LipSuckLB, LipSuckRT, LipSuckRB",4,0.13577319104132932,True,True,True,filter disabled
+LipTightenerL/R,AU23,"LipTightenerL, LipTightenerR",2,0.06930227476843007,True,True,True,filter disabled
+LipsToward,AU8,LipsToward,1,0.0647881544391553,True,True,True,filter disabled
+LowerLipDepressorL/R,AU16,"LowerLipDepressorL, LowerLipDepressorR",2,0.12748065661357375,True,True,True,filter disabled
+MouthLeft,,MouthLeft,1,0.011144317156828697,False,True,True,filter disabled
+MouthRight,,MouthRight,1,0.003404548730339449,False,True,True,filter disabled
+NoseWrinklerL/R,AU9,"NoseWrinklerL, NoseWrinklerR",2,0.33854152913188906,True,True,True,filter disabled
+OuterBrowRaiserL/R,AU2,"OuterBrowRaiserL, OuterBrowRaiserR",2,0.17982523322888602,True,True,True,filter disabled
+UpperLidRaiserL/R,AU5,"UpperLidRaiserL, UpperLidRaiserR",2,0.2253952344644785,True,True,True,filter disabled
+UpperLipRaiserL/R,AU10,"UpperLipRaiserL, UpperLipRaiserR",2,0.28391778615316676,True,True,True,filter disabled

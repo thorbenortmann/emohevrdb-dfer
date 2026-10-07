@@ -1,0 +1,13 @@
+metric,value
+Pooled image accuracy,0.6984126984126984
+Pooled multimodal accuracy,0.8042328042328042
+Multimodal - Image difference (pp),10.582010582010582
+Primary bootstrap CI low (pp),7.5396825396825395
+Primary bootstrap CI high (pp),13.756613756613756
+Primary bootstrap p-value,9.99999000001e-07
+Sensitivity t statistic,6.726657296586284
+Sensitivity t-test p-value,6.460389114011613e-11
+Participants favoring Multimodal,8.0
+Participants favoring Image,0.0
+Participants tied,0.0
+Median participant difference Multimodal - Image (pp),11.584028082492326

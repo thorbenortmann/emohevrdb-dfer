@@ -1,0 +1,2 @@
+comparison,n_reenactments,ordered_image_accuracy,shuffled_image_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap,p_value_holm,reject_holm,holm_family,holm_family_size,alpha
+Pooled Ordered Image - pooled Shuffled Image,378,0.7275132275132276,0.6190476190476191,10.846560846560847,7.2751322751322745,14.417989417989418,9.99999000001e-07,1000000,1.999998000002e-06,True,image_sequence_order,2,0.05

@@ -1,0 +1,13 @@
+metric,value
+Pooled Static Image accuracy,0.6984126984126984
+Pooled Dynamic Image accuracy,0.7275132275132276
+Dynamic - Static Image difference (pp),2.91005291005291
+Primary bootstrap CI low (pp),-0.7936507936507936
+Primary bootstrap CI high (pp),6.613756613756613
+Primary bootstrap p-value,0.1292878707121293
+Sensitivity t statistic,1.5507885641872658
+Sensitivity t-test p-value,0.12179139525005059
+Participants favoring Dynamic Image,5.0
+Participants favoring Static Image,2.0
+Participants tied,1.0
+Median participant difference Dynamic - Static Image (pp),4.469476744186046

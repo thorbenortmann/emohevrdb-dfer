@@ -1,40 +1,49 @@
 # EmoHeVRDB DFER
 
-This repository provides accompanying information, code, and model links for the journal paper:
+Code and saved results accompanying **Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB**, by Thorben Ortmann, Qi Wang, and Larissa Putzar.
 
-**Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB**  
-by Thorben Ortmann, Qi Wang, and Larissa Putzar
+The directories follow the article. Start with the section index below, then follow links to the producing notebook, saved report, or numerical table. FEA denotes the headset's facial expression activation coefficients.
 
-The paper is an invited submission to the Special Issue **Best of ACII 2024** of **IEEE Transactions on Affective Computing** and is **still under review**.
+## Paper-to-code navigation
 
-It extends the 2024 ACII paper **[EmojiHeroVR: A Study on Facial Expression Recognition under Partial Occlusion from Head-Mounted Displays](https://doi.org/10.1109/ACII63134.2024.00014)** by introducing dynamic facial expression recognition (DFER) baselines on EmoHeVRDB.  
-The journal paper also builds on the 2025 AIxVR paper **[Unimodal and Multimodal Static Facial Expression Recognition for Virtual Reality Users with EmoHeVRDB](https://doi.org/10.1109/AIxVR63409.2025.00048)** about static FER with EmoHeVRDB.  
-Content that is already maintained in the corresponding repositories is linked here rather than duplicated.
+| Reported content | Entry point |
+| --- | --- |
+| Section 3; Figure 2; Table 2: database construction and subsets | [EmojiHeroVR and EmoHeVRDB](3_emojiherovr_and_emohevrdb/README.md) |
+| Section 4; Table 3: static baselines and complementarity counts | [Static FER](4_static_facial_expression_recognition/README.md) |
+| Sections 5.1–5.2; Tables 4–5: dynamic unimodal results and sequence-order controls | [Dynamic FER](5_dynamic_facial_expression_recognition/README.md) |
+| Section 5.3; Figures 3–4; Table 6: overlap and fusion | [Multimodal FER](5_dynamic_facial_expression_recognition/5_3_multimodal/README.md) |
+| Section 6; Figure 5; Table 7: fusion outcomes, accuracy comparisons, and error interpretation | [Discussion analyses](6_discussion/README.md) |
+| Figures S1–S7; Tables S1–S11 | [Supplemental Material](supplemental_material/README.md) |
 
-This repository mirrors the relevant structure of the journal paper.
+Figure 1 and Table 1 are background illustration/reference material in the article, rather than notebook-generated results. AU names and FEA correspondences are indexed in supplemental Tables S1–S2.
 
-## Table of Contents
+## Shared predictions
 
-- [3. User Study](3_user_study)
-- [4. EmojiHeroVR Database](4_emojiherovr_database)
-- [5. Static Facial Expression Recognition](5_static_facial_expression_recognition)
-- [6. Dynamic Facial Expression Recognition](6_dynamic_facial_expression_recognition)
-  - [6.1 Image-Sequence-Based FER](6_dynamic_facial_expression_recognition/6_1_image_sequence_based_fer)
-  - [6.2 FEA-Sequence-Based FER](6_dynamic_facial_expression_recognition/6_2_fea_sequence_based_fer)
-  - [6.3 Multimodal FER](6_dynamic_facial_expression_recognition/6_3_multimodal_fer)
-    - [6.3.1 Complementarity Analysis](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_1_complementarity_analysis)
-    - [6.3.3 Late Fusion](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_3_late_fusion)
-    - [6.3.4 Intermediate Fusion](6_dynamic_facial_expression_recognition/6_3_multimodal_fer/6_3_4_intermediate_fusion)
+- [Static test predictions](4_static_facial_expression_recognition/static_test_predictions.csv), produced by the [static collector](4_static_facial_expression_recognition/collect_static_test_predictions.ipynb).
+- [Dynamic test predictions](5_dynamic_facial_expression_recognition/dynamic_test_predictions.csv), produced by the [dynamic collector](5_dynamic_facial_expression_recognition/collect_dynamic_test_predictions.ipynb).
 
-## Referencing
+Each export contains 756 camera-view rows from the same 378 test reenactments and eight participants. `sample_id` identifies a view; `reenactment_id` links central and side views. Image and Multimodal metrics use both views. FEA metrics use one prediction per reenactment; its prediction is repeated on both view rows for alignment. Class IDs follow Anger, Disgust, Fear, Happiness, Neutral, Sadness, Surprise.
 
-If you reference this repository or use the code, please cite the journal paper:
+Prediction-based analyses can use these CSVs without model inference. Raw-FEA analyses require the external DFEA data. Retraining or regenerating predictions additionally requires the appropriate datasets and checkpoints.
+
+## Setup and related repositories
+
+- [Environment and dataset layout](env/README.md), including the separate static inference environment.
+- [Static checkpoints](4_static_facial_expression_recognition/models/README.md) and [dynamic checkpoints](5_dynamic_facial_expression_recognition/models/README.md).
+- [EmoHeVRDB access and construction](https://github.com/thorbenortmann/emoji-hero-vr-database), accompanying [ACII 2024](https://doi.org/10.1109/ACII63134.2024.00014).
+- [Original static FEA and multimodal experiments](https://github.com/thorbenortmann/emohevrdb-sfer), accompanying [AIxVR 2025](https://doi.org/10.1109/AIxVR63409.2025.00048).
+
+Labels describe posed expression categories. The paired views share a human-rated reference image and are not independent reenactments. FEAs are vendor-defined estimates, not validated FACS action-unit measurements.
+
+## Citation and license
 
 ```bibtex
 @unpublished{ortmann2026dynamic,
-  author       = {Ortmann, Thorben and Wang, Qi and Putzar, Larissa},
-  title        = {Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB},
-  year         = {2026},
-  note         = {Invited submission to the Special Issue 'Best of ACII 2024' of IEEE Transactions on Affective Computing. Under review}
+  author = {Ortmann, Thorben and Wang, Qi and Putzar, Larissa},
+  title  = {Dynamic Facial Expression Recognition under Partial Occlusion by Head-Mounted Displays on EmoHeVRDB},
+  year   = {2026},
+  note   = {Revised manuscript submitted to IEEE Transactions on Affective Computing, Special Issue 'Best of ACII 2024'}
 }
 ```
+
+[LICENSE](LICENSE) covers the code, documentation, and linked models. The paper, dataset, and third-party assets have separate terms.

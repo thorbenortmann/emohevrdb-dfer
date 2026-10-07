@@ -1,0 +1,15 @@
+metric,value
+Pooled image accuracy,0.6984126984126984
+FEA accuracy,0.716931216931217
+Central accuracy,0.7275132275132276
+Side accuracy,0.6693121693121693
+FEA - pooled image difference (pp),1.8518518518518516
+Primary bootstrap CI low (pp),-3.3068783068783065
+Primary bootstrap CI high (pp),6.878306878306878
+Primary bootstrap p-value,0.49362550637449365
+Sensitivity t statistic,0.7084503255885694
+Sensitivity t-test p-value,0.47910345635106844
+Participants favoring FEA,4.0
+Participants favoring Image,3.0
+Participants tied,1.0
+Median participant difference FEA - Image (pp),3.7037037037037033

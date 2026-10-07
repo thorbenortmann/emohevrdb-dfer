@@ -1,0 +1,5 @@
+group,n,correct,wrong,correct_percent
+both_correct,476,474,2,99.5798319327731
+image_only_correct,74,52,22,70.27027027027027
+fea_only_correct,116,86,30,74.13793103448276
+both_wrong,90,5,85,5.555555555555555

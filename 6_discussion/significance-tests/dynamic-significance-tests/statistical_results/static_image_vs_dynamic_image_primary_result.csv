@@ -1,0 +1,2 @@
+comparison,n_reenactments,static_image_accuracy,dynamic_image_accuracy,difference_pp,ci_low_pp,ci_high_pp,p_value,n_bootstrap
+Pooled Dynamic Image - pooled Static Image,378,0.6984126984126984,0.7275132275132276,2.91005291005291,-0.7936507936507936,6.613756613756613,0.1292878707121293,1000000
